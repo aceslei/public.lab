@@ -4,7 +4,7 @@
 * Scroll down this page to get a quick scan of how the site works.
 * At the end of the tour you can return to the site, or [return to the site now](https://businessgrp-stage.uoregon.edu/user).
 
-## My Account -- linked at the bottom of the page
+## My Account -- linked at the bottom of the page -- click this link
 
 ![docs-my-account-link-001](https://cloud.githubusercontent.com/assets/4074354/19358131/9841dd6e-9129-11e6-8b24-ef06ec328cf6.png)
 

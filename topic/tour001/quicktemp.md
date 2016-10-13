@@ -14,5 +14,8 @@
 
 ## User Account Settings -- (animated demo)
 
-
 ![animate-002](https://cloud.githubusercontent.com/assets/4074354/19360882/373621fe-9135-11e6-909b-0597809725be.gif)
+
+## End of tour
+* You may [return to the site now](https://businessgrp-stage.uoregon.edu/user).
+

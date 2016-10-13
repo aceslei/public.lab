@@ -11,5 +11,7 @@
 ![docs-my-account-link-001](https://cloud.githubusercontent.com/assets/4074354/19358131/9841dd6e-9129-11e6-8b24-ef06ec328cf6.png)
 
 ## User Account Settings -- this is the main control panel
+* This is what you see after logon or clicking "My Account".
 * Most site functionality can be reached from here.
+
 ![capture](https://cloud.githubusercontent.com/assets/4074354/19360389/29ef5440-9133-11e6-9da8-a7e98e651565.PNG)

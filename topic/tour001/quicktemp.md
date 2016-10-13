@@ -4,13 +4,12 @@
 * Scroll down this page to get a quick scan of how the site works.
 * At the end of the tour you can return to the site, or [return to the site now](https://businessgrp-stage.uoregon.edu/user).
 
-## My Account -- this is the main control panel
+## My Account -- linked at the bottom of the page
 
-* The My Account link takes you to the User Account Settings page.
-* Most site functionality can be reached here.
-* The My Account link appears near the bottom of the page at the footer.
+* This is the page you are taken to when you first logon to the site.
+* The My Account link takes you to the User Account Settings page, use this link if you ever need to get back.
 ![docs-my-account-link-001](https://cloud.githubusercontent.com/assets/4074354/19358131/9841dd6e-9129-11e6-8b24-ef06ec328cf6.png)
 
-## Screenshot
-
+## User Account Settings -- this is the main control panel
+* Most site functionality can be reached from here.
 ![capture](https://cloud.githubusercontent.com/assets/4074354/19360389/29ef5440-9133-11e6-9da8-a7e98e651565.PNG)

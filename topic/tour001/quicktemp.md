@@ -16,7 +16,7 @@
 
 ![capture](https://cloud.githubusercontent.com/assets/4074354/19360389/29ef5440-9133-11e6-9da8-a7e98e651565.PNG)
 
-### Quick scan of menu items
+### Using menu items (animated demo)
 
 * This is an animated scan of menu items, demonstrating how the User Account Settings section works
 

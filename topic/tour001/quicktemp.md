@@ -1,8 +1,6 @@
 ## Overview
 
-* This is a quick tour of site functionality.
-* Scroll down this page to get a quick scan of how the site works.
-* At the end of the tour you can return to the site, or [return to the site now](https://businessgrp-stage.uoregon.edu/user).
+* This is a quick tour of site functionality, at the end of the tour you can return to the site, or [return to the site now](https://businessgrp-stage.uoregon.edu/user).
 
 ## My Account -- linked at the bottom of the page -- click this link
 

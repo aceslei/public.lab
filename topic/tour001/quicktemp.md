@@ -2,9 +2,9 @@
 
 * This is a quick tour of site functionality, at the end of the tour you can return to the site, or [return to the site now](https://businessgrp-stage.uoregon.edu/user).
 
-## My Account -- linked at the bottom of the page -- click this link
+## My Account -- use this for backe-end site functionality
 
-![docs-my-account-link-001](https://cloud.githubusercontent.com/assets/4074354/19358131/9841dd6e-9129-11e6-8b24-ef06ec328cf6.png)
+![my-account-overview-001](https://cloud.githubusercontent.com/assets/4074354/19402921/d34d0a6a-9218-11e6-91fe-a2f3cead7ed4.png)
 
 ## User Account Settings -- this is the main control panel
 

@@ -4,4 +4,7 @@
 
 ## See also
 
-* [public.lab tymacsimpledata](https://github.com/dreftymac/public.lab/blob/master/topic/tymacsimpledata/doc-conventions.md)
+* [diecutter template generation as a service](https://diecutter.alwaysdata.net/)
+* [diecutter template generation as a service](https://diecutter.readthedocs.io/en/0.7.1/)
+* [diecutter github](https://github.com/diecutter)
+

@@ -6,7 +6,7 @@
 
 ![my-account-overview-001](https://cloud.githubusercontent.com/assets/4074354/19402921/d34d0a6a-9218-11e6-91fe-a2f3cead7ed4.png)
 
-## User Account Settings -- this is the main control panel
+## User Account Settings -- where you go when you choose My Account
 
 ![capture](https://cloud.githubusercontent.com/assets/4074354/19360389/29ef5440-9133-11e6-9da8-a7e98e651565.PNG)
 

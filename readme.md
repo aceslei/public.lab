@@ -4,6 +4,9 @@ This is the general-purpose publically-accessible github lab space for dreftymac
 
 ## Links
 
+* youtube fun link
+   * https://www.youtube.com/watch?v=h4emcNAf5lY
+
 * github trending and cool repositories
     * https://github.com/trending
     * https://github.com/caesar0301/awesome-public-datasets

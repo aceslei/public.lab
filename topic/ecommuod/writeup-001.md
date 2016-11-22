@@ -1,6 +1,6 @@
 # Overview
 
-This writeup enumerates the top-level requirements for migration of an e-commerce system to UO Central Drupal Hosting (hereinafter "target_system").
+This writeup enumerates the top-level requirements for deployment, hosting and maintenance of an e-commerce system to UO Central Drupal Hosting (hereinafter "target_system"). This e-commerce system is currently provisioned and designed by the UO Business Affairs Office.
 
 ## System Requirements
 
@@ -11,3 +11,10 @@ This writeup assumes the following minumum requirements for the target_system:
 * Linux server RHEL 6.8 or newer
 * Drupal CMS 7.52 or newer
 
+## System Elements
+
+This writeup assumes the following core elements for the target_system. 
+
+Some elements may be hosted on servers other than those provided by UO Central Drupal Hosting. Some elements may be optionally added to or removed from UO Central Drupal Hosting. This is specified in this writeup, whenever and wherever such may be the case.
+
+The following diagram serves as the primary visual template for enumerating the elements of the target_system.

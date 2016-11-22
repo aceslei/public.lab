@@ -83,11 +83,26 @@ The following diagram serves as the primary visual template for enumerating the 
 
 
 
-
+## Figure 001
 
 * ![figure-001](https://cloud.githubusercontent.com/assets/4074354/20542606/331a7e48-b0b7-11e6-8058-1705782d9dfc.png)
+
+## Figure 002
+
 * ![figure-002](https://cloud.githubusercontent.com/assets/4074354/20542611/35bea926-b0b7-11e6-8cbc-33d65f64b961.png)
+
+## Figure 003
+
 * ![figure-003](https://cloud.githubusercontent.com/assets/4074354/20542614/38d7543c-b0b7-11e6-9327-aff428b16086.png)
+
+## Figure 004
+
 * ![figure-004](https://cloud.githubusercontent.com/assets/4074354/20542619/3cfdcbb8-b0b7-11e6-93ba-1c5ed049e408.png)
+
+## Figure 005
+
 * ![figure-005](https://cloud.githubusercontent.com/assets/4074354/20542625/420c2cb2-b0b7-11e6-99a6-500eb144db53.png)
+
+## Figure 006
+
 * ![figure-006](https://cloud.githubusercontent.com/assets/4074354/20542629/462bc532-b0b7-11e6-9a56-83b8ff74a7c0.png)

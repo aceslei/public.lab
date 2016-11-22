@@ -28,3 +28,26 @@ The following diagram serves as the primary visual template for enumerating the 
 * Consists of one or more Drupal CMS websites
 * Ecommerce Forms currently rely on Drupal7 CMS with enumerated contrib modules and content types
 * Ecommerce Reporting currently relies on Drupal7 CMS with enumerated contrib modules and content types
+
+### Element 002: MySQL database with approx five tables for read-write access
+
+#### Operational elements
+
+* MySQL database will be populated with real-time updates from:
+    * RTPN data from e-commerce payment provider
+    * Transaction request data from Ecommerce payment forms
+    * Transaction request data from select authorized UO Departments\
+    * (see also) figure 2016-11-22-004
+* MySQL database will be populated with batch/nightly/periodic updates from:
+    * UO Central IS Quikpay reporting ()
+    * (see also) figure 2016-11-22-004
+
+
+
+#### Technical elements
+
+* Specific-purpose accounts will be established for write access
+* Specific-purpose accounts will be provisioned for read-only access
+* Approximately five tables will be used with varying access for native MySQL privileges
+* SSH tunneling may be required/provisioned for entire database access
+* Permission and access model for row-level read/write will be established for each table.

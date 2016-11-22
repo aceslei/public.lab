@@ -34,15 +34,18 @@ The following diagram serves as the primary visual template for enumerating the 
 #### Operational elements
 
 * MySQL database will be populated with real-time updates from:
-    * RTPN data from e-commerce payment provider
+    * Real-Time-Payment-Notification (hereinafter "RTPN") data from e-commerce payment provider
     * Transaction request data from Ecommerce payment forms
     * Transaction request data from select authorized UO Departments\
     * (see also) figure 2016-11-22-004
+
 * MySQL database will be populated with batch/nightly/periodic updates from:
-    * UO Central IS Quikpay reporting ()
+    * UO Central IS Quikpay reporting (see also joey@)
     * (see also) figure 2016-11-22-004
 
-
+* MySQL database will provide real-time updates to:
+    * Drupal CSM via Drupal Migrate Module
+    * (see also) figure 2016-11-22-004
 
 #### Technical elements
 
@@ -51,3 +54,29 @@ The following diagram serves as the primary visual template for enumerating the 
 * Approximately five tables will be used with varying access for native MySQL privileges
 * SSH tunneling may be required/provisioned for entire database access
 * Permission and access model for row-level read/write will be established for each table.
+
+### Element 003: WEB-API Transaction Handler and related elements
+
+* Web-based API for handling incoming transaction requests (via REST-API or otherwise)
+* Web-based API for handling incoming RTPN payment notifications (via https)
+
+#### Operational elements
+
+* Incoming RTPNs currently obtained over https to specific URL configured in Quikpay Portal
+* Incoming EOD batch reports currently obtained from UO Central IS (see also joey@)
+
+### Element 004: External Interop with the system
+
+* Select UO departments may be authorized to submit payment transaction requests (Figure 2016-11-22-004a)
+* Quikpay Portal is authorized to send RTPNs to a specific URL or set of URLs at UO (Figure 2016-11-22-004b)
+* UO Central IS is authorized to send End Of Day batch files (hereinafter "EOD") to a single-purpose Linux account over SCP (Figure 2016-11-22-004c)
+
+### Element 005: EOD/RTPN/Batches and Transaction Interop
+
+* Currently the EOD/RTPN input requires shell scripts for parsing and loading.
+* These may be transitioned to MySQL load-data-infile queries for easier maintenance and better performance/throughput.
+
+### Element 006: Drupal CMS Migrate process
+
+* Currently the target_system requires routine updates from MySQL to Drupal Migrate, in order to convert the external content into Drupal nodes.
+* The Migrate process requires crontab entries in order to routinely refresh the Drupal CMS as frequently as every few minutes.

@@ -98,6 +98,7 @@ The following diagram serves as the primary visual template for enumerating the 
 ## Figure 004
 
 * ![figure-004](https://cloud.githubusercontent.com/assets/4074354/20542619/3cfdcbb8-b0b7-11e6-93ba-1c5ed049e408.png)
+  * Figure 004
 
 * 004a -- Externally hosted ecommerce forms
 * 004b -- Quikpay Portal

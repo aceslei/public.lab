@@ -19,7 +19,7 @@ Some elements may be hosted on servers other than those provided by UO Central D
 
 The following diagram serves as the primary visual template for enumerating the elements of the target_system.
 
-* [chart-000](https://github.com/dreftymac/public.lab/blob/master/topic/ecommuod/image/specchart-000.png)
+* [chart-000](https://github.com/dreftymac/public.lab/blob/master/topic/ecommuod/image/specchart000.png)
 
 ![specchart-000](https://cloud.githubusercontent.com/assets/4074354/20541457/31c16106-b0b2-11e6-8cef-00d62e2b28d2.png)
 
@@ -28,4 +28,3 @@ The following diagram serves as the primary visual template for enumerating the 
 * Consists of one or more Drupal CMS websites
 * Ecommerce Forms currently rely on Drupal7 CMS with enumerated contrib modules and content types
 * Ecommerce Reporting currently relies on Drupal7 CMS with enumerated contrib modules and content types
-

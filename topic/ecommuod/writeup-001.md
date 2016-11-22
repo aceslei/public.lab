@@ -99,6 +99,10 @@ The following diagram serves as the primary visual template for enumerating the 
 
 * ![figure-004](https://cloud.githubusercontent.com/assets/4074354/20542619/3cfdcbb8-b0b7-11e6-93ba-1c5ed049e408.png)
 
+* 004a -- Externally hosted ecommerce forms
+* 004b -- Quikpay Portal
+* 004c -- Central IS EOD report and BANNER Deposit Records
+
 ## Figure 005
 
 * ![figure-005](https://cloud.githubusercontent.com/assets/4074354/20542625/420c2cb2-b0b7-11e6-99a6-500eb144db53.png)

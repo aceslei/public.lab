@@ -82,6 +82,7 @@ The following diagram serves as the primary visual template for enumerating the 
 * The Migrate process requires crontab entries in order to routinely refresh the Drupal CMS as frequently as every few minutes.
 
 
+# Illustrations
 
 ## Figure 001
 

@@ -78,8 +78,9 @@ The following diagram serves as the primary visual template for enumerating the 
 
 ### Element 006: Drupal CMS Migrate process
 
-* Currently the target_system requires routine updates from MySQL to Drupal Migrate, in order to convert the external content into Drupal nodes.
-* The Migrate process requires crontab entries in order to routinely refresh the Drupal CMS as frequently as every few minutes.
+*	The Ecommerce system uses the Drupal Migrate module to import records from the external MySQL database (Element 002) into Drupal nodes.
+*	This migration process requires crontab entries in order to routinely run the import - as frequently as every few minutes.
+
 
 
 # Illustrations

@@ -20,8 +20,6 @@
 if('init_python'):
   import re
   import yaml
-  import textwrap
-  from datetime import datetime
 
 ### ----------------------------------
 if('init_custom_formatter'):
@@ -36,15 +34,6 @@ if('init_custom_formatter'):
       .replace('{','{{').replace('}','}}')
       .replace(self.tkbeg,'{').replace(self.tkend,'}')
       .format(**self.srcdata))
-
-### ----------------------------------
-if(not 'show_demo_usage::curly-brace-collisions-fixed'):
-
-  odata   =   dict({"template":'string'})
-  vout    =   CustFmt('''
-  This is a <%template%> this is a {template}
-  ''',odata).myformat()
-  print vout
 
 ### ----------------------------------
 if('show_demo_usage::fill-in-the-blank-document-generation'):

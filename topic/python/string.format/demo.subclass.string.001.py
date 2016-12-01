@@ -55,14 +55,13 @@ if('show_demo_usage::fill-in-the-blank-document-generation'):
     maininfo:
       username:   tvt173
       userid:     701803
-      greeter:    dreftymac
   ''')
 
   ### ------------------------------------------------------------------------
   vout    =   CustFmt('''
   ## Overview
 
-  This is an introductory document written to  from .
+  This is an introductory document written to <%username%> from Dreftymac.
 
   ### Introduction
 
@@ -70,6 +69,8 @@ if('show_demo_usage::fill-in-the-blank-document-generation'):
   Greetings!  I noticed you are a user on Stackoverflow!
 
   Your user page is located here:
+
+  http://stackoverflow.com/users/<%userid%>/<%username%>
 
   Thanks for using the site! We programmers need to stick together! ^_^
 

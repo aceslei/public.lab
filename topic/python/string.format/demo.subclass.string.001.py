@@ -52,7 +52,6 @@ if('show_demo_usage::fill-in-the-blank-document-generation'):
 
   ### ------------------------------------------------------------------------
   odata   =   yaml.safe_load('''
-    maininfo:
       username:   tvt173
       userid:     701803
   ''')

@@ -38,7 +38,7 @@ if('init_custom_formatter'):
       .format(**self.srcdata))
 
 ### ----------------------------------
-if('show_demo_usage::curly-brace-collisions-fixed'):
+if(not 'show_demo_usage::curly-brace-collisions-fixed'):
 
   odata   =   dict({"template":'string'})
   vout    =   CustFmt('''
@@ -63,7 +63,6 @@ if('show_demo_usage::fill-in-the-blank-document-generation'):
   This is an introductory document written to <%username%> from Dreftymac.
 
   ### Introduction
-
 
   Greetings!  I noticed you are a user on Stackoverflow!
 

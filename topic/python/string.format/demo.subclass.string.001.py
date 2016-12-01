@@ -12,7 +12,7 @@
 ###     desc: |
 ###         * demo code showing an alternate use of string.format()
 ###     seealso: |
-###         * __seealso__
+###         * http://stackoverflow.com/questions/35574349/python-format-string-with-custom-delimiters
 ### <end-file_info>
 '''
 

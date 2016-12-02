@@ -8,6 +8,10 @@
     * string.format() uses curly-brace
     * curly-brace is a very common delimiter and causes [Delimiter collision](https://en.wikipedia.org/wiki/Delimiter#Delimiter_collision)
     * string.format() workaround is to double-up the delimiters, this is not tenable if you have a lot of source files
+* SOLUTION: 
+   * configure string.format() to support arbitrary delimiter placeholder syntax
+   * this feature is supported in other contexts, such as the jinja templating system
+       * http://jinja.pocoo.org/docs/dev/api/#high-level-api
 
 ### Example001: subtclassing python str()
 

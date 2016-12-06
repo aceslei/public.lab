@@ -23,8 +23,8 @@ if('init_python'):
 
 ### ----------------------------------
 if('init_custom_formatter'):
-  class CustFmt(str):
-    '''extend python str type to permit custom delimiters on str.format()
+  class PythonHereDoc(str):
+    '''extend python str.format() to permit custom placeholder delimiters
     '''
     def __new__(cls, value, srcdata={}, tkbeg='<%',tkend='%>',):
       return str.__new__(cls,value)
@@ -46,7 +46,7 @@ if('show_demo_usage::fill-in-the-blank-document-generation'):
   ''')
 
   ### ------------------------------------------------------------------------
-  vout    =   CustFmt('''
+  vout    =   PythonHereDoc('''
   ## Overview
 
   This is an introductory document written to <%username%> from Dreftymac.

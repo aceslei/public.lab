@@ -45,6 +45,9 @@ if('init_custom_formatter'):
       return vout
 
     def convert_field(self, value, conversion):
+      '''
+      limited because only accepts one character
+      '''
       if conversion == 'v':
         return self.reverse(value)
       else:
@@ -89,7 +92,7 @@ if('test_custom_formatter'):
   fmt = CuFo001()
   print(fmt.format('''{project!v}''',**odata))
   print(fmt.format('''{django_info[engine]!v}''',**odata))
-  print(fmt.format('''{user_table[0][username]!v:xupp}''',**odata))
+  print(fmt.format('''{user_table[0][username]:xupp}''',**odata))
 
 
 

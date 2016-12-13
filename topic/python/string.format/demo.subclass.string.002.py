@@ -32,7 +32,7 @@ if('init_python'):
 
 ### ----------------------------------
 if('init_custom_formatter'):
-  class CuFo002(string.Formatter): ## simplified with multiple filters
+  class CuFo002(string.Formatter): ## demo with multiple filters
     '''
     CuFo002 -- testing override of string.format()
     * here we do not care about empty brace {} autonumbering bug

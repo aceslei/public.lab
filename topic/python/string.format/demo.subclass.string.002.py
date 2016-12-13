@@ -51,9 +51,7 @@ if('init_custom_formatter'):
     def tokenize(self): return(self.__str__()
       .replace('{','{{').replace('}','}}')
       .replace(self.tkbeg,'{').replace(self.tkend,'}'))
-    def render(self): return(
-      self.fmt.format(self.tokenize(),**self.srcdata)
-      )
+    def render(self): return(self.fmt.format(self.tokenize(),**self.srcdata))
 
 ### ----------------------------------
 if('test_custom_formatter'):
@@ -76,7 +74,7 @@ if('test_custom_formatter'):
         useremail: bravo@gg.com
       - username: charlblobs
         userrowid: 3
-        useremail: charlie@complicatedmail.com
+        useremail: charlie@complexmail.com
     hosts_table:
       - hostname:  .coffeehouse.com
         hostaddr:  12.12.12.12
@@ -85,14 +83,17 @@ if('test_custom_formatter'):
   ''')
 
 if(not not 'show_demo_usage::loop'):
-  odata['tpl_users'] = PyHeredoc("""   -- <%userrowid:0>4%> ;; <%username:^12%> ;; <%useremail:>20%>@@\n""",odata).loop(odata['user_table'])
-  #exit()
+  odata['tpl_users'] = PyHeredoc("""\
+    -- <%userrowid:0>4%> ;; <%username:^12%> ;; <%useremail:>20%>@@
+    """
+    ,odata).loop(odata['user_table'])
 
 if(not not 'show_demo_usage::format'):
   print PyHeredoc("""
-                  <%project:xupp%>
-                  """,odata).render()
-  #exit()
+    <%project:xupp%>
+    <%tpl_users%>
+    """,odata).render()
+
 
 
 

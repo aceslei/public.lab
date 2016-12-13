@@ -32,7 +32,7 @@ if('init_python'):
 
 ### ----------------------------------
 if('init_custom_formatter'):
-  class CuFo001(string.Formatter): ## NO_WORKY ;; convert_field multi-char spec ValueError: expected ':' after format specifier
+  class CuFo001(string.Formatter): ## YES_WORKY ;; singlechar format_field custom formatter
     '''
     CuFo001 -- testing override of string.format()
     * here we do not care about empty brace {} autonumbering
@@ -45,15 +45,15 @@ if('init_custom_formatter'):
       return vout
 
     def convert_field(self, value, conversion):
-      if conversion == 'qpp':
+      if conversion == 'v':
         return self.reverse(value)
       else:
         return super(CuFo001,self).convert_field(value, conversion)
 
     def format_field(self, value, spec):
       # handle any invalid format
-      if spec == "q":
-        return self.reverse(value)
+      if spec == "x":
+        return str(value).upper()
       else:
         return super(CuFo001,self).format_field(value, spec)
 
@@ -87,9 +87,9 @@ if('test_custom_formatter'):
   ''')
 
   fmt = CuFo001()
-  print(fmt.format('''{project!qpp}''',**odata))
-  print(fmt.format('''{django_info[engine]!qpp}''',**odata))
-  print(fmt.format('''{user_table[0][username]!qpp}''',**odata))
+  print(fmt.format('''{project!v}''',**odata))
+  print(fmt.format('''{django_info[engine]!v}''',**odata))
+  print(fmt.format('''{user_table[0][username]!v:x}''',**odata))
 
 
 

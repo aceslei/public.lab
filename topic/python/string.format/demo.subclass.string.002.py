@@ -32,20 +32,20 @@ if('init_python'):
 
 ### ----------------------------------
 if('init_custom_formatter'):
-  class CuFo002(string.Formatter): ## demo with different datapaths
+  class CuFo003(string.Formatter): ## combine with PyHeredoc
     '''
-    CuFo002 -- testing override of string.format()
+    CuFo003 -- testing override of string.format()
     * here we do not care about empty brace {} autonumbering bug
     '''
     def __init__(self):
-      super(CuFo002, self).__init__()
+      super(CuFo003, self).__init__()
 
     def format_field(self, value, spec):
       if spec   == "xiden": return str(value)
       elif spec == "xrev":  return str(value)[::-1]
       elif spec == "xupp":  return str(value).upper()
       else:
-        return super(CuFo002,self).format_field(value, spec)
+        return super(CuFo003,self).format_field(value, spec)
 
 ### ----------------------------------
 if('test_custom_formatter'):
@@ -76,7 +76,7 @@ if('test_custom_formatter'):
         hostaddr:  14.14.14.14
   ''')
 
-  fmt = CuFo002()
+  fmt = CuFo003()
   print(fmt.format('''{project:xupp}''',**odata))
   print(fmt.format('''
                    {0[0][username]:xupp}

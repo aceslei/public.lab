@@ -39,13 +39,13 @@ if('init_custom_formatter'):
     def loop(self,items=[],):
       vout = ''
       for curr in items:
-        vout += self.preformat().format(**curr)
+        vout += self.tokenize().format(**curr)
       return vout
-    def preformat(self): return(self.__str__()
+    def tokenize(self): return(self.__str__()
       .replace('{','{{').replace('}','}}')
       .replace(self.tkbeg,'{').replace(self.tkend,'}'))
     def render(self): return(
-      self.preformat().format(**self.srcdata))
+      self.tokenize().format(**self.srcdata))
 
   odata   =   yaml.safe_load('''
     project: Testing123
@@ -76,7 +76,7 @@ if('init_custom_formatter'):
 ### ----------------------------------
 
 if(not not 'show_demo_usage::format'):
-  print PythonHeredoc("""  {} """,odata).format(**odata)
+  print PythonHeredoc(""" {project} """,odata).format(**odata)
   exit()
 
 if(not not 'show_demo_usage::loop'):

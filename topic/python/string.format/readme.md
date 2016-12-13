@@ -16,9 +16,13 @@
    * this feature is supported in other contexts, such as the jinja templating system
        * http://jinja.pocoo.org/docs/dev/api/#high-level-api
 
-### Example001: subtclassing python str()
+### Example001: subclassing python str()
 
 * https://github.com/dreftymac/public.lab/blob/master/topic/python/string.format/demo.subclass.string.001.py
+
+### Example002: extending string.Formatter
+
+* https://github.com/dreftymac/public.lab/blob/master/topic/python/string.format/demo.subclass.string.002.py
 
 ### Usage: easy placeholder entry using snippets with an IDE or text editor
 

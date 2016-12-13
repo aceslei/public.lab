@@ -33,7 +33,7 @@ if('init_python'):
 
 ### ----------------------------------
 if('init_custom_formatter'):
-  class CustFmt(string.Formatter): ## a few custom filters non-recursive
+  class CustFmt(string.Formatter): ## non-chainable changecase demo
     def __init__(self):
       super(CustFmt, self).__init__()
     def format_field(self, value, spec):
@@ -43,9 +43,9 @@ if('init_custom_formatter'):
       elif  str(spec).endswith("xnosp"):  return str(value).replace(' ','')
       elif  str(spec).endswith("xcaps"):  return (''.join(word.title()
               if vxx else word for vxx, word in enumerate(str(value).split('_'))))
-      elif  str(spec).endswith("xcaml"):  return (re.sub(
-        '([a-z0-9])([A-Z])', r'\1_\2',
-        re.sub('(.)([A-Z][a-z]+)', r'\1_\2', str(value))).lower())
+      elif  str(spec).endswith("xundr"):  return (re.sub(
+              '([a-z0-9])([A-Z])', r'\1_\2',
+              re.sub('(.)([A-Z][a-z]+)', r'\1_\2', str(value))).lower())
       else:
         try:
           vout = super(CustFmt,self).format_field(value, spec)
@@ -68,9 +68,9 @@ if('init_custom_formatter'):
 if('test_custom_formatter'):
 
   odata   =   yaml.safe_load('''
-    project:    ThisTest123
-    owner:      MyDogHasFleas
-    classname:  my_dog_has_fleas
+    project:        ThisTest123
+    projcaps:       This Test 123
+    projunder:      this_test_123
     django_info:
       engine:     django.db.backends.postgresql
       dbname:     mytestdb
@@ -109,8 +109,15 @@ if(not 'show_demo_usage::render'):
 
 if(not not 'show_demo_usage::render'):
   print PyHeredoc("""
-  <%owner:xcaml%>
-  <%classname:xcaps%>
+  $<%project:xundr%>
+  $<%project:xcaps%>
+
+  $<%projcaps:xundr%>
+  $<%projcaps:xcaps%>
+
+  $<%projunder:xundr%>
+  $<%projunder:xcaps%>
+
   """,odata).dedent()
 
 

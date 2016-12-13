@@ -32,7 +32,7 @@ if('init_python'):
 
 ### ----------------------------------
 if('init_custom_formatter'):
-  class CuFo001(string.Formatter): ## YES_WORKY with autonumbering
+  class CuFo001(string.Formatter): ## YES_WORKY ;; custom conversion specifier
     '''
     CuFo001 -- testing override of string.format()
     * here we do not care about empty brace {} autonumbering
@@ -87,5 +87,6 @@ if('test_custom_formatter'):
   ''')
 
   fmt = CuFo001()
-  print('{project!a}'.format(**odata))
+  print(fmt.format('''{project!q}''',**odata))
+
 

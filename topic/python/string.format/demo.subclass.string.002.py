@@ -12,9 +12,15 @@
 ###     desc: |
 ###         * demo code showing an alternate use of string.format()
 ###     seealso: |
+###         * https://tobywf.com/2015/12/custom-formatters/
 ###         * http://stackoverflow.com/questions/21664318/subclass-string-formatter
 ###         * https://www.python.org/dev/peps/pep-3101/
 ### <end-file_info>
+
+### BUGNAG:
+### http://bugs.python.org/issue13579
+### 2.7 doesn't support !a or 'ascii()' // ValueError: Unknown conversion specifier a
+
 '''
 
 ### ----------------------------------
@@ -27,19 +33,29 @@ if('init_python'):
 ### ----------------------------------
 if('init_custom_formatter'):
   class CuFo001(string.Formatter): ## YES_WORKY with autonumbering
-      '''
-      CuFo001 -- testing override of string.format()
-      * here we do not care about empty brace {} autonumbering
-      '''
-      def __init__(self):
-        super(CuFo001, self).__init__()
+    '''
+    CuFo001 -- testing override of string.format()
+    * here we do not care about empty brace {} autonumbering
+    '''
+    def __init__(self):
+      super(CuFo001, self).__init__()
 
-      def format_field(self, value, format_string):
-        # handle an invalid format
-        if format_string == "i":
-            return self.eng(value)
-        else:
-            return super(CuFo001,self).format_field(value, format_string)
+    def reverse(self, vout):
+      vout = str(vout)[::-1]
+      return vout
+
+    def convert_field(self, value, conversion):
+      if conversion == 'q':
+        return self.reverse(value)
+      else:
+        return super(CuFo001,self).convert_field(value, conversion)
+
+    def format_field(self, value, spec):
+      # handle any invalid format
+      if spec == "q":
+        return self.reverse(value)
+      else:
+        return super(CuFo001,self).format_field(value, spec)
 
 ### ----------------------------------
 if('test_custom_formatter'):
@@ -71,7 +87,5 @@ if('test_custom_formatter'):
   ''')
 
   fmt = CuFo001()
-  print('{}'.format(0.055412))
-  print(fmt.format("{0:i} ", 55654654231654))
-  print(fmt.format("{}", 0.00254641))
+  print('{project!a}'.format(**odata))
 

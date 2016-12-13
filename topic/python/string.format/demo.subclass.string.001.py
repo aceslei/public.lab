@@ -11,55 +11,106 @@
 ###     lastupdate: "__lastupdate__"
 ###     desc: |
 ###         * demo code showing an alternate use of string.format()
+###         * demo showing loop output
 ###     seealso: |
 ###         * http://stackoverflow.com/questions/35574349/python-format-string-with-custom-delimiters
+###         * http://stackoverflow.com/questions/9589301/python-heredoc
+###         * href="smartpath://mytrybits/p/trypython/lab2014/readme.txt" find="blends_cocos_luring"
 ### <end-file_info>
 '''
 
 ### ----------------------------------
 if('init_python'):
   import re
+  import textwrap
   import yaml
 
 ### ----------------------------------
 if('init_custom_formatter'):
-  class PythonHereDoc(str):
-    '''extend python str.format() to permit custom placeholder delimiters
+  class PythonHeredoc(str):
+    '''extend python str.format()
+        * permit custom placeholder delimiters
+        * support simple loops
     '''
     def __new__(cls, value, srcdata={}, tkbeg='<%',tkend='%>',):
       return str.__new__(cls,value)
     def __init__(self,value,srcdata={}, tkbeg='<%',tkend='%>'):
       self.srcdata = srcdata;self.tkbeg = tkbeg;self.tkend = tkend;
-    def myformat(self): return(self.__str__()
+    def loop(self,items=[],):
+      vout = ''
+      for curr in items:
+        vout += self.preformat().format(**curr)
+      return vout
+    def preformat(self): return(self.__str__()
       .replace('{','{{').replace('}','}}')
-      .replace(self.tkbeg,'{').replace(self.tkend,'}')
-      .format(**self.srcdata))
+      .replace(self.tkbeg,'{').replace(self.tkend,'}'))
+    def render(self): return(
+      self.preformat().format(**self.srcdata))
 
-### ----------------------------------
-if('show_demo_usage::fill-in-the-blank-document-generation'):
-
-
-  ### ------------------------------------------------------------------------
   odata   =   yaml.safe_load('''
-      username:   tvt173
-      userid:     701803
+    django_info:
+      engine:     django.db.backends.postgresql
+      dbname:     mytestdb
+      dbuser:     mydbuser
+      dbpass:     my/weak/password
+      dbhost:     127.0.0.1
+      dbport:     5432
+    user_table:
+      - username: alphadog
+        userrowid: 1
+        useremail: alpha@gg.com
+      - username: bravomopp
+        userrowid: 2
+        useremail: bravo@gg.com
+    hosts_table:
+      - hostname:  .coffeehouse.com
+        hostaddr:  12.12.12.12
+      - hostname:  .teahouse.com
+        hostaddr:  14.14.14.14
   ''')
 
-  ### ------------------------------------------------------------------------
-  vout    =   PythonHereDoc('''
-  ## Overview
+### ----------------------------------
 
-  This is an introductory document written to <%username%> from Dreftymac.
+if('show_demo_usage::loop'):
+  print PythonHeredoc("""   <%userrowid:<12%>  <%username:<12%> -- <%userpass:^34%>\n""",odata).loop(odata['user_table'])
+  exit()
 
-  ### Introduction
+if('show_demo_usage::PythonHeredoc'):
 
-  Greetings!  I noticed you are a user on Stackoverflow!
 
-  Your user page is located here:
-
-  http://stackoverflow.com/users/<%userid%>/<%username%>
-
-  Thanks for using the site! We programmers need to stick together! ^_^
-
-  ''',odata).myformat()
+  # vout    = (''
+  # + PythonHeredoc('''
+  # ''',odata).render()
+  vout  = (PythonHeredoc('''
+  ALLOWED_HOSTS = [
+  ]
+  DATABASES = {
+      'default': {
+          'ENGINE':   '<%django_info[engine]%>',
+          'NAME':     '<%django_info[dbname]%>',
+          'USER':     '<%django_info[dbuser]%>',
+          'PASSWORD': '<%django_info[dbpass]%>',
+          'HOST':     '<%django_info[dbhost]%>',
+          'PORT':     '<%django_info[dbname]%>',
+      }
+  }
+  ''',odata).render()
+  )
   print vout
+  exit()
+
+
+
+if('document_sample_output::PythonHeredoc'):
+  '''
+  DATABASES = {
+      'default': {
+          'ENGINE':   'django.db.backends.postgresql',
+          'NAME':     'mytestdb',
+          'USER':     'mydbuser',
+          'PASSWORD': 'my/weak/password',
+          'HOST':     '127.0.0.1',
+          'PORT':     'mytestdb',
+      }
+  }
+  '''

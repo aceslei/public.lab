@@ -15,6 +15,7 @@
 ###         * https://tobywf.com/2015/12/custom-formatters/
 ###         * http://stackoverflow.com/questions/21664318/subclass-string-formatter
 ###         * https://www.python.org/dev/peps/pep-3101/
+###         * https://en.wikipedia.org/wiki/Camel_case#Variations_and_synonyms
 ### <end-file_info>
 
 ### BUGNAG:
@@ -32,30 +33,31 @@ if('init_python'):
 
 ### ----------------------------------
 if('init_custom_formatter'):
-  class CuFo003(string.Formatter): ## NO_WORKY -- not recursing all the way try chainable filters
+  class CustFmt(string.Formatter): ## a few custom filters non-recursive
     def __init__(self):
-      super(CuFo003, self).__init__()
+      super(CustFmt, self).__init__()
     def format_field(self, value, spec):
-      if    str(spec.split('-')[-1]).endswith("xiden"):
-        return self.format_field(str(value),"".join(spec.split('-')[0:-1]))
-      elif  str(spec.split('-')[-1]).endswith("xrev"):
-        return self.format_field(str(value)[::-1],"".join(spec.split('-')[0:-1]))
-      elif  str(spec.split('-')[-1]).endswith("xupp"):
-        return self.format_field(str(value).upper(),"".join(spec.split('-')[0:-1]))
-      elif  str(spec.split('-')[-1]).endswith("xsqe"):
-        return self.format_field(str(value).replace(' ',''),"".join(spec.split('-')[0:-1]))
+      if    str(spec).endswith("xiden"):  return str(value)
+      elif  str(spec).endswith("xrev"):   return str(value)[::-1]
+      elif  str(spec).endswith("xupp"):   return str(value).upper()
+      elif  str(spec).endswith("xnosp"):  return str(value).replace(' ','')
+      elif  str(spec).endswith("xcaps"):  return (''.join(word.title()
+              if vxx else word for vxx, word in enumerate(str(value).split('_'))))
+      elif  str(spec).endswith("xcaml"):  return (re.sub(
+        '([a-z0-9])([A-Z])', r'\1_\2',
+        re.sub('(.)([A-Z][a-z]+)', r'\1_\2', str(value))).lower())
       else:
         try:
-          vout = super(CuFo003,self).format_field(value, spec)
+          vout = super(CustFmt,self).format_field(value, spec)
         except:
-          vout = super(CuFo003,self).format_field(value, '')
+          vout = super(CustFmt,self).format_field(value, '')
         return vout
   class PyHeredoc(str):
     def __new__(cls, value, srcdata={}):
       return str.__new__(cls,value)
     def __init__(self,value,srcdata={}, tkbeg='<%',tkend='%>'):
       self.srcdata  =   srcdata;self.tkbeg = tkbeg;self.tkend = tkend;
-      self.fmt      =   CuFo003()
+      self.fmt      =   CustFmt()
     def loop(self,items=[],): return "".join([ self.fmt.format(self.tokenize(),**vxx)for vxx in items])
     def tokenize(self): return(self.__str__().replace('{','{{').replace('}','}}')
       .replace(self.tkbeg,'{').replace(self.tkend,'}'))
@@ -66,7 +68,9 @@ if('init_custom_formatter'):
 if('test_custom_formatter'):
 
   odata   =   yaml.safe_load('''
-    project: Testing  1   2   3
+    project:    ThisTest123
+    owner:      MyDogHasFleas
+    classname:  my_dog_has_fleas
     django_info:
       engine:     django.db.backends.postgresql
       dbname:     mytestdb
@@ -105,7 +109,8 @@ if(not 'show_demo_usage::render'):
 
 if(not not 'show_demo_usage::render'):
   print PyHeredoc("""
-  <%project:-xsqe-xrev-xupp%>
+  <%owner:xcaml%>
+  <%classname:xcaps%>
   """,odata).dedent()
 
 

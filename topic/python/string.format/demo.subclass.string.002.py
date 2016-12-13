@@ -26,10 +26,17 @@ if('init_python'):
 
 ### ----------------------------------
 if('init_custom_formatter'):
-  class CustFormatter(string.Formatter): ## NO_WORKY with autonumbering
+  class CustFormatter(string.Formatter): ## YES_WORKY with autonumbering
       "Defines special formatting"
       def __init__(self):
           super(CustFormatter, self).__init__()
+          self.last_number = 0
+
+      def get_value(self, key, args, kwargs):
+          if key == '':
+              key = self.last_number
+              self.last_number += 1
+          return super(CustFormatter, self).get_value(key, args, kwargs)
 
       def powerise10(self, x):
           if x == 0: return 0, 0
@@ -59,5 +66,5 @@ if('test_custom_formatter'):
   fmt = CustFormatter()
   print('{}'.format(0.055412))
   print(fmt.format("{0:i} ", 55654654231654))
-  print(fmt.format("{0}", 0.00254641))
+  print(fmt.format("{}", 0.00254641))
 

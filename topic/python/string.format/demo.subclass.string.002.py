@@ -33,19 +33,27 @@ if('init_python'):
 ### ----------------------------------
 if('init_custom_formatter'):
   class CuFo003(string.Formatter): ## combine with PyHeredoc
-    '''
-    CuFo003 -- testing override of string.format()
-    * here we do not care about empty brace {} autonumbering bug
-    '''
     def __init__(self):
       super(CuFo003, self).__init__()
-
     def format_field(self, value, spec):
       if spec   == "xiden": return str(value)
       elif spec == "xrev":  return str(value)[::-1]
       elif spec == "xupp":  return str(value).upper()
       else:
         return super(CuFo003,self).format_field(value, spec)
+  class PyHeredoc(str):
+    def __new__(cls, value, srcdata={}, tkbeg='<%',tkend='%>',):
+      return str.__new__(cls,value)
+    def __init__(self,value,srcdata={}, tkbeg='<%',tkend='%>'):
+      self.srcdata  =   srcdata;self.tkbeg = tkbeg;self.tkend = tkend;
+      self.fmt      =   CuFo003()
+    def loop(self,items=[],): return "".join([ self.fmt.format(self.tokenize(),**vxx)for vxx in items])
+    def tokenize(self): return(self.__str__()
+      .replace('{','{{').replace('}','}}')
+      .replace(self.tkbeg,'{').replace(self.tkend,'}'))
+    def render(self): return(
+      self.fmt.format(self.tokenize(),**self.srcdata)
+      )
 
 ### ----------------------------------
 if('test_custom_formatter'):
@@ -76,11 +84,15 @@ if('test_custom_formatter'):
         hostaddr:  14.14.14.14
   ''')
 
-  fmt = CuFo003()
-  print(fmt.format('''{project:xupp}''',**odata))
-  print(fmt.format('''
-                   {0[0][username]:xupp}
-                   ''',odata['user_table']))
+if(not not 'show_demo_usage::loop'):
+  odata['tpl_users'] = PyHeredoc("""   -- <%userrowid:0>4%> ;; <%username:^12%> ;; <%useremail:>20%>@@\n""",odata).loop(odata['user_table'])
+  #exit()
 
-  #print(fmt.format('''{project:xupp}''',**odata))
+if(not not 'show_demo_usage::format'):
+  print PyHeredoc("""
+                  <%project:xupp%>
+                  """,odata).render()
+  #exit()
+
+
 

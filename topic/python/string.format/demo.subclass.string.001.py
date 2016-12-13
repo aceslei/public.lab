@@ -46,8 +46,8 @@ if('init_custom_formatter'):
     #     #   .replace('@@bravo','Second')
     #     #   .replace('@@charlie','Third'))
     #   return vout
-    def __format__(self,ssfmt=''):
-      print "CALLED FORMAT"
+    # def __format__(self,ssfmt=''):
+    #   print "CALLED FORMAT"
     def loop(self,items=[],):
       vout = ''
       for curr in items:

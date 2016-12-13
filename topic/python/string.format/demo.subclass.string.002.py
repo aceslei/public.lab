@@ -32,33 +32,20 @@ if('init_python'):
 
 ### ----------------------------------
 if('init_custom_formatter'):
-  class CuFo001(string.Formatter): ## YES_WORKY ;; multichar format_field custom formatter
+  class CuFo002(string.Formatter): ## simplified with multiple filters
     '''
-    CuFo001 -- testing override of string.format()
-    * here we do not care about empty brace {} autonumbering
+    CuFo002 -- testing override of string.format()
+    * here we do not care about empty brace {} autonumbering bug
     '''
     def __init__(self):
-      super(CuFo001, self).__init__()
-
-    def reverse(self, vout):
-      vout = str(vout)[::-1]
-      return vout
-
-    def convert_field(self, value, conversion):
-      '''
-      limited because only accepts one character
-      '''
-      if conversion == 'v':
-        return self.reverse(value)
-      else:
-        return super(CuFo001,self).convert_field(value, conversion)
+      super(CuFo002, self).__init__()
 
     def format_field(self, value, spec):
-      # handle any invalid format
-      if spec == "xupp":
-        return str(value).upper()
+      if spec   == "xiden": return str(value)
+      elif spec == "xrev":  return str(value)[::-1]
+      elif spec == "xupp":  return str(value).upper()
       else:
-        return super(CuFo001,self).format_field(value, spec)
+        return super(CuFo002,self).format_field(value, spec)
 
 ### ----------------------------------
 if('test_custom_formatter'):
@@ -89,10 +76,7 @@ if('test_custom_formatter'):
         hostaddr:  14.14.14.14
   ''')
 
-  fmt = CuFo001()
-  print(fmt.format('''{project!v}''',**odata))
-  print(fmt.format('''{django_info[engine]!v}''',**odata))
-  print(fmt.format('''{user_table[0][username]:xupp}''',**odata))
-
-
-
+  fmt = CuFo002()
+  print(fmt.format('''{project:xiden}''',**odata))
+  print(fmt.format('''{project:xupp}''',**odata))
+  print(fmt.format('''{project:xrev}''',**odata))

@@ -27,7 +27,7 @@ if('init_python'):
 
 ### ----------------------------------
 if('init_custom_formatter'):
-  class PythonHeredoc(str):
+  class PythonHeredoc(str): ## comment out stubs
     '''extend python str.format()
         * permit custom placeholder delimiters
         * support simple loops
@@ -36,18 +36,6 @@ if('init_custom_formatter'):
       return str.__new__(cls,value)
     def __init__(self,value,srcdata={}, tkbeg='<%',tkend='%>'):
       self.srcdata = srcdata;self.tkbeg = tkbeg;self.tkend = tkend;
-    # attempt NO_WORKY as expected
-    # def __format__(self, ssfmt=''):
-    #   vout = ''
-    #   if( ssfmt.endswith('h') ):
-    #     print ssfmt
-    #     # vout = (vout
-    #     #   .replace('@@alpha','First')
-    #     #   .replace('@@bravo','Second')
-    #     #   .replace('@@charlie','Third'))
-    #   return vout
-    # def __format__(self,ssfmt=''):
-    #   print "CALLED FORMAT"
     def loop(self,items=[],):
       vout = ''
       for curr in items:

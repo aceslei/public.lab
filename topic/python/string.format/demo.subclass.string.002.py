@@ -32,7 +32,7 @@ if('init_python'):
 
 ### ----------------------------------
 if('init_custom_formatter'):
-  class CuFo002(string.Formatter): ## demo with multiple filters
+  class CuFo002(string.Formatter): ## demo with different datapaths
     '''
     CuFo002 -- testing override of string.format()
     * here we do not care about empty brace {} autonumbering bug
@@ -77,6 +77,10 @@ if('test_custom_formatter'):
   ''')
 
   fmt = CuFo002()
-  print(fmt.format('''{project:xiden}''',**odata))
   print(fmt.format('''{project:xupp}''',**odata))
-  print(fmt.format('''{project:xrev}''',**odata))
+  print(fmt.format('''
+                   {0[0][username]:xupp}
+                   ''',odata['user_table']))
+
+  #print(fmt.format('''{project:xupp}''',**odata))
+

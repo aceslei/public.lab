@@ -32,7 +32,7 @@ if('init_python'):
 
 ### ----------------------------------
 if('init_custom_formatter'):
-  class CuFo001(string.Formatter): ## YES_WORKY ;; custom conversion specifier
+  class CuFo001(string.Formatter): ## YES_WORKY ;; convert_field singlechar spec
     '''
     CuFo001 -- testing override of string.format()
     * here we do not care about empty brace {} autonumbering
@@ -88,5 +88,6 @@ if('test_custom_formatter'):
 
   fmt = CuFo001()
   print(fmt.format('''{project!q}''',**odata))
-
+  print(fmt.format('''{django_info[engine]!q}''',**odata))
+  print(fmt.format('''{user_table[0][username]!q}''',**odata))
 

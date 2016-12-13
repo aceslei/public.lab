@@ -11,11 +11,8 @@
 ###     lastupdate: "__lastupdate__"
 ###     desc: |
 ###         * demo code showing an alternate use of string.format()
-###         * demo showing loop output
 ###     seealso: |
-###         * http://stackoverflow.com/questions/35574349/python-format-string-with-custom-delimiters
-###         * http://stackoverflow.com/questions/9589301/python-heredoc
-###         * href="smartpath://mytrybits/p/trypython/lab2014/readme.txt" find="blends_cocos_luring"
+###         * http://stackoverflow.com/questions/21664318/subclass-string-formatter
 ### <end-file_info>
 '''
 
@@ -24,18 +21,43 @@ if('init_python'):
   import re
   import textwrap
   import yaml
+  import string
+  from math import floor, log10
 
 ### ----------------------------------
 if('init_custom_formatter'):
+  class CustFormatter(string.Formatter):
+      "Defines special formatting"
+      def __init__(self):
+          super(CustFormatter, self).__init__()
 
-  class HAL9000(object):
-    # type = 'tree'
-    # kinds = [{'name': 'oak'}, {'name': 'maple'}]
-    def __format__(self, ssfmt=''):
-      if (ssfmt == 'open-podbaydoors'):
-          return "I'm afraid I can't do that."
-      return 'HAL 9000'
+      def powerise10(self, x):
+          if x == 0: return 0, 0
+          Neg = x < 0
+          if Neg: x = -x
+          a = 1.0 * x / 10**(floor(log10(x)))
+          b = int(floor(log10(x)))
+          if Neg: a = -a
+          return a, b
+
+      def eng(self, x):
+          a, b = self.powerise10(x)
+          if -3 < b < 3: return "%.4g" % x
+          a = a * 10**(b%3)
+          b = b - b%3
+          return "%.4g*10^%s" % (a, b)
+
+      def format_field(self, value, format_string):
+        # handle an invalid format
+        if format_string == "i":
+            return self.eng(value)
+        else:
+            return super(CustFormatter,self).format_field(value, format_string)
 
 ### ----------------------------------
 if('test_custom_formatter'):
-  print '{:open-podbaydoors}'.format(HAL9000())
+  fmt = CustFormatter()
+  print('{}'.format(0.055412))
+  print(fmt.format("{0:i} ", 55654654231654))
+  print(fmt.format("{}", 0.00254641))
+

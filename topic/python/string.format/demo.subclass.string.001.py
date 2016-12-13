@@ -36,6 +36,16 @@ if('init_custom_formatter'):
       return str.__new__(cls,value)
     def __init__(self,value,srcdata={}, tkbeg='<%',tkend='%>'):
       self.srcdata = srcdata;self.tkbeg = tkbeg;self.tkend = tkend;
+    # attempt NO_WORKY as expected
+    # def __format__(self, ssfmt=''):
+    #   vout = ''
+    #   if( ssfmt.endswith('h') ):
+    #     print ssfmt
+    #     # vout = (vout
+    #     #   .replace('@@alpha','First')
+    #     #   .replace('@@bravo','Second')
+    #     #   .replace('@@charlie','Third'))
+    #   return vout
     def loop(self,items=[],):
       vout = ''
       for curr in items:
@@ -48,6 +58,7 @@ if('init_custom_formatter'):
       self.preformat().format(**self.srcdata))
 
   odata   =   yaml.safe_load('''
+    project: Testing123
     django_info:
       engine:     django.db.backends.postgresql
       dbname:     mytestdb
@@ -62,6 +73,9 @@ if('init_custom_formatter'):
       - username: bravomopp
         userrowid: 2
         useremail: bravo@gg.com
+      - username: charlblobs
+        userrowid: 3
+        useremail: charlie@complicatedmail.com
     hosts_table:
       - hostname:  .coffeehouse.com
         hostaddr:  12.12.12.12
@@ -71,8 +85,12 @@ if('init_custom_formatter'):
 
 ### ----------------------------------
 
+if('show_demo_usage::ssfmt::custom_formatter'):
+  print PythonHeredoc(""" This is the <%project:h%> alpha and this is the @@bravo """,odata).render()
+  exit()
+
 if('show_demo_usage::loop'):
-  print PythonHeredoc("""   <%userrowid:<12%>  <%username:<12%> -- <%userpass:^34%>\n""",odata).loop(odata['user_table'])
+  print PythonHeredoc("""   -- <%userrowid:0>4%> ;; <%username:^12%> ;; <%useremail:>20%>@@\n""",odata).loop(odata['user_table'])
   exit()
 
 if('show_demo_usage::PythonHeredoc'):

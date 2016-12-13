@@ -32,16 +32,15 @@ if('init_python'):
 
 ### ----------------------------------
 if('init_custom_formatter'):
-  class CuFo003(string.Formatter): ## remove tkbeg tkend try chainable filters
+  class CuFo003(string.Formatter): ## try chainable filters
     def __init__(self):
       super(CuFo003, self).__init__()
     def format_field(self, value, spec):
-      sschunk = str(spec.split('-')[-1])
-      if    sschunk.endswith("xiden"):
+      if    str(spec.split('-')[-1]).endswith("xiden"):
         return str(value)
-      elif  sschunk.endswith("xrev"):
+      elif  str(spec.split('-')[-1]).endswith("xrev"):
         return str(value)[::-1]
-      elif  sschunk.endswith("xupp"):
+      elif  str(spec.split('-')[-1]).endswith("xupp"):
         return str(value).upper()
       else:
         try:

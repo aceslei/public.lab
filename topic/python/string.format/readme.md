@@ -31,11 +31,13 @@
 
 ## See also
 
-* nice_documentation     ;; https://pyformat.info/
-* nice_blog_post         ;; https://tobywf.com/2015/12/custom-formatters/
-* nice_blog_post         ;; https://tobywf.com/2015/12/sane-pluralisation/
-* stackoverflow_question ;; http://stackoverflow.com/questions/34214945/advanced-python-string-formatting-with-custom-placeholders
-* stackoverflow_question ;; http://stackoverflow.com/questions/35574349/python-format-string-with-custom-delimiters
-* stackoverflow_question ;; http://stackoverflow.com/questions/5466451/how-can-i-print-a-literal-characters-in-python-string-and-also-use-format
-* dmid crossref          ;; dmid://pyformat_korea_darkish_share
+* nice_documentation       ;; https://pyformat.info/
+* nice_blog_post           ;; https://tobywf.com/2015/12/custom-formatters/
+* nice_blog_post           ;; https://tobywf.com/2015/12/sane-pluralisation/
+* stackoverflow_question   ;; http://stackoverflow.com/questions/34214945/advanced-python-string-formatting-with-custom-placeholders
+* stackoverflow_question   ;; http://stackoverflow.com/questions/35574349/python-format-string-with-custom-delimiters
+* stackoverflow_question   ;; http://stackoverflow.com/questions/5466451/how-can-i-print-a-literal-characters-in-python-string-and-also-use-format
+* github_repo_similar_idea ;; https://github.com/childsish/dynamic-yaml
+* dmid crossref            ;; dmid://pyformat_korea_darkish_share
+
 

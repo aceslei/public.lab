@@ -46,6 +46,8 @@ if('init_custom_formatter'):
     #     #   .replace('@@bravo','Second')
     #     #   .replace('@@charlie','Third'))
     #   return vout
+    def __format__(self,ssfmt=''):
+      print "CALLED FORMAT"
     def loop(self,items=[],):
       vout = ''
       for curr in items:
@@ -85,13 +87,18 @@ if('init_custom_formatter'):
 
 ### ----------------------------------
 
+if(not not 'show_demo_usage::format'):
+  print PythonHeredoc("""  {} """,odata).format(**odata)
+  exit()
+
+if(not not 'show_demo_usage::loop'):
+  print PythonHeredoc("""   -- <%userrowid:0>4%> ;; <%username:^12%> ;; <%useremail:>20%>@@\n""",odata).loop(odata['user_table'])
+  exit()
+
 if('show_demo_usage::ssfmt::custom_formatter'):
   print PythonHeredoc(""" This is the <%project:h%> alpha and this is the @@bravo """,odata).render()
   exit()
 
-if('show_demo_usage::loop'):
-  print PythonHeredoc("""   -- <%userrowid:0>4%> ;; <%username:^12%> ;; <%useremail:>20%>@@\n""",odata).loop(odata['user_table'])
-  exit()
 
 if('show_demo_usage::PythonHeredoc'):
 

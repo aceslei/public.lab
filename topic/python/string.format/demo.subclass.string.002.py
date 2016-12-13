@@ -6,13 +6,14 @@
 ###     last: lastmod="Thu Dec 01 12:03:13 2016"
 ###     tags: python,string,format,subclass,oop,py2
 ###     author: created="dreftymac"
-###     dmid: "narceine_land_brains"
+###     dmid: "upheaval_elm_id"
 ###     filetype: "py"
 ###     lastupdate: "__lastupdate__"
 ###     desc: |
 ###         * demo code showing an alternate use of string.format()
 ###     seealso: |
 ###         * http://stackoverflow.com/questions/21664318/subclass-string-formatter
+###         * https://www.python.org/dev/peps/pep-3101/
 ### <end-file_info>
 '''
 

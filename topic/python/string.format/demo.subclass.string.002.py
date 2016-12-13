@@ -32,26 +32,34 @@ if('init_python'):
 
 ### ----------------------------------
 if('init_custom_formatter'):
-  class CuFo003(string.Formatter): ## combine with PyHeredoc
+  class CuFo003(string.Formatter): ## remove tkbeg tkend try chainable filters
     def __init__(self):
       super(CuFo003, self).__init__()
     def format_field(self, value, spec):
-      if spec   == "xiden": return str(value)
-      elif spec == "xrev":  return str(value)[::-1]
-      elif spec == "xupp":  return str(value).upper()
+      sschunk = str(spec.split('-')[-1])
+      if    sschunk.endswith("xiden"):
+        return str(value)
+      elif  sschunk.endswith("xrev"):
+        return str(value)[::-1]
+      elif  sschunk.endswith("xupp"):
+        return str(value).upper()
       else:
-        return super(CuFo003,self).format_field(value, spec)
+        try:
+          vout = super(CuFo003,self).format_field(value, spec)
+        except:
+          vout = super(CuFo003,self).format_field(value, '')
+        return vout
   class PyHeredoc(str):
-    def __new__(cls, value, srcdata={}, tkbeg='<%',tkend='%>',):
+    def __new__(cls, value, srcdata={}):
       return str.__new__(cls,value)
     def __init__(self,value,srcdata={}, tkbeg='<%',tkend='%>'):
       self.srcdata  =   srcdata;self.tkbeg = tkbeg;self.tkend = tkend;
       self.fmt      =   CuFo003()
     def loop(self,items=[],): return "".join([ self.fmt.format(self.tokenize(),**vxx)for vxx in items])
-    def tokenize(self): return(self.__str__()
-      .replace('{','{{').replace('}','}}')
+    def tokenize(self): return(self.__str__().replace('{','{{').replace('}','}}')
       .replace(self.tkbeg,'{').replace(self.tkend,'}'))
     def render(self): return(self.fmt.format(self.tokenize(),**self.srcdata))
+    def dedent(self): return textwrap.dedent(self.render())
 
 ### ----------------------------------
 if('test_custom_formatter'):
@@ -83,16 +91,22 @@ if('test_custom_formatter'):
   ''')
 
 if(not not 'show_demo_usage::loop'):
-  odata['tpl_users'] = PyHeredoc("""\
+  odata['loop_users'] = PyHeredoc("""\
     -- <%userrowid:0>4%> ;; <%username:^12%> ;; <%useremail:>20%>@@
     """
     ,odata).loop(odata['user_table'])
 
-if(not not 'show_demo_usage::format'):
+if(not not 'show_demo_usage::render'):
+  print PyHeredoc("""
+    <%project:xrev-xupp%>
+    <%loop_users%>
+    """,odata).render()
+
+if(not not 'show_demo_usage::render'):
   print PyHeredoc("""
     <%project:xupp%>
-    <%tpl_users%>
-    """,odata).render()
+    <%loop_users%>
+  """,odata).dedent()
 
 
 

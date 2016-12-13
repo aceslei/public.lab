@@ -39,5 +39,3 @@ if('init_custom_formatter'):
 ### ----------------------------------
 if('test_custom_formatter'):
   print '{:open-podbaydoors}'.format(HAL9000())
-
-

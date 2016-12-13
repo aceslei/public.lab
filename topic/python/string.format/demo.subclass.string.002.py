@@ -32,16 +32,18 @@ if('init_python'):
 
 ### ----------------------------------
 if('init_custom_formatter'):
-  class CuFo003(string.Formatter): ## try chainable filters
+  class CuFo003(string.Formatter): ## NO_WORKY -- not recursing all the way try chainable filters
     def __init__(self):
       super(CuFo003, self).__init__()
     def format_field(self, value, spec):
       if    str(spec.split('-')[-1]).endswith("xiden"):
-        return str(value)
+        return self.format_field(str(value),"".join(spec.split('-')[0:-1]))
       elif  str(spec.split('-')[-1]).endswith("xrev"):
-        return str(value)[::-1]
+        return self.format_field(str(value)[::-1],"".join(spec.split('-')[0:-1]))
       elif  str(spec.split('-')[-1]).endswith("xupp"):
-        return str(value).upper()
+        return self.format_field(str(value).upper(),"".join(spec.split('-')[0:-1]))
+      elif  str(spec.split('-')[-1]).endswith("xsqe"):
+        return self.format_field(str(value).replace(' ',''),"".join(spec.split('-')[0:-1]))
       else:
         try:
           vout = super(CuFo003,self).format_field(value, spec)
@@ -64,7 +66,7 @@ if('init_custom_formatter'):
 if('test_custom_formatter'):
 
   odata   =   yaml.safe_load('''
-    project: Testing123
+    project: Testing  1   2   3
     django_info:
       engine:     django.db.backends.postgresql
       dbname:     mytestdb
@@ -89,24 +91,22 @@ if('test_custom_formatter'):
         hostaddr:  14.14.14.14
   ''')
 
-if(not not 'show_demo_usage::loop'):
+if( not 'show_demo_usage::loop'):
   odata['loop_users'] = PyHeredoc("""\
     -- <%userrowid:0>4%> ;; <%username:^12%> ;; <%useremail:>20%>@@
     """
     ,odata).loop(odata['user_table'])
 
-if(not not 'show_demo_usage::render'):
+if(not 'show_demo_usage::render'):
   print PyHeredoc("""
-    <%project:xrev-xupp%>
+    <%project:xrev%>
     <%loop_users%>
     """,odata).render()
 
 if(not not 'show_demo_usage::render'):
   print PyHeredoc("""
-    <%project:xupp%>
-    <%loop_users%>
+  <%project:-xsqe-xrev-xupp%>
   """,odata).dedent()
-
 
 
 

@@ -9,6 +9,7 @@
 ###     lastupdate: ""
 ###     desc: |
 ###         * python string.Formatter addon
+###         * a solution that extends python str.format() method with a custom class.
 ###     seealso: |
 ###         * __seealso__
 ### <end-file_info>

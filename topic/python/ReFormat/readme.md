@@ -8,39 +8,43 @@
 
 ## Problem
 
+We want to use custom placeholder delimiters with python str.format()
+
   * string.format() is very powerful, but it does not natively support placeholder delimiter modification.
   * string.format() uses curly-brace which is very common and and causes [Delimiter collision](https://en.wikipedia.org/wiki/Delimiter#Delimiter_collision)
   * string.format() default workaround is to double-up the delimiters, which can be cumbersome.
 
 ## Solution
 
+We write a custom class that extends native python str.format()
+
   * extend native python str.format with custom class
   * configure string.format() to support arbitrary delimiter placeholder syntax
   * permit other enhancements such as custom formatters and filters
-
-## Pitfalls
-
-  * requires extension class to str.format()
-  * not intended as a substitute for full-blown sandbox-compatible templating solution
 
 ## Example001: Demo use of a custom ReFormat class
 
   * we wrote a custom ReFormat class that extends python str.format()
 
-  ```
-  ## import custom class
-  import ReFormat
+<pre>
+## import custom class
+import ReFormat
 
-  ## prepare source data
-  odata = { "fname" : "Planet",
-            "lname" : "Earth",
-            "age"   : "4b years",
-           }
+## prepare source data
+odata = { "fname" : "Planet",
+          "lname" : "Earth",
+          "age"   : "4b years",
+         }
 
-  ## format output using .render() method of custom ReFormat class
-  vout = ReFormat.String("Hello <%fname%> <%lname%>!",odata).render()
-  print vout
-  ```
+## format output using .render() method of custom ReFormat class
+vout = ReFormat.String("Hello <%fname%> <%lname%>!",odata).render()
+print vout
+</pre>
+
+## Pitfalls
+
+  * requires extension class to str.format()
+  * not intended as a substitute for full-blown sandbox-compatible templating solution
 
 ## See also
 

@@ -33,11 +33,11 @@ if('init_python'):
 
 ### ----------------------------------
 if('init_custom_formatter'):
-  class CustFmt(string.Formatter): ## non-chainable changecase demo
+  class CuFo004(string.Formatter): ## try alternate chaining methodology
     def __init__(self):
-      super(CustFmt, self).__init__()
+      super(CuFo004, self).__init__()
     def format_field(self, value, spec):
-      if    str(spec).endswith("xiden"):  return str(value)
+      if    str(spec).startswith("xiden"):  return str(value)
       elif  str(spec).endswith("xrev"):   return str(value)[::-1]
       elif  str(spec).endswith("xupp"):   return str(value).upper()
       elif  str(spec).endswith("xnosp"):  return str(value).replace(' ','')
@@ -48,16 +48,16 @@ if('init_custom_formatter'):
               re.sub('(.)([A-Z][a-z]+)', r'\1_\2', str(value))).lower())
       else:
         try:
-          vout = super(CustFmt,self).format_field(value, spec)
+          vout = super(CuFo004,self).format_field(value, spec)
         except:
-          vout = super(CustFmt,self).format_field(value, '')
+          vout = super(CuFo004,self).format_field(value, '')
         return vout
   class PyHeredoc(str):
     def __new__(cls, value, srcdata={}):
       return str.__new__(cls,value)
     def __init__(self,value,srcdata={}, tkbeg='<%',tkend='%>'):
       self.srcdata  =   srcdata;self.tkbeg = tkbeg;self.tkend = tkend;
-      self.fmt      =   CustFmt()
+      self.fmt      =   CuFo004()
     def loop(self,items=[],): return "".join([ self.fmt.format(self.tokenize(),**vxx)for vxx in items])
     def tokenize(self): return(self.__str__().replace('{','{{').replace('}','}}')
       .replace(self.tkbeg,'{').replace(self.tkend,'}'))
@@ -119,6 +119,3 @@ if(not not 'show_demo_usage::render'):
   $<%projunder:xcaps%>
 
   """,odata).dedent()
-
-
-

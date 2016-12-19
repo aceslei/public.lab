@@ -1,0 +1,5 @@
+## local directory gitignore
+
+*.ignore
+*.leo
+*.sh

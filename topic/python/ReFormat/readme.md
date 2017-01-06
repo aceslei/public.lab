@@ -37,7 +37,7 @@ odata = { "fname" : "Planet",
          }
 
 ## format output using .render() method of custom ReFormat class
-vout = ReFormat.String("Hello <%fname%> <%lname%>!",odata).render()
+vout = ReFormat.String("Hello &lt;%fname%&gt; &lt;%lname%&gt;!",odata).render()
 print vout
 </pre>
 

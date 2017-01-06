@@ -69,17 +69,17 @@ if('init_py'):
     '''
     def __new__(cls, value, srcdata={}):
       return str.__new__(cls,value)
-    def __init__(self,value,srcdata={}, tkbeg='<%',tkend='%>'):
-      self.srcdata  =   srcdata;self.tkbeg = tkbeg;self.tkend = tkend;
+    def __init__(self,value,srcdata={}, tkn_beg='<%',tkn_end='%>'):
+      self.srcdata  =   srcdata;self.tkn_beg = tkn_beg;self.tkn_end = tkn_end;
       self.fmt      =   CustFmtShort()
     def loop(self,items=[],): return "".join([ self.fmt.format(self.custom_delimiterize(),**vxx)for vxx in items])
     def custom_delimiterize(self):
       vout = self.__str__()
-      vout = re.sub(re.escape(self.tkbeg)+'\s+',self.tkbeg,vout)
-      vout = re.sub('\s+'+re.escape(self.tkend),self.tkend,vout)
+      vout = re.sub(re.escape(self.tkn_beg)+'\s+',self.tkn_beg,vout)
+      vout = re.sub('\s+'+re.escape(self.tkn_end),self.tkn_end,vout)
       vout = re.sub('\s+:',':',vout)
       vout = (vout.replace('{','{{').replace('}','}}')
-      .replace(self.tkbeg,'{').replace(self.tkend,'}'))
+      .replace(self.tkn_beg,'{').replace(self.tkn_end,'}'))
       return vout
     def render(self): return(self.fmt.format(self.custom_delimiterize(),**self.srcdata))
     def dedent(self): return textwrap.dedent(self.render())

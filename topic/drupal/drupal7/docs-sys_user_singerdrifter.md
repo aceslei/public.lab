@@ -3,7 +3,7 @@
 ### document_metadata:
 ###   - date: created="2017-02-02"
 ###     last: lastmod="2017-02-02"
-###     tags: drupal,d7,views,user,permissions 
+###     tags: drupal,d7,views,user,permissions
 ###     dmid: "wariest_waylaid_wind"
 ###     filetype: "md"
 ###     lastupdate: "__lastupdate__"

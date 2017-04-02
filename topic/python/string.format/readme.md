@@ -40,4 +40,3 @@
 * github_repo_similar_idea ;; https://github.com/childsish/dynamic-yaml
 * dmid crossref            ;; dmid://pyformat_korea_darkish_share
 
-

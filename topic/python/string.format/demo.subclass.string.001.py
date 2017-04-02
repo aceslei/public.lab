@@ -4,7 +4,7 @@
 ### main:
 ###   - date: created="Thu Dec 01 12:03:13 2016"
 ###     last: lastmod="Thu Dec 01 12:03:13 2016"
-###     tags: python,string,format,subclass,oop,py2
+###     tags: python,string,format,subclass,oop,py2,codegeneration,
 ###     author: created="dreftymac"
 ###     dmid: "narceine_land_brains"
 ###     filetype: "py"

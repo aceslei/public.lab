@@ -4,24 +4,24 @@
 ### main:
 ###   - date: created="Thu Dec 01 12:03:13 2016"
 ###     last: lastmod="Thu Dec 01 12:03:13 2016"
-###     tags: python,string,format,subclass,oop,py2
+###     tags: python,str.format,subclass,oop,py2
 ###     author: created="dreftymac"
 ###     dmid: "upheaval_elm_id"
 ###     filetype: "py"
-###     lastupdate: "__lastupdate__"
+###     lastupdate: "demo subclass str.format"
 ###     desc: |
-###         * demo code showing an alternate use of string.format()
+###         ##
+###         * demo code showing an alternate use of str.format()
+###         ## BUGNAG:
+###         * http://bugs.python.org/issue13579
+###         * 2.7 doesn't support !a or 'ascii()' // ValueError: Unknown conversion specifier a
 ###     seealso: |
+###         ##
 ###         * https://tobywf.com/2015/12/custom-formatters/
-###         * http://stackoverflow.com/questions/21664318/subclass-string-formatter
+###         * http://stackoverflow.com/questions/21664318/subclass-str.formatter
 ###         * https://www.python.org/dev/peps/pep-3101/
 ###         * https://en.wikipedia.org/wiki/Camel_case#Variations_and_synonyms
 ### <end-file_info>
-
-### BUGNAG:
-### http://bugs.python.org/issue13579
-### 2.7 doesn't support !a or 'ascii()' // ValueError: Unknown conversion specifier a
-
 '''
 
 ### ----------------------------------

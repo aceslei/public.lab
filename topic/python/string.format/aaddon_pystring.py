@@ -16,6 +16,10 @@
 ###         * __seealso__
 ### <end-file_info>
 """
+if('init_python'):
+  import re
+  import string
+  import textwrap
 
 if('init_custom_formatter'):
   class CuFo004(string.Formatter): ## try alternate chaining methodology
@@ -37,6 +41,7 @@ if('init_custom_formatter'):
         except:
           vout = super(CuFo004,self).format_field(value, '')
         return vout
+  ##;;
   class PyHeredoc(str):
     def __new__(cls, value, srcdata={}):
       return str.__new__(cls,value)
@@ -44,7 +49,10 @@ if('init_custom_formatter'):
       self.srcdata  =   srcdata;self.tkbeg = tkbeg;self.tkend = tkend;
       self.fmt      =   CuFo004()
     def loop(self,items=[],): return "".join([ self.fmt.format(self.tokenize(),**vxx)for vxx in items])
-    def tokenize(self): return(self.__str__().replace('{','{{').replace('}','}}')
+    def tokenize(self): return(self.__str__()
+      .replace('{','{{')
+      .replace('}','}}')
       .replace(self.tkbeg,'{').replace(self.tkend,'}'))
     def render(self): return(self.fmt.format(self.tokenize(),**self.srcdata))
     def dedent(self): return textwrap.dedent(self.render())
+  ##;;

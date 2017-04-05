@@ -17,24 +17,25 @@
 ### <end-file_info>
 """
 
-class PowerString(str):
+if('py_init_class'):
+  class PowerString(str):
     def __new__(cls, string):
-        ob = super(DerivedClass, cls).__new__(cls, string)
+        ob = super(PowerString, cls).__new__(cls, string)
         return ob
 
     def upper(self):
-        caps = super(DerivedClass, self).upper()
-        return DerivedClass(caps + '123')
+        caps = super(PowerString, self).upper()
+        return PowerString(caps + '123')
 
-    def __getattribute__(self, name):
-        att = super(DerivedClass, self).__getattribute__(name)
+    def __getattr__(self, name):
+        def _missing(*args, **kwargs):
+            print "A missing method was called."
+            print "The object was %r, the method was %r. " % (self, name)
+            print "It was called with %r and %r as arguments" % (args, kwargs)
+        return _missing
 
-        if not callable(att):
-            return att
+if('py_demo_process'):
+  mytest =  PowerString("Hello World")
+  print mytest.upper().reverse()
 
-        def call_me_later(*args, **kwargs):
-            result = att(*args, **kwargs)
-            if isinstance(result, basestring):
-                return DerivedClass(result)
-            return result
-        return call_me_later
+

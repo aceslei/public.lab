@@ -21,7 +21,7 @@ if('init_python'):
   import textwrap
 
 if('init_custom_formatter'):
-  class CuFo004(string.Formatter): ## try alternate chaining methodology
+  class CuFo004(string.Formatter):
     def __init__(self):
       super(CuFo004, self).__init__()
     def format_field(self, value, spec):
@@ -41,6 +41,8 @@ if('init_custom_formatter'):
           vout = super(CuFo004,self).format_field(value, '')
         return vout
   ##;;
+
+if('py_heredoc'):
   class PyHeredoc(str):
     def __new__(cls, value, srcdata={}):
       return str.__new__(cls,value)

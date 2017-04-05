@@ -6,8 +6,7 @@
 ###     dmid: "pyaddon_strformat_faucetqptysan"
 ###     date: created="2017-04-05"
 ###     last: lastmod="2017-04-05"
-###     tags: tags
-###     author: created="__author__"
+###     author: created="dreftymac"
 ###     filetype: "yaml"
 ###     lastupdate: "__lastupdate__"
 ###     desc: |

@@ -18,8 +18,8 @@
 ###     seealso: |
 ###         ## weblinks
 ###         * https://tobywf.com/2015/12/custom-formatters/
-###         * http://stackoverflow.com/questions/21664318/subclass-str.formatter
 ###         * https://www.python.org/dev/peps/pep-3101/
+###         * http://stackoverflow.com/questions/21664318/subclass-str.formatter
 ###         * https://en.wikipedia.org/wiki/Camel_case#Variations_and_synonyms
 ### <end-file_info>
 '''
@@ -29,12 +29,11 @@ if('init_python'):
   import re
   import textwrap
   import yaml
-  from aaddon_pystring import CuFo004
   from aaddon_pystring import PyHeredoc
+    ## href="./aaddon_pystring.py"
 
 ### ----------------------------------
 if('init_source_data'):
-
   odata   =   yaml.safe_load('''
     project:        ThisCamelCaseWord
     projcaps:       This Capitalized Sentence
@@ -65,12 +64,11 @@ if('init_source_data'):
 
 ### ----------------------------------
 if('show_demo_output'):
-
   if( not not 'show_demo_usage::loop'):
-    odata['loop_users'] = PyHeredoc(textwrap.dedent("""
-      -- <%userrowid:0>4%> ;; <%username:^12%> ;; <%useremail:>20%>@@""")
+    odata['loop_users'] = PyHeredoc("""
+      -- <%userrowid:0>4%> ;; <%username:^12%> ;; <%useremail:>20%>@@"""
       ,odata).loop(odata['user_table'])
-    print odata['loop_users']
+    ##print odata['loop_users']
 
   if(not not 'show_demo_usage::render'):
     print PyHeredoc("""
@@ -90,6 +88,3 @@ if('show_demo_output'):
     $<%projunder:xcaps%>
 
     """,odata).dedent()
-
-
-

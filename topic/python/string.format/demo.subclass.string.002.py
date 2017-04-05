@@ -68,9 +68,9 @@ if('init_custom_formatter'):
 if('test_custom_formatter'):
 
   odata   =   yaml.safe_load('''
-    project:        ThisTest123
-    projcaps:       This Test 123
-    projunder:      this_test_123
+    project:        ThisCamelCaseWord
+    projcaps:       This Capitalized Sentence
+    projunder:      this_underscore_word
     django_info:
       engine:     django.db.backends.postgresql
       dbname:     mytestdb

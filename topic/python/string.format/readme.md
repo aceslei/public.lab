@@ -31,7 +31,7 @@
 
 ## See also
 
-* nice_documentation       ;; https://pyformat.info/
+* nice_documentation       ;; https://pyformat.info
 * nice_blog_post           ;; https://tobywf.com/2015/12/custom-formatters/
 * nice_blog_post           ;; https://tobywf.com/2015/12/sane-pluralisation/
 * stackoverflow_question   ;; http://stackoverflow.com/questions/34214945/advanced-python-string-formatting-with-custom-placeholders

@@ -42,7 +42,7 @@ if('init_custom_formatter'):
         return vout
   ##;;
 
-if('py_heredoc'):
+if('init_py_heredoc'):
   class PyHeredoc(str):
     def __new__(cls, value, srcdata={}):
       return str.__new__(cls,value)

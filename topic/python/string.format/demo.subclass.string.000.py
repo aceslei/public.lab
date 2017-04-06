@@ -39,20 +39,33 @@ if('py_init_class'):
 
     def fmtbody(self,sbody=None,**kwargs):
       bdedent = bool(kwargs['dedent'])if ('dedent' in kwargs) else False
+      iindent = int(kwargs['indent']) if ('indent' in kwargs) else -1
       sstrip  = str(kwargs['strip'])  if ('strip' in kwargs)  else ""
       sputs   = str(kwargs['puts'])   if ('puts' in kwargs)   else ""
       schomp  = str(kwargs['chomp'])  if ('chomp' in kwargs)  else ""
-      sbody   = str(sbody)            if (not sbody is None)  else "_blank_"
-      if(bdedent):  sbody = textwrap.dedent(sbody)
+      sbody   = str(sbody)            if (not sbody is None)  else ""
+      if(bdedent or iindent > -1):  sbody = textwrap.dedent(sbody)
+        ## TODO: decide whether you want this
+        ## dedent is implicit when indent is present and gt neg1
       if(sstrip):   sbody = self.fmtstrip(sbody,sstrip)
       if(schomp):   sbody = self.fmtchomp(sbody,schomp)
       if(sputs):    sbody = self.fmtputs(sbody,sputs)
+      if(iindent > -1): sbody = self.fmtindent(sbody,iindent)
       return sbody
     ##;;
 
     def fmtchomp(self,sbody='',spec='',):
       if("<" in spec): sbody = str(sbody).rstrip()
       if(">" in spec): sbody = re.sub(r'\n$','',str(sbody))
+      return sbody
+    ##;;
+
+    def fmtindent(self,sbody='',isize='0',):
+      isize = int(isize)
+      if(int(isize)>-1):
+        aabody    = sbody.splitlines()
+        aabody    = [(isize * ' ') + line + "\n" for line in aabody]
+        sbody     = ''.join(aabody)
       return sbody
     ##;;
 
@@ -159,7 +172,7 @@ if('demo_holdingsqlalan'):
                   Hello
                   Hello
                   """
-                  ,puts='>',strip='<>',dedent=1)
+                  ,puts='>',strip='<>',indent=2)
           .concat("----").puts()
           .each("""
                 * {fname}

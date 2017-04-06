@@ -13,7 +13,7 @@
 ###     desc: |
 ###         * __desc__
 ###     seealso: |
-###         * __seealso__
+###         * http://stackoverflow.com/questions/10660435/pythonic-way-to-create-a-long-multi-line-string
 ### <end-file_info>
 """
 
@@ -172,7 +172,7 @@ if('demo_holdingsqlalan'):
                   Hello
                   Hello
                   """
-                  ,puts='>',strip='<>',indent=2)
+                  ,puts='>',strip='<>',indent=0)
           .concat("----").puts()
           .each("""
                 * {fname}

@@ -24,12 +24,15 @@ if('py_init_class'):
   class PyHereDoc(object):
     def __init__(self, strval=None, ddata=None ):
       self.strval = strval  if bool(strval) else ""
-      self.ddata  = ddata   if bool(ddata) else {}
+      self.ddata  = ddata   if bool(ddata)  else {}
     ##;;
 
     ##
-    def anonop(self,*args):   return self
-    ###
+    def anonop(self,*args):
+      return self
+    ##;;
+
+    ##
     def chomp(self,spec='<>'):
       if(">" in spec): self.strval = str(self.strval).rstrip()
       if("<" in spec): self.strval = str(self.strval).lstrip()
@@ -53,7 +56,7 @@ if('py_init_class'):
     def reverse(self):
       self.strval = str(self.strval)[::-1];
       return self
-    def __str__(self):
+    def __repr__(self):
       return self.render()
     def __getattr__(self, name):
       try:
@@ -65,17 +68,17 @@ if('py_init_class'):
 
 if('demo_holdingsqlalan'):
   vout = ''
-  vout += (PyHereDoc("""
+  vout += str(PyHereDoc("""
           Hello
                      """)
           .chomp("<>")
           .concat(".there")
           .concat(".world")
           .puts('>')
-          .render()
+          .concat("----")
           )
-  vout += (PyHereDoc("----").render())
-  vout += (PyHereDoc("----").render())
+  # vout += (PyHereDoc.render())
+  # vout += (PyHereDoc("----").render())
   print vout
   pass
 

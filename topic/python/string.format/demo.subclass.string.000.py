@@ -34,10 +34,18 @@ if('py_init_class'):
 
     ##
     def chomp(self,spec='<>'):
+      '''
+      Note: chomp left ('<') removes newline at beginning of *entire string*,
+          not the most recently concatted portion thereof
+      '''
       if(">" in spec): self.strval = str(self.strval).rstrip()
       if("<" in spec): self.strval = str(self.strval).lstrip()
       return self
     def puts(self,spec='<>'):
+      '''
+      Note: puts left ('<') puts newline at beginning of *entire string*,
+          not the most recently concatted portion thereof
+      '''
       if(">" in spec): self.strval = str(self.strval)+"\n"
       if("<" in spec): self.strval = "\n"+str(self.strval)
       return self
@@ -75,6 +83,8 @@ if('demo_holdingsqlalan'):
           .concat(".there")
           .concat(".world")
           .puts('>')
+          .concat("----").puts('')
+          .concat("----").puts('')
           .concat("----")
           )
   # vout += (PyHereDoc.render())

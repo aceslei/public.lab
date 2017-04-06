@@ -9,7 +9,7 @@
 ###     tags: tags
 ###     author: created="__author__"
 ###     filetype: "yaml"
-###     lastupdate: "make concat work like each"
+###     lastupdate: "TODO: make concat work like each"
 ###     desc: |
 ###         * __desc__
 ###     seealso: |

@@ -18,7 +18,7 @@
 """
 
 if('py_init_class'):
-  class PowerString(object):
+  class PyHereDoc(object):
     def __init__(self, strval=None, ddata=None ):
       if strval is None:
         self.strval = ""
@@ -31,8 +31,7 @@ if('py_init_class'):
         self.ddata = ddata
     ##;;
 
-    def aanoop(self,*args):
-      print args
+    def anonop(self,*args):
       self.strval = self.strval
       return self
     ##;;
@@ -58,37 +57,31 @@ if('py_init_class'):
     def __getattr__(self, name):
       ##
       try:
-        self.strval = getattr(str,name)(self.strval)
+        self.strval = object.getattr(str,name)(self.strval)
+        return self.anonop
       except Exception: pass
       ##
-      return self.aanoop
+      return self.anonop
     ##;;
-
-    # def __getattr__(self, name):
-    #   if(True):
-    #     self.strval = getattr(str,name)(self.strval)
-    #     #return self.__new__(self.strval,self.ddata)
-    #   elif(True):
-    #     def _missing(*args, **kwargs):
-    #       print "A missing method was called."
-    #       print "The object was %r, the method was %r. " % (self, name)
-    #       print "It was called with %r and %r as arguments" % (args, kwargs)
-    #     return _missing
-    #   #return self
-    # ##;;
 
 if('demo_holdingsqpalan'):
   ## all of these work as expected and desired
-  print PowerString("hello world")
-  print PowerString("hello world").reverse()
-  print PowerString("hello world").title().reverse()
-  print PowerString("hello world").reverse().title()
-  print PowerString("hello world").startswith('hello')
+  odata = dict()
+  odata['fname'] = 'Homer'
+  odata['lname'] = 'Simpson'
+  print PyHereDoc("hello world")
+  print PyHereDoc("hello world").reverse()
+  print PyHereDoc("hello world").title().reverse()
+  print PyHereDoc("hello world").reverse().title()
+  print PyHereDoc("hello world").startswith('hello')
+    ## this behaves differently when PyHereDoc extends str (breaks chainability)
+    ## this behaves differently when PyHereDoc extends object
+    ## learnbit ;; __getattr__ works by
   pass
 
 if(not 'demo_holdingsqlalan'):
   ## all of these work as expected and desired
-  print PowerString("hello world").upper().reverse().render()
+  print PyHereDoc("hello world").upper().reverse().render()
   pass
 
 if( 'demo_holdingsqmalan'):
@@ -101,24 +94,24 @@ if( 'demo_holdingsqnalan'):
 
 
 # if('demo002'):
-#   print PowerString("hello world").render()
-#   print PowerString("hello world").reverse().render()
-#   print PowerString("hello world").title().reverse().render()
-#   print PowerString("hello world").reverse().title().render()
+#   print PyHereDoc("hello world").render()
+#   print PyHereDoc("hello world").reverse().render()
+#   print PyHereDoc("hello world").title().reverse().render()
+#   print PyHereDoc("hello world").reverse().title().render()
 #   pass
 
 # if(not not 'py_demo_process'):
-#   mytest =  PowerString("hello world").reverse().title().render()
+#   mytest =  PyHereDoc("hello world").reverse().title().render()
 #   print mytest
 #   pass
 #
 # if(not not 'py_demo_process'):
-#   print type(PowerString("hello world").upper)
+#   print type(PyHereDoc("hello world").upper)
 #
 # if(not 'py_demo_process'):
-#   mytest =  PowerString("hello world").reverse().title().render()
+#   mytest =  PyHereDoc("hello world").reverse().title().render()
 #   print mytest
 #   pass
 
 # if(not 'py_demo_process'):
-#   print PowerString("hello world").noexisto(1,2,*[3,4,5],**{'1':'1'})
+#   print PyHereDoc("hello world").noexisto(1,2,*[3,4,5],**{'1':'1'})

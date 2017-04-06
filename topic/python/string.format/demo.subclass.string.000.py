@@ -9,21 +9,23 @@
 ###     tags: tags
 ###     author: created="__author__"
 ###     filetype: "yaml"
-###     lastupdate: "render is optional on print but not variable concat"
+###     lastupdate: "each method working without str.format"
 ###     desc: |
 ###         * __desc__
 ###     seealso: |
 ###         * __seealso__
 ### <end-file_info>
 """
+
 if('init_python'):
   import re
   import string
   import textwrap
   import yaml
+
 if('py_init_class'):
   class PyHereDoc(object):
-    def __init__(self, strval=None, ddata=None ):
+    def __init__(self, strval=None, ddata=None, dconfig=None, ):
       self.strval = strval  if bool(strval) else ""
       self.ddata  = ddata   if bool(ddata)  else {}
     ##;;
@@ -31,6 +33,12 @@ if('py_init_class'):
     ##
     def anonop(self,*args):
       return self
+    ##;;
+
+    def fmtputs(self,sbody='',spec='',):
+      sbeg = "\n"  if("<" in spec) else ""
+      send = "\n"  if(">" in spec) else ""
+      return "".join([sbeg,"{0}".format(sbody),send])
     ##;;
 
     ##
@@ -66,10 +74,10 @@ if('py_init_class'):
       return self
     ##;;
 
-    def each(self,items=[],spec=""):
+    def each(self,items=None,spec=None):
       sbeg = "\n"  if("<" in spec) else ""
       send = "\n"  if(">" in spec) else ""
-      self.strval = self.strval + str( "".join([ "".join([sbeg,"{0}".format(vxx),send]) for vxx in items]) )
+      self.strval = self.strval + str( "".join([ self.fmtputs(str(vxx),str(spec)) for vxx in items]) )
       return self
     ##;;
 
@@ -116,7 +124,7 @@ if('demo_holdingsqlalan'):
           .concat(".there").puts('>')
           .concat(".world").puts('>')
           .concat("----").puts('>')
-          .each([1,2,3,4,5],'>')
+          .each(odata,'>')
           .concat("----").puts('>')
           .concat("----")
           )

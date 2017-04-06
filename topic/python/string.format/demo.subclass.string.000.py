@@ -9,7 +9,7 @@
 ###     tags: tags
 ###     author: created="__author__"
 ###     filetype: "yaml"
-###     lastupdate: "TODO: make concat work like each"
+###     lastupdate: "DONE: concat accepts fmtbody operations"
 ###     desc: |
 ###         * __desc__
 ###     seealso: |
@@ -35,11 +35,14 @@ if('py_init_class'):
       return self
     ##;;
 
-    def fmtbody(self,sbody,**kwargs):
+    ### ------------------------------------------------------------------------
+
+    def fmtbody(self,sbody=None,**kwargs):
       bdedent = bool(kwargs['dedent'])if ('dedent' in kwargs) else False
       sstrip  = str(kwargs['strip'])  if ('strip' in kwargs)  else ""
       sputs   = str(kwargs['puts'])   if ('puts' in kwargs)   else ""
       schomp  = str(kwargs['chomp'])  if ('chomp' in kwargs)  else ""
+      sbody   = str(sbody)            if (not sbody is None)  else "_blank_"
       if(bdedent):  sbody = textwrap.dedent(sbody)
       if(sstrip):   sbody = self.fmtstrip(sbody,sstrip)
       if(schomp):   sbody = self.fmtchomp(sbody,schomp)
@@ -84,10 +87,21 @@ if('py_init_class'):
       return self
     ##;;
 
-    def concat(self,*args):
-      aatemp = [str(self.strval)]
-      aatemp.extend( str(vxx) for vxx in list(args) )
-      self.strval = "".join( aatemp )
+    ### ------------------------------------------------------------------------
+
+    def concat(self,sbody=None,**kwargs):
+      sbody       = str(sbody) if (not sbody is None) else "_blank_"
+      sputs       = str(kwargs['puts']) if ('puts' in kwargs) else ""
+      sstrip      = str(kwargs['strip']) if ('strip' in kwargs) else ""
+      odata       = (kwargs['data'])     if ('data' in kwargs) else None
+      if(False):  pass
+      elif( odata ):
+        self.strval += self.fmtbody(sbody.format(**odata),**kwargs)
+      elif( not odata ):
+        self.strval += self.fmtbody(str(sbody),**kwargs)
+      # aatemp = [str(self.strval)]
+      # aatemp.extend( str(vxx) for vxx in list(args) )
+      # self.strval = "".join( aatemp )
       return self
     ##;;
 
@@ -144,16 +158,21 @@ if('demo_holdingsqlalan'):
                   Hello
                   Hello
                   Hello
-                  """).puts()
-          .concat(".world").puts()
+                  """
+                  ,puts='>',strip='<>',dedent=1)
           .concat("----").puts()
           .each("""
                 * {fname}
                 * {lname}
                 """
                 ,data=odata,puts='>',strip='<>',chomp='',dedent=1)
-          .puts('')
-          .concat("----").puts()
+          .concat("----")
+          .puts()
+          .concat("""
+                  World
+                  World
+                  World
+                  """).puts()
           .concat("----")
           )
   print vout

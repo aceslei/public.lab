@@ -9,7 +9,7 @@
 ###     tags: tags
 ###     author: created="__author__"
 ###     filetype: "yaml"
-###     lastupdate: "each method working without str.format"
+###     lastupdate: "each method add str.format body field"
 ###     desc: |
 ###         * __desc__
 ###     seealso: |
@@ -77,7 +77,10 @@ if('py_init_class'):
     def each(self,items=None,spec=None):
       sbeg = "\n"  if("<" in spec) else ""
       send = "\n"  if(">" in spec) else ""
-      self.strval = self.strval + str( "".join([ self.fmtputs(str(vxx),str(spec)) for vxx in items]) )
+      self.strval = self.strval + str( "".join([
+        self.fmtputs(str(vxx),str(spec))
+        for vxx in items
+        ]))
       return self
     ##;;
 

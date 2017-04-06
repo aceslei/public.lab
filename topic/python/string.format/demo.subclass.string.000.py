@@ -79,10 +79,10 @@ if('py_init_class'):
 
 if('demo_holdingsqpalan'):
   ## all of these work as expected and desired
-  print PowerString("hello world").render()
-  print PowerString("hello world").reverse().render()
-  print PowerString("hello world").title().reverse().render()
-  print PowerString("hello world").reverse().title().render()
+  print PowerString("hello world")
+  print PowerString("hello world").reverse()
+  print PowerString("hello world").title().reverse()
+  print PowerString("hello world").reverse().title()
   print PowerString("hello world").startswith('hello')
   pass
 

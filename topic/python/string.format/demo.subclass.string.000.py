@@ -9,14 +9,17 @@
 ###     tags: tags
 ###     author: created="__author__"
 ###     filetype: "yaml"
-###     lastupdate: "__lastupdate__"
+###     lastupdate: "render is optional on print but not variable concat"
 ###     desc: |
 ###         * __desc__
 ###     seealso: |
 ###         * __seealso__
 ### <end-file_info>
 """
-
+if('init_python'):
+  import re
+  import string
+  import textwrap
 if('py_init_class'):
   class PyHereDoc(object):
     def __init__(self, strval=None, ddata=None ):
@@ -24,27 +27,59 @@ if('py_init_class'):
       self.ddata  = ddata   if bool(ddata) else {}
     ##;;
 
-    def anonop(self,*args): return self
-    def render(self): return str(self.strval)
-    def reverse(self): self.strval = str(self.strval)[::-1];
+    ##
+    def anonop(self,*args):   return self
+    ###
+    def chomp(self,spec='<>'):
+      if(">" in spec): self.strval = str(self.strval).rstrip()
+      if("<" in spec): self.strval = str(self.strval).lstrip()
       return self
-    ##;;
-
+    def puts(self,spec='<>'):
+      if(">" in spec): self.strval = str(self.strval)+"\n"
+      if("<" in spec): self.strval = "\n"+str(self.strval)
+      return self
+    def concat(self,*args):
+      aatemp = [str(self.strval)]
+      aatemp.extend( str(vxx) for vxx in list(args) )
+      self.strval = "".join( aatemp )
+      return self
+    def dedent(self):
+      self.strval = textwrap.dedent(self.strval)
+      return self
+    def loop(self,items=[],):
+      return "".join([ str(vxx) for vxx in items])
+    def render(self):
+      return str(self.strval)
+    def reverse(self):
+      self.strval = str(self.strval)[::-1];
+      return self
     def __str__(self):
       return self.render()
-    ##;;
-
     def __getattr__(self, name):
-      ##
       try:
         self.strval = getattr(str,name)(self.strval)
-        return self.anonop
       except Exception: pass
       ##
       return self.anonop
     ##;;
 
-if('demo_holdingsqpalan'):
+if('demo_holdingsqlalan'):
+  vout = ''
+  vout += (PyHereDoc("""
+          Hello
+                     """)
+          .chomp("<>")
+          .concat(".there")
+          .concat(".world")
+          .puts('>')
+          .render()
+          )
+  vout += (PyHereDoc("----").render())
+  vout += (PyHereDoc("----").render())
+  print vout
+  pass
+
+if(not 'demo_holdingsqpalan'):
   ## all of these work as expected and desired
   odata = dict()
   odata['fname'] = 'Homer'
@@ -58,19 +93,6 @@ if('demo_holdingsqpalan'):
     ## this behaves differently when PyHereDoc extends str (breaks chainability)
     ##    subclassing str breaks chainability because __getattr__ never gets called on `startswith`
     ##    since a `startswith` method exists on str
-  pass
-
-if(not 'demo_holdingsqlalan'):
-  ## all of these work as expected and desired
-  print PyHereDoc("hello world").upper().reverse().render()
-  pass
-
-if( 'demo_holdingsqmalan'):
-  ## all of these work as expected and desired
-  pass
-
-if( 'demo_holdingsqnalan'):
-  ## all of these work as expected and desired
   pass
 
 

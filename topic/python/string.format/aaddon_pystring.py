@@ -57,5 +57,3 @@ if('init_py_heredoc'):
     def render(self): return(self.fmt.format(self.tokenize(),**self.srcdata))
     def dedent(self): return textwrap.dedent(self.render())
   ##;;
-
-  

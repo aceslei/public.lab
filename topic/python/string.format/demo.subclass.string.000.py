@@ -9,7 +9,7 @@
 ###     tags: tags
 ###     author: created="__author__"
 ###     filetype: "yaml"
-###     lastupdate: "each method body field support"
+###     lastupdate: "make concat work like each"
 ###     desc: |
 ###         * __desc__
 ###     seealso: |
@@ -27,12 +27,30 @@ if('py_init_class'):
   class PyHereDoc(object):
     def __init__(self, strval=None, ddata=None, dconfig=None, ):
       self.strval = strval  if bool(strval) else ""
-      self.ddata  = ddata   if bool(ddata)  else {}
+      self.ddata  = ddata   if bool(ddata)  else []
     ##;;
 
     ##
     def anonop(self,*args):
       return self
+    ##;;
+
+    def fmtbody(self,sbody,**kwargs):
+      bdedent = bool(kwargs['dedent'])if ('dedent' in kwargs) else False
+      sstrip  = str(kwargs['strip'])  if ('strip' in kwargs)  else ""
+      sputs   = str(kwargs['puts'])   if ('puts' in kwargs)   else ""
+      schomp  = str(kwargs['chomp'])  if ('chomp' in kwargs)  else ""
+      if(bdedent):  sbody = textwrap.dedent(sbody)
+      if(sstrip):   sbody = self.fmtstrip(sbody,sstrip)
+      if(schomp):   sbody = self.fmtchomp(sbody,schomp)
+      if(sputs):    sbody = self.fmtputs(sbody,sputs)
+      return sbody
+    ##;;
+
+    def fmtchomp(self,sbody='',spec='',):
+      if("<" in spec): sbody = str(sbody).rstrip()
+      if(">" in spec): sbody = re.sub(r'\n$','',str(sbody))
+      return sbody
     ##;;
 
     def fmtputs(self,sbody='',spec='',):
@@ -78,13 +96,14 @@ if('py_init_class'):
       return self
     ##;;
 
-    def each(self,sbody=None,items=None,**kwargs):
+    def each(self,sbody=None,**kwargs):
       sbody       = str(sbody) if (not sbody is None) else "{0}"
       sputs       = str(kwargs['puts']) if ('puts' in kwargs) else ""
       sstrip      = str(kwargs['strip']) if ('strip' in kwargs) else ""
+      odata       = (kwargs['data'])     if ('data' in kwargs) else self.ddata
       self.strval = self.strval + str( "".join([
-        self.fmtputs(self.fmtstrip(sbody.format(**vxx),str(sstrip)),str(sputs))
-        for vxx in items
+        self.fmtbody(sbody.format(**vxx),**kwargs)
+        for vxx in odata
         ]))
       return self
     ##;;
@@ -120,21 +139,20 @@ if('demo_holdingsqlalan'):
     lname: Dimpson
   ''')
   vout = ''
-  vout += str(PyHereDoc(
-          """
-          Hello
-          Hello
-          Hello
-          """)
-          .dedent()
-          .offstrip("<>")
-          .puts('>')
-          .concat(".there").puts()
+  vout += str(PyHereDoc()
+          .concat("""
+                  Hello
+                  Hello
+                  Hello
+                  """).puts()
           .concat(".world").puts()
           .concat("----").puts()
           .each("""
-                {fname}
-                """,odata,puts='>',strip='<>')
+                * {fname}
+                * {lname}
+                """
+                ,data=odata,puts='>',strip='<>',chomp='',dedent=1)
+          .puts('')
           .concat("----").puts()
           .concat("----")
           )

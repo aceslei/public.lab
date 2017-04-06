@@ -21,6 +21,7 @@
   * TODO ;; methods to add
       * tofile()
       * tozipfile()
+      * eachwithindex
       * possible chainable formatters in customized str.formatter?
   * TODO ;; make option for default fmtbody args, to reduce linenoise
       * <img src="data:image/png;base64,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" />
@@ -153,6 +154,8 @@ if('py_init_class'):
       return self
     ##;;
 
+    ### ------------------------------------------------------------------------
+
     def __repr__(self):
       return self.render()
     ##;;
@@ -173,10 +176,13 @@ if('demo_holdingsqlalan'):
   peopletable:
   - fname: Homer
     lname: Simpson
+    age:   33
   - fname: Maggie
     lname: Bimpson
+    age:   23
   - fname: Lisa
     lname: Dimpson
+    age:   13
   ''')
   vout = ''
   vout += str(PyHereDoc()
@@ -189,8 +195,8 @@ if('demo_holdingsqlalan'):
             """
             ,data=odata['projectinfo'], puts='>',strip='<>',indent=0)
           .each("""
-            * {fname:<12}|{lname}
-          """,data=odata['peopletable'],puts='>',strip='<>',dedent=1)
+            * {fname:<12}|{lname:^20}|{age}
+            """,data=odata['peopletable'],puts='>',strip='<>',dedent=1)
           .concat("""
             ----
             ## World: {basename}
@@ -220,26 +226,3 @@ if(not 'demo_holdingsqpalan'):
     ##    since a `startswith` method exists on str
   pass
 
-
-# if('demo002'):
-#   print PyHereDoc("hello world").render()
-#   print PyHereDoc("hello world").reverse().render()
-#   print PyHereDoc("hello world").title().reverse().render()
-#   print PyHereDoc("hello world").reverse().title().render()
-#   pass
-
-# if(not not 'py_demo_process'):
-#   mytest =  PyHereDoc("hello world").reverse().title().render()
-#   print mytest
-#   pass
-#
-# if(not not 'py_demo_process'):
-#   print type(PyHereDoc("hello world").upper)
-#
-# if(not 'py_demo_process'):
-#   mytest =  PyHereDoc("hello world").reverse().title().render()
-#   print mytest
-#   pass
-
-# if(not 'py_demo_process'):
-#   print PyHereDoc("hello world").noexisto(1,2,*[3,4,5],**{'1':'1'})

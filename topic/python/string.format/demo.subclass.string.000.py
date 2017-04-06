@@ -20,34 +20,14 @@
 if('py_init_class'):
   class PyHereDoc(object):
     def __init__(self, strval=None, ddata=None ):
-      if strval is None:
-        self.strval = ""
-      elif (True):
-        self.strval = strval
-
-      if ddata is None:
-        self.ddata = {}
-      elif (True):
-        self.ddata = ddata
+      self.strval = strval  if bool(strval) else ""
+      self.ddata  = ddata   if bool(ddata) else {}
     ##;;
 
-    def anonop(self,*args):
-      self.strval = self.strval
+    def anonop(self,*args): return self
+    def render(self): return str(self.strval)
+    def reverse(self): self.strval = str(self.strval)[::-1];
       return self
-    ##;;
-
-    def title(self):
-      self.strval = str(self.strval).title()
-      return self
-    ##;;
-
-    def reverse(self):
-      self.strval = str(self.strval)[::-1]
-      return self
-    ##;;
-
-    def render(self):
-      return str(self.strval)
     ##;;
 
     def __str__(self):
@@ -57,7 +37,7 @@ if('py_init_class'):
     def __getattr__(self, name):
       ##
       try:
-        self.strval = object.getattr(str,name)(self.strval)
+        self.strval = getattr(str,name)(self.strval)
         return self.anonop
       except Exception: pass
       ##
@@ -74,9 +54,10 @@ if('demo_holdingsqpalan'):
   print PyHereDoc("hello world").title().reverse()
   print PyHereDoc("hello world").reverse().title()
   print PyHereDoc("hello world").startswith('hello')
+    ## this behaves differently when PyHereDoc extends object (keeps chainability)
     ## this behaves differently when PyHereDoc extends str (breaks chainability)
-    ## this behaves differently when PyHereDoc extends object
-    ## learnbit ;; __getattr__ works by
+    ##    subclassing str breaks chainability because __getattr__ never gets called on `startswith`
+    ##    since a `startswith` method exists on str
   pass
 
 if(not 'demo_holdingsqlalan'):

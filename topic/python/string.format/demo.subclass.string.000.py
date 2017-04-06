@@ -9,7 +9,7 @@
 ###     tags: tags
 ###     author: created="__author__"
 ###     filetype: "yaml"
-###     lastupdate: "puts-right is the default puts format"
+###     lastupdate: "each method body field support"
 ###     desc: |
 ###         * __desc__
 ###     seealso: |
@@ -41,14 +41,19 @@ if('py_init_class'):
       return "".join([sbeg,"{0}".format(str(sbody)),send])
     ##;;
 
+    def fmtstrip(self,sbody='',spec='',):
+      if(">" in spec): sbody = str(sbody).rstrip()
+      if("<" in spec): sbody = str(sbody).lstrip()
+      return sbody
+    ##;;
+
     ##
     def strip(self,spec='<>'):
       '''
       Note: strip left ('<') removes newline at beginning of *entire string*,
           not the most recently concatted portion thereof
       '''
-      if(">" in spec): self.strval = str(self.strval).rstrip()
-      if("<" in spec): self.strval = str(self.strval).lstrip()
+      self.strval = self.fmtstrip(self.strval,spec)
       return self
     ##;;
 
@@ -73,9 +78,12 @@ if('py_init_class'):
       return self
     ##;;
 
-    def each(self,items=None,spec=None):
+    def each(self,sbody=None,items=None,**kwargs):
+      sbody       = str(sbody) if (not sbody is None) else "{0}"
+      sputs       = str(kwargs['puts']) if ('puts' in kwargs) else ""
+      sstrip      = str(kwargs['strip']) if ('strip' in kwargs) else ""
       self.strval = self.strval + str( "".join([
-        self.fmtputs(str(vxx),str(spec))
+        self.fmtputs(self.fmtstrip(sbody.format(**vxx),str(sstrip)),str(sputs))
         for vxx in items
         ]))
       return self
@@ -119,12 +127,14 @@ if('demo_holdingsqlalan'):
           Hello
           """)
           .dedent()
-          .strip("<>")
+          .offstrip("<>")
           .puts('>')
           .concat(".there").puts()
           .concat(".world").puts()
           .concat("----").puts()
-          .each(odata,'>')
+          .each("""
+                {fname}
+                """,odata,puts='>',strip='<>')
           .concat("----").puts()
           .concat("----")
           )

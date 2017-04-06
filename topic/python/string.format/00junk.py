@@ -1,4 +1,8 @@
-def demo(*args):
-  print "\n".join(str(vxx) for vxx in (['asdf'] + list(args)))
+def testing(one=1,two=2,**kwargs):
+  print one
+  print two
+  print kwargs
+  print 'dd' in kwargs
+  print 'aa' in kwargs
 
-demo(*[1,2,3])
+testing(1,2,cc='33',aa='1',bb='22',)

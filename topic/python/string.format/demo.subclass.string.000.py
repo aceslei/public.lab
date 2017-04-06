@@ -9,7 +9,7 @@
 ###     tags: tags
 ###     author: created="__author__"
 ###     filetype: "yaml"
-###     lastupdate: "each method add str.format body field"
+###     lastupdate: "puts-right is the default puts format"
 ###     desc: |
 ###         * __desc__
 ###     seealso: |
@@ -38,7 +38,7 @@ if('py_init_class'):
     def fmtputs(self,sbody='',spec='',):
       sbeg = "\n"  if("<" in spec) else ""
       send = "\n"  if(">" in spec) else ""
-      return "".join([sbeg,"{0}".format(sbody),send])
+      return "".join([sbeg,"{0}".format(str(sbody)),send])
     ##;;
 
     ##
@@ -52,13 +52,12 @@ if('py_init_class'):
       return self
     ##;;
 
-    def puts(self,spec='<>'):
+    def puts(self,spec='>'):
       '''
       Note: puts left ('<') puts newline at beginning of *entire string*,
           not the most recently concatted portion thereof
       '''
-      if(">" in spec): self.strval = str(self.strval)+"\n"
-      if("<" in spec): self.strval = "\n"+str(self.strval)
+      self.strval = self.fmtputs(self.strval,spec)
       return self
     ##;;
 
@@ -75,8 +74,6 @@ if('py_init_class'):
     ##;;
 
     def each(self,items=None,spec=None):
-      sbeg = "\n"  if("<" in spec) else ""
-      send = "\n"  if(">" in spec) else ""
       self.strval = self.strval + str( "".join([
         self.fmtputs(str(vxx),str(spec))
         for vxx in items
@@ -124,15 +121,13 @@ if('demo_holdingsqlalan'):
           .dedent()
           .strip("<>")
           .puts('>')
-          .concat(".there").puts('>')
-          .concat(".world").puts('>')
-          .concat("----").puts('>')
+          .concat(".there").puts()
+          .concat(".world").puts()
+          .concat("----").puts()
           .each(odata,'>')
-          .concat("----").puts('>')
+          .concat("----").puts()
           .concat("----")
           )
-  # vout += (PyHereDoc.render())
-  # vout += (PyHereDoc("----").render())
   print vout
   pass
 

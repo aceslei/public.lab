@@ -20,6 +20,7 @@ if('init_python'):
   import re
   import string
   import textwrap
+  import yaml
 if('py_init_class'):
   class PyHereDoc(object):
     def __init__(self, strval=None, ddata=None ):
@@ -33,14 +34,16 @@ if('py_init_class'):
     ##;;
 
     ##
-    def chomp(self,spec='<>'):
+    def strip(self,spec='<>'):
       '''
-      Note: chomp left ('<') removes newline at beginning of *entire string*,
+      Note: strip left ('<') removes newline at beginning of *entire string*,
           not the most recently concatted portion thereof
       '''
       if(">" in spec): self.strval = str(self.strval).rstrip()
       if("<" in spec): self.strval = str(self.strval).lstrip()
       return self
+    ##;;
+
     def puts(self,spec='<>'):
       '''
       Note: puts left ('<') puts newline at beginning of *entire string*,
@@ -49,23 +52,40 @@ if('py_init_class'):
       if(">" in spec): self.strval = str(self.strval)+"\n"
       if("<" in spec): self.strval = "\n"+str(self.strval)
       return self
+    ##;;
+
     def concat(self,*args):
       aatemp = [str(self.strval)]
       aatemp.extend( str(vxx) for vxx in list(args) )
       self.strval = "".join( aatemp )
       return self
+    ##;;
+
     def dedent(self):
       self.strval = textwrap.dedent(self.strval)
       return self
-    def loop(self,items=[],):
-      return "".join([ str(vxx) for vxx in items])
+    ##;;
+
+    def each(self,items=[],spec=""):
+      sbeg = "\n"  if("<" in spec) else ""
+      send = "\n"  if(">" in spec) else ""
+      self.strval = self.strval + str( "".join([ "".join([sbeg,"{0}".format(vxx),send]) for vxx in items]) )
+      return self
+    ##;;
+
     def render(self):
       return str(self.strval)
+    ##;;
+
     def reverse(self):
       self.strval = str(self.strval)[::-1];
       return self
+    ##;;
+
     def __repr__(self):
       return self.render()
+    ##;;
+
     def __getattr__(self, name):
       try:
         self.strval = getattr(str,name)(self.strval)
@@ -75,16 +95,29 @@ if('py_init_class'):
     ##;;
 
 if('demo_holdingsqlalan'):
+  odata = yaml.safe_load('''
+  - fname: Homer
+    lname: Simpson
+  - fname: Maggie
+    lname: Bimpson
+  - fname: Lisa
+    lname: Dimpson
+  ''')
   vout = ''
-  vout += str(PyHereDoc("""
+  vout += str(PyHereDoc(
+          """
           Hello
-                     """)
-          .chomp("<>")
-          .concat(".there")
-          .concat(".world")
+          Hello
+          Hello
+          """)
+          .dedent()
+          .strip("<>")
           .puts('>')
-          .concat("----").puts('')
-          .concat("----").puts('')
+          .concat(".there").puts('>')
+          .concat(".world").puts('>')
+          .concat("----").puts('>')
+          .each([1,2,3,4,5],'>')
+          .concat("----").puts('>')
           .concat("----")
           )
   # vout += (PyHereDoc.render())

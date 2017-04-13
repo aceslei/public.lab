@@ -7,7 +7,7 @@ This is the general-purpose publically-accessible github lab space for dreftymac
 * Bible-Database
 * ga-beacon
 * angular-dynamic-forms
-* sampleproject
+* pypa/sampleproject
 * awesome
 * template-chooser
 * xdebug.org

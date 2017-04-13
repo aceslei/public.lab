@@ -2,6 +2,21 @@
 
 This is the general-purpose publically-accessible github lab space for dreftymac.org
 
+## Forkable
+
+Bible-Database
+ga-beacon
+angular-dynamic-forms
+sampleproject
+awesome
+template-chooser
+xdebug.org
+learnxinyminutes-docs
+petl
+coffin
+oath
+node-google-oauth2
+
 ## Links
 
 * youtube fun link

@@ -196,7 +196,7 @@ if('demo_holdingsqlalan'):
             ,data=odata['projectinfo'], puts='>',strip='<>',indent=0)
           .each("""
             * {fname:<12}|{lname:^20}|{age}
-            """,data=odata['peopletable'],puts='>',strip='<>',dedent=1)
+                """,data=odata['peopletable'],puts='>',strip='<>',dedent=1)
           .concat("""
             ----
             ## World: {basename}
@@ -225,4 +225,3 @@ if(not 'demo_holdingsqpalan'):
     ##    subclassing str breaks chainability because __getattr__ never gets called on `startswith`
     ##    since a `startswith` method exists on str
   pass
-

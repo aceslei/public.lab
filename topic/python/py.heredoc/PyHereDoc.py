@@ -26,27 +26,34 @@ if('region::python_init'):
   import yaml
 
 if('py_init_class'):
-  class FormatExtend(str):
-    '''
-    extend python str.format()
-      * permit custom placeholder delimiters
-      * support simple loops
-    '''
-    def __new__(cls, value, srcdata={}, tkbeg='<%',tkend='%>',):
-      return str.__new__(cls,value)
-    def __init__(self,value,srcdata={}, tkbeg='<%',tkend='%>'):
-      self.srcdata = srcdata;self.tkbeg = tkbeg;self.tkend = tkend;
-    def tokenize(self): return(self.__str__()
-      .replace('{','{{').replace('}','}}')
-      .replace(self.tkbeg,'{').replace(self.tkend,'}'))
-    def render(self): return(
-      self.tokenize().format(**self.srcdata))
+  # class FormatExtend(str):
+  #   '''
+  #   extend python str.format()
+  #     * permit custom placeholder delimiters
+  #     * support simple loops
+  #   '''
+  #   def __new__(cls, value, srcdata={}, tkbeg='<%',tkend='%>',):
+  #     return str.__new__(cls,value)
+  #   def __init__(self,value,srcdata={}, tkbeg='<%',tkend='%>'):
+  #     self.srcdata = srcdata;self.tkbeg = tkbeg;self.tkend = tkend;
+  #   def tokenize(self): return(self.__str__()
+  #     .replace('{','{{').replace('}','}}')
+  #     .replace(self.tkbeg,'{').replace(self.tkend,'}'))
+  #   def render(self): return(
+  #     self.tokenize().format(**self.srcdata))
 
   class Document(object):
     def __init__(self, strval=None, ddata=None, dconfig=None, ):
-      self.strval = strval  if bool(strval) else ""
-      self.ddata  = ddata   if bool(ddata)  else []
-    ##;;
+      self.strval   = strval    if bool(strval)   else ""
+      self.ddata    = ddata     if bool(ddata)    else []
+      self.dconfig  = dconfig   if bool(dconfig)  else {}
+    ##enddef;;
+    def proc_retokenize(self,ssinput=''):
+      return(ssinput.__str__()
+        .replace('{','{{').replace('}','}}')
+        .replace(self.tkbeg,'{').replace(self.tkend,'}')
+        )
+    ##enddef;;
 
     ### ------------------------------------------------------------------------
 
@@ -88,7 +95,8 @@ if('py_init_class'):
       if(sputs):        sbody = self.fmtputs(sbody,sputs)
       if(iindent > -1): sbody = self.fmtindent(sbody,iindent)
       return sbody
-    ##;;
+      ##;;
+    ##enddef
 
     def fmtchomp(self,sbody='',spec='',):
       if("<" in spec): sbody = str(sbody).rstrip()
@@ -143,11 +151,14 @@ if('py_init_class'):
       sputs       = str(kwargs['puts'])  if ('puts'   in kwargs) else ""
       sstrip      = str(kwargs['strip']) if ('strip'  in kwargs) else ""
       odata       = (kwargs['data'])     if ('data'   in kwargs) else None
-      if(False):  pass
+      if(False):
+        pass
       elif( odata ):
+        #self.strval += self.fmtbody(sbody.format(**odata),**kwargs)
         self.strval += self.fmtbody(sbody.format(**odata),**kwargs)
+        FormatExtend(sbody,odata).render()
       elif( not odata ):
-        self.strval += self.fmtbody(str(sbody),**kwargs)
+        #self.strval += self.fmtbody(str(sbody),**kwargs)
       return self
     ##;;
 

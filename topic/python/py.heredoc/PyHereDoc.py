@@ -7,7 +7,7 @@
 ###     date: created="2017-05-12"
 ###     last: lastmod="2017-05-12"
 ###     tags: python,heredoc,template
-###     lastupdate: "__lastupdate__"
+###     lastupdate: "modify __init__ method of Document"
 ###     desc: |
 ###         * base class for python heredoc
 ###     seealso: |
@@ -43,12 +43,20 @@ if('py_init_class'):
   #     self.tokenize().format(**self.srcdata))
 
   class Document(object):
-    def __init__(self, strval=None, ddata=None, dconfig=None, ):
-      self.strval   = strval    if bool(strval)   else ""
-      self.ddata    = ddata     if bool(ddata)    else []
-      self.dconfig  = dconfig   if bool(dconfig)  else {}
+    def __init__(self, dconfig=None, ):
+      #self.strval   =   strval    if bool(strval)   else ""
+      #self.ddata    =   ddata     if bool(ddata)    else []
+      self.dconfig  =   dconfig   if bool(dconfig)  else {}
+      self.tkbeg    =   self.dconfig.pop('{', '{')
+      self.tkend    =   self.dconfig.pop('}', '}')
     ##enddef;;
     def proc_retokenize(self,ssinput=''):
+      return(ssinput.__str__()
+        .replace('{','{{').replace('}','}}')
+        .replace(self.tkbeg,'{').replace(self.tkend,'}')
+        )
+    ##enddef;;
+    def proc_format(self,ssinput=''):
       return(ssinput.__str__()
         .replace('{','{{').replace('}','}}')
         .replace(self.tkbeg,'{').replace(self.tkend,'}')
@@ -156,9 +164,8 @@ if('py_init_class'):
       elif( odata ):
         #self.strval += self.fmtbody(sbody.format(**odata),**kwargs)
         self.strval += self.fmtbody(sbody.format(**odata),**kwargs)
-        FormatExtend(sbody,odata).render()
       elif( not odata ):
-        #self.strval += self.fmtbody(str(sbody),**kwargs)
+        self.strval += self.fmtbody(str(sbody),**kwargs)
       return self
     ##;;
 

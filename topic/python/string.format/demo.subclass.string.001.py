@@ -76,15 +76,17 @@ if('init_custom_formatter'):
 ### ----------------------------------
 if(not not 'show_demo_usage::format'):
   print PythonHeredoc(""" {project} """,odata).format(**odata)
-  exit()
+  ##exit()
 
 if(not not 'show_demo_usage::loop'):
-  print PythonHeredoc("""   -- <%userrowid:0>4%> ;; <%username:^12%> ;; <%useremail:>20%>@@\n""",odata).loop(odata['user_table'])
-  exit()
+  print PythonHeredoc("""   -- <%userrowid:0>4%> ;; <%username:^12%> ;; <%useremail:<30%> @@\n""",odata).loop(odata['user_table'])
+  ##exit()
 
 if('show_demo_usage::ssfmt::custom_formatter'):
-  print PythonHeredoc(""" This is the <%project:h%> alpha and this is the @@bravo """,odata).render()
-  exit()
+  ## NO_WORKY
+  ## print PythonHeredoc(""" This is the <%project:h%> alpha and this is the @@bravo """,odata).render()
+  ## exit()
+  pass
 
 if('show_demo_usage::PythonHeredoc'):
   # vout    = (''

@@ -3,39 +3,46 @@
 ### <beg-file_info>
 ### document_metadata:
 ###   - caption: "__blank__"
-###     dmid: "demo_subclassstring_tilingqpsocket"
-###     date: created="2017-04-05"
-###     last: lastmod="2017-04-05"
-###     tags: tags
-###     author: created="__author__"
-###     filetype: "yaml"
-###     lastupdate: "clean up heredoc demo to minimize method calls"
+###     dmid: "pyheredoc_zigggy07glare"
+###     date: created="2017-05-12"
+###     last: lastmod="2017-05-12"
+###     tags: python,heredoc,template
+###     lastupdate: "__lastupdate__"
 ###     desc: |
-###         * __desc__
+###         * base class for python heredoc
 ###     seealso: |
-###         * http://stackoverflow.com/questions/10660435/pythonic-way-to-create-a-long-multi-line-string
+###         * __seealso__
 ### <end-file_info>
-
-## TODO: todoitems_securelyqpstash
-  * TODO ;; add in CustomFormat with placeholder syntax
-  * TODO ;; methods to add
-      * tofile()
-      * tozipfile()
-      * eachwithindex
-      * possible chainable formatters in customized str.formatter?
-  * TODO ;; make option for default fmtbody args, to reduce linenoise
-      * 
-
 """
 
-if('init_python'):
+## begin_ init
+if('region::python_init'):
+  ## std lib
+  import os
   import re
   import string
+  import sys
   import textwrap
   import yaml
 
 if('py_init_class'):
-  class PyHereDoc(object):
+  class FormatExtend(str):
+    '''
+    extend python str.format()
+      * permit custom placeholder delimiters
+      * support simple loops
+    '''
+    def __new__(cls, value, srcdata={}, tkbeg='<%',tkend='%>',):
+      return str.__new__(cls,value)
+    def __init__(self,value,srcdata={}, tkbeg='<%',tkend='%>'):
+      self.srcdata = srcdata;self.tkbeg = tkbeg;self.tkend = tkend;
+    def tokenize(self): return(self.__str__()
+      .replace('{','{{').replace('}','}}')
+      .replace(self.tkbeg,'{').replace(self.tkend,'}'))
+    def render(self): return(
+      self.tokenize().format(**self.srcdata))
+
+  class Document(object):
     def __init__(self, strval=None, ddata=None, dconfig=None, ):
       self.strval = strval  if bool(strval) else ""
       self.ddata  = ddata   if bool(ddata)  else []
@@ -54,15 +61,31 @@ if('py_init_class'):
       bdedent = bool(kwargs['dedent'])if ('dedent' in kwargs) else False
       iindent = int(kwargs['indent']) if ('indent' in kwargs) else -1
       sstrip  = str(kwargs['strip'])  if ('strip' in kwargs)  else ""
-      sputs   = str(kwargs['puts'])   if ('puts' in kwargs)   else ""
+      sputs   = str(kwargs['puts'])   if ('puts'  in kwargs)  else ""
       schomp  = str(kwargs['chomp'])  if ('chomp' in kwargs)  else ""
+      snewl   = str(kwargs['n'])      if ('n'     in kwargs)  else ""
       sbody   = str(sbody)            if (not sbody is None)  else ""
+      ## kwargs synonym convert
+      if (snewl == ''):
+        pass
+      elif (snewl == '1'):
+        sputs = '<'
+      elif (snewl == '2'):
+        sputs = '>'
+      elif (snewl == '3'):
+        sputs = '<>'
+      ##;;
+
+      ##
       if(bdedent or iindent > -1):  sbody = textwrap.dedent(sbody)
         ## TODO: decide whether you want this
         ## dedent is implicit when indent is present and gt neg1
-      if(sstrip):   sbody = self.fmtstrip(sbody,sstrip)
-      if(schomp):   sbody = self.fmtchomp(sbody,schomp)
-      if(sputs):    sbody = self.fmtputs(sbody,sputs)
+      ##;;
+
+      ##
+      if(sstrip):       sbody = self.fmtstrip(sbody,sstrip)
+      if(schomp):       sbody = self.fmtchomp(sbody,schomp)
+      if(sputs):        sbody = self.fmtputs(sbody,sputs)
       if(iindent > -1): sbody = self.fmtindent(sbody,iindent)
       return sbody
     ##;;
@@ -117,19 +140,14 @@ if('py_init_class'):
 
     def concat(self,sbody=None,**kwargs):
       sbody       = str(sbody) if (not sbody is None) else "_blank_"
-      sputs       = str(kwargs['puts']) if ('puts' in kwargs) else ""
-      sstrip      = str(kwargs['strip']) if ('strip' in kwargs) else ""
-      odata       = (kwargs['data'])     if ('data' in kwargs) else None
+      sputs       = str(kwargs['puts'])  if ('puts'   in kwargs) else ""
+      sstrip      = str(kwargs['strip']) if ('strip'  in kwargs) else ""
+      odata       = (kwargs['data'])     if ('data'   in kwargs) else None
       if(False):  pass
       elif( odata ):
         self.strval += self.fmtbody(sbody.format(**odata),**kwargs)
       elif( not odata ):
         self.strval += self.fmtbody(str(sbody),**kwargs)
-      return self
-    ##;;
-
-    def dedent(self):
-      self.strval = textwrap.dedent(self.strval)
       return self
     ##;;
 
@@ -144,6 +162,12 @@ if('py_init_class'):
         ]))
       return self
     ##;;
+
+    def dedent(self):
+      self.strval = textwrap.dedent(self.strval)
+      return self
+    ##;;
+
 
     def render(self):
       return str(self.strval)
@@ -163,65 +187,8 @@ if('py_init_class'):
     def __getattr__(self, name):
       try:
         self.strval = getattr(str,name)(self.strval)
-      except Exception: pass
+      except Exception, exx:
+        pass
       ##
       return self.anonop
     ##;;
-
-if('demo_holdingsqlalan'):
-  odata = yaml.safe_load('''
-  projectinfo:
-    basename: Hello World Project
-    geekname: helloworldproject
-  peopletable:
-  - fname: Homer
-    lname: Simpson
-    age:   33
-  - fname: Maggie
-    lname: Bimpson
-    age:   23
-  - fname: Lisa
-    lname: Dimpson
-    age:   13
-  ''')
-  vout = ''
-  vout += str(PyHereDoc()
-          .concat("""
-            ## Hello: {basename}
-            * Hola
-            * Hello
-            * Bonjour
-            ----
-            """
-            ,data=odata['projectinfo'], puts='>',strip='<>',indent=0)
-          .each("""
-            * {fname:<12}|{lname:^20}|{age}
-                """,data=odata['peopletable'],puts='>',strip='<>',dedent=1)
-          .concat("""
-            ----
-            ## World: {basename}
-            * Mundo
-            * World
-            * Monde
-            ----
-            """
-            ,data=odata['projectinfo'], puts='>',strip='<>',indent=0)
-          )
-  print vout
-  pass
-
-if(not 'demo_holdingsqpalan'):
-  ## all of these work as expected and desired
-  odata = dict()
-  odata['fname'] = 'Homer'
-  odata['lname'] = 'Simpson'
-  print PyHereDoc("hello world")
-  print PyHereDoc("hello world").reverse()
-  print PyHereDoc("hello world").title().reverse()
-  print PyHereDoc("hello world").reverse().title()
-  print PyHereDoc("hello world").startswith('hello')
-    ## this behaves differently when PyHereDoc extends object (keeps chainability)
-    ## this behaves differently when PyHereDoc extends str (breaks chainability)
-    ##    subclassing str breaks chainability because __getattr__ never gets called on `startswith`
-    ##    since a `startswith` method exists on str
-  pass

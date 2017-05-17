@@ -8,7 +8,7 @@
 * A file extension is optional, but Markdown files (.md) are supported.
 
 ## See also
-* (https://dzone.com/articles/github-templates)[https://dzone.com/articles/github-templates] original source of this list
-* (https://twitter.com/apievangelist)[https://twitter.com/apievangelist] Twitter feed original channel 
+* [https://dzone.com/articles/github-templates](https://dzone.com/articles/github-templates) original source of this list
+* [https://twitter.com/apievangelist](https://twitter.com/apievangelist) Twitter feed original channel 
 
 

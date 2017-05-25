@@ -2,6 +2,8 @@
 
 This is a quick writeup of first-impressions and notes on [visualstudio code editor](https://code.visualstudio.com/).
 
+This is from the perspective of a "text editor geek" who is familiar with `Atom` `Sublime` `Vim` 
+
 ## advanced tips and tricks
 * https://github.com/Microsoft/vscode-tips-and-tricks
 * TOTRY ;; json schema for intellisense on JSON files, how does this work?

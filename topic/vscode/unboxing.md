@@ -72,6 +72,9 @@ This is from the perspective of a self-described "text editor geek" who is famil
 * https://stackoverflow.com/questions/29987840/how-to-execute-python-code-from-within-visual-studio-code
 * https://www.stevefenton.co.uk/2015/05/Custom-Tasks-In-Visual-Studio-Code/
 
+### run external commands
+* seealso [custom tasks](#custom-tasks)
+
 ### syntax coloring
 * how to modify default syntax for plain text files
     * https://stackoverflow.com/questions/37681609/is-there-any-plain-text-colorizer-for-vs-code

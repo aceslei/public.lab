@@ -60,6 +60,9 @@ This is from the perspective of a self-described "text editor geek" who is famil
 * https://stevenwooding.com/how-to-run-python-in-visual-studio-code/
 * https://code.visualstudio.com/docs/editor/tasks-appendix
 * href="smartpath://mydaydirs/2017/week21/.vscode/tasks.json" find="vscodetasks_grieving09dean"
+* https://stackoverflow.com/questions/30046411/define-multiple-tasks-in-vscode#32680182
+* https://github.com/Microsoft/vscode/issues/981
+* http://qiita.com/usagi/items/5a0f4edc99420173abb3
 
 ### keybindings
 * Overview
@@ -74,6 +77,8 @@ This is from the perspective of a self-described "text editor geek" who is famil
 
 ### open file under cursor
 * something that works like [vim gf](http://vimdoc.sourceforge.net/htmldoc/editing.html#gf)
+* https://github.com/kfelichko/open-under
+* https://github.com/VSCodeVim/Vim/issues?utf8=%E2%9C%93&q=gf%20
 
 ### python
 * https://stackoverflow.com/questions/29987840/how-to-execute-python-code-from-within-visual-studio-code

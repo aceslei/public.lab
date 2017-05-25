@@ -9,6 +9,17 @@ This is from the perspective of a self-described "text editor geek" who is famil
 * `Vim` 
 * A lot of the [other tools on this list](https://insights.stackoverflow.com/survey/2017#technology-most-popular-developer-environments-by-occupation)
 
+**Highlights:**
+* General grade: solid 4.5 stars out of 5
+* Most key features "just work" without hassle, surprising quirks or rigamorole.
+* The devlopment team behind this product appears to be a sharp crew with savvy design sensibilities.
+* This is a tool for experienced/advanced use, but is also very approachable for non-experts.
+
+**Lookups and Research:**
+* What is the debugging/development experience like for Python/Perl/Ruby
+* How easy is it to extend with user-created addons
+* How easy is it to do advanced editing and configuration on par with Vim
+
 ## advanced tips and tricks
 * https://github.com/Microsoft/vscode-tips-and-tricks
 * TOTRY ;; json schema for intellisense on JSON files, how does this work?
@@ -16,13 +27,15 @@ This is from the perspective of a self-described "text editor geek" who is famil
 ## annoyances and weirdness
 * resolve save conflict came up for file that was edited in outside editor ... it was a bit counter-intuitive at first
 
-## features that work
+## features that "just work"
+
 * cmd_pal          ;; user_interface  ;; works just like you expect from Sublime, Atom, KomodoIDE and others
 * cmd_pal language ;; syntax          ;; Change language mode easily changes syntax coloring
 * cmd_pal language ;; syntax          ;; YAML syntax (indentation-based) worked out of the box with syntax coloring
 * cmd_pal folding  ;; folding         ;; code folding worked effortlessly out of the box on indentation-based syntax           
 * ctrl+space       ;; word_completion ;; works well, has a slightly unique completion fuzzy-match approach
 * keybindings      ;; user_interface  ;; Much more intuitive than Atom to override or disable keybindings, but appears to be just as powerful
+* custom userconfig ;; configuration ;; it was easy to symlink my user settings directory away from the default path (this is something I *always* do because I never like the default config directories and I want my configs to be in version control)
 
 ## features to explore
 

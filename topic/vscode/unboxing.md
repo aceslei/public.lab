@@ -1,3 +1,23 @@
+<!---
+### <beg-file_info>
+### document_metadata:
+###   - caption: "__blank__"
+###     dmid: "__dmid__"
+###     date: created="2017-05-25"
+###     last: lastmod="2017-05-25"
+###     tags: tags
+###     author: created="__author__"
+###     filetype: "yaml"
+###     lastupdate: "__lastupdate__"
+###     desc: |
+###         * __desc__
+###     seealso: |
+###         * blogtef editor features ;; regain://makeup_yearner_unlinks
+###     seeinstead: |
+###         * __seeinstead__
+### <end-file_info>
+--->
+
 # Overview
 
 This is a quick writeup of first-impressions and notes on [visualstudio code editor](https://code.visualstudio.com/) [version 1.12.2].
@@ -51,6 +71,9 @@ This is from the perspective of a self-described "text editor geek" who is famil
 * https://code.visualstudio.com/blogs/2017/02/12/code-lens-roundup
 * https://medium.com/hack-visual-studio-code/toggle-any-setting-in-vs-code-using-keyboard-shortcut-arguments-cdb5ddc56955
 
+### ctags
+* http://ctags.sourceforge.net
+
 ### custom settings directory
 * default-win ;; C:/Users/**username**/AppData/Roaming/Code/User
 * customized ;; smartpath://mytrybits/v/tryvisualstudiocode/addon/AppData-Roaming-Code-User
@@ -71,6 +94,7 @@ This is from the perspective of a self-described "text editor geek" who is famil
 * ctrl+shift+k ;;  delete line ;;  how to change this to ctrl+shift+y
 * opening up cmd_pal and type in `key` immediately brings up keyboard help and a pdf download, very nice
 * keybindings have a json config, similar to atom, but it is normal json, and not atom-flavored-coffeescript
+* https://vi.stackexchange.com/questions/1871/ins-completion-of-words
 
 ### macros
 * https://marketplace.visualstudio.com/items?itemName=geddski.macros
@@ -98,3 +122,5 @@ This is from the perspective of a self-described "text editor geek" who is famil
 
 ### vim
 * https://github.com/VSCodeVim/Vim/blob/master/ROADMAP.md
+
+

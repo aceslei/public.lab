@@ -7,7 +7,7 @@ This is from the perspective of a self-described "text editor geek" who is famil
 * `KomodoIDE`
 * `Sublime` 
 * `Vim` 
-* A lot of the other tools on [this list](https://insights.stackoverflow.com/survey/2017#technology-most-popular-developer-environments-by-occupation)
+* A lot of the [other tools on this list](https://insights.stackoverflow.com/survey/2017#technology-most-popular-developer-environments-by-occupation)
 
 ## advanced tips and tricks
 * https://github.com/Microsoft/vscode-tips-and-tricks

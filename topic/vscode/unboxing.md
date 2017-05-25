@@ -69,6 +69,9 @@ This is from the perspective of a self-described "text editor geek" who is famil
 * opening up cmd_pal and type in `key` immediately brings up keyboard help and a pdf download, very nice
 * keybindings have a json config, similar to atom, but it is normal json, and not atom-flavored-coffeescript
 
+### macros
+* https://marketplace.visualstudio.com/items?itemName=geddski.macros
+
 ### python
 * https://stackoverflow.com/questions/29987840/how-to-execute-python-code-from-within-visual-studio-code
 * https://www.stevefenton.co.uk/2015/05/Custom-Tasks-In-Visual-Studio-Code/

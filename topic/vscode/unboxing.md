@@ -72,6 +72,9 @@ This is from the perspective of a self-described "text editor geek" who is famil
 ### macros
 * https://marketplace.visualstudio.com/items?itemName=geddski.macros
 
+### open file under cursor
+* something that works like [vim gf](http://vimdoc.sourceforge.net/htmldoc/editing.html#gf)
+
 ### python
 * https://stackoverflow.com/questions/29987840/how-to-execute-python-code-from-within-visual-studio-code
 * https://www.stevefenton.co.uk/2015/05/Custom-Tasks-In-Visual-Studio-Code/

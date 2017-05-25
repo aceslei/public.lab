@@ -18,6 +18,7 @@ This is from the perspective of a self-described "text editor geek" who is famil
 
 **Annoyances:**
 * It is not clear where this "freemium" product is targeted, relative to "non-freemium" offerings by Microsoft, what can I get if I am willing to pay extra? (compare ActiveState KomodoEdit vs KomodoIDE).
+* [macro support ?](https://github.com/Microsoft/vscode/issues/4490)
 
 **Lookups and Research:**
 * What is the debugging/development experience like for Python/Perl/Ruby

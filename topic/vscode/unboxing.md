@@ -20,6 +20,8 @@ This is from the perspective of a self-described "text editor geek" who is famil
 * How easy is it to extend with user-created addons
 * How easy is it to do advanced editing and configuration on par with Vim
 
+# Topics
+
 ## advanced tips and tricks
 * https://github.com/Microsoft/vscode-tips-and-tricks
 * TOTRY ;; json schema for intellisense on JSON files, how does this work?

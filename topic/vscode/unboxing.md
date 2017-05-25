@@ -51,8 +51,8 @@ This is from the perspective of a self-described "text editor geek" who is famil
 * https://medium.com/hack-visual-studio-code/toggle-any-setting-in-vs-code-using-keyboard-shortcut-arguments-cdb5ddc56955
 
 ### custom settings directory
-* default ;; C:\Users\smosley\AppData\Roaming\Code\User
-* customized ;; C:\sm\docs\mytrybits\v\tryvisualstudiocode\addon\AppData-Roaming-Code-User
+* default ;; C:\Users\<username>\AppData\Roaming\Code\User
+* customized ;; smartpath://mytrybits\v\tryvisualstudiocode\addon\AppData-Roaming-Code-User
 
 ### custom tasks
 * https://code.visualstudio.com/docs/editor/tasks

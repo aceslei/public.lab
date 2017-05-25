@@ -7,7 +7,7 @@
 ###     last: lastmod="2017-05-25"
 ###     tags: tags
 ###     author: created="__author__"
-###     filetype: "yaml"
+###     filetype: "md"
 ###     lastupdate: "__lastupdate__"
 ###     desc: |
 ###         * __desc__

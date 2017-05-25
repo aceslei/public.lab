@@ -1,3 +1,7 @@
+# Overview
+
+This is a quick writeup of first-impressions and notes on [visualstudio code editor](https://code.visualstudio.com/).
+
 ## advanced tips and tricks
 * https://github.com/Microsoft/vscode-tips-and-tricks
 * TOTRY ;; json schema for intellisense on JSON files, how does this work?

@@ -10,7 +10,7 @@ This is from the perspective of a self-described "text editor geek" who is famil
 * A lot of the [other tools on this list](https://insights.stackoverflow.com/survey/2017#technology-most-popular-developer-environments-by-occupation) and even others [on this list](https://en.wikipedia.org/wiki/Comparison_of_text_editors#Overview).
 
 **Highlights:**
-* General grade: solid 4.5 stars out of 5
+* **Rating**: :star::star::star::star: (4 stars out of 5)
 * Most key features "just work" without hassle, surprising quirks or rigamorole.
 * The devlopment team behind this product appears to be a sharp crew with savvy design sensibilities.
 * This is a tool for experienced/advanced use, but is also very approachable for non-experts.

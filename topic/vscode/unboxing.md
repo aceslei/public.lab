@@ -2,7 +2,11 @@
 
 This is a quick writeup of first-impressions and notes on [visualstudio code editor](https://code.visualstudio.com/).
 
-This is from the perspective of a "text editor geek" who is familiar with `Atom` `Sublime` `Vim` 
+This is from the perspective of a self-described "text editor geek" who is familiar with:
+* `Atom` 
+* `KomodoIDE`
+* `Sublime` 
+* `Vim` 
 
 ## advanced tips and tricks
 * https://github.com/Microsoft/vscode-tips-and-tricks

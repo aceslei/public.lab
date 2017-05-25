@@ -51,8 +51,8 @@ This is from the perspective of a self-described "text editor geek" who is famil
 * https://medium.com/hack-visual-studio-code/toggle-any-setting-in-vs-code-using-keyboard-shortcut-arguments-cdb5ddc56955
 
 ### custom settings directory
-* default ;; C:\Users\<username>\AppData\Roaming\Code\User
-* customized ;; smartpath://mytrybits\v\tryvisualstudiocode\addon\AppData-Roaming-Code-User
+* default-win ;; C:/Users/<username>/AppData/Roaming/Code/User
+* customized ;; smartpath://mytrybits/v/tryvisualstudiocode/addon/AppData-Roaming-Code-User
 
 ### custom tasks
 * https://code.visualstudio.com/docs/editor/tasks
@@ -79,7 +79,7 @@ This is from the perspective of a self-described "text editor geek" who is famil
 ### terminal (cygwin)
 * https://github.com/Microsoft/vscode/issues/14977
 * href="./txt/cygwin-terminal.txt"
-* c:\programs\cygwin\bin\mintty.exe --position 400,90 --size 120,40 -e /bin/xhere /bin/bash.exe "."
+* c:/programs/cygwin/bin/mintty.exe --position 400,90 --size 120,40 -e /bin/xhere /bin/bash.exe "."
 
 ### vim
 * https://github.com/VSCodeVim/Vim/blob/master/ROADMAP.md

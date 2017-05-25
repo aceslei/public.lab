@@ -3,10 +3,10 @@
 This is a quick writeup of first-impressions and notes on [visualstudio code editor](https://code.visualstudio.com/) [version 1.12.2].
 
 This is from the perspective of a self-described "text editor geek" who is familiar with:
-* `Atom` 
+* `Atom`
 * `KomodoIDE`
-* `Sublime` 
-* `Vim` 
+* `Sublime`
+* `Vim`
 * ... as well as a lot of the [other tools on this list](https://insights.stackoverflow.com/survey/2017#technology-most-popular-developer-environments-by-occupation) and even others [on this list](https://en.wikipedia.org/wiki/Comparison_of_text_editors#Overview).
 
 **Highlights:**
@@ -38,7 +38,7 @@ This is from the perspective of a self-described "text editor geek" who is famil
 * cmd_pal          ;; user_interface  ;; works just like you expect from Sublime, Atom, KomodoIDE and others
 * cmd_pal language ;; syntax          ;; Change language mode easily changes syntax coloring
 * cmd_pal language ;; syntax          ;; YAML syntax (indentation-based) worked out of the box with syntax coloring
-* cmd_pal folding  ;; folding         ;; code folding worked effortlessly out of the box on indentation-based syntax           
+* cmd_pal folding  ;; folding         ;; code folding worked effortlessly out of the box on indentation-based syntax
 * ctrl+space       ;; word_completion ;; works well, has a slightly unique completion fuzzy-match approach
 * keybindings      ;; user_interface  ;; Much more intuitive than Atom to override or disable keybindings, but appears to be just as powerful
 * custom userconfig ;; configuration ;; it was easy to symlink my user settings directory away from the default path (this is something I *always* do because I never like the default config directories and I want my configs to be in version control)
@@ -62,8 +62,8 @@ This is from the perspective of a self-described "text editor geek" who is famil
 
 ### keybindings
 * Overview
-* how to remap keybindings?
-* how to disable keybindings?      
+    * how to remap keybindings?
+    * how to disable keybindings?
 * ctrl+shift+k ;;  delete line ;;  how to change this to ctrl+shift+y
 * opening up cmd_pal and type in `key` immediately brings up keyboard help and a pdf download, very nice
 * keybindings have a json config, similar to atom, but it is normal json, and not atom-flavored-coffeescript
@@ -71,6 +71,10 @@ This is from the perspective of a self-described "text editor geek" who is famil
 ### python
 * https://stackoverflow.com/questions/29987840/how-to-execute-python-code-from-within-visual-studio-code
 * https://www.stevefenton.co.uk/2015/05/Custom-Tasks-In-Visual-Studio-Code/
+
+### syntax coloring
+* how to modify default syntax for plain text files
+    * https://stackoverflow.com/questions/37681609/is-there-any-plain-text-colorizer-for-vs-code
 
 ### terminal (cygwin)
 * https://github.com/Microsoft/vscode/issues/14977

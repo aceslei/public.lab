@@ -15,17 +15,6 @@
 ###     seealso: |
 ###         * http://stackoverflow.com/questions/10660435/pythonic-way-to-create-a-long-multi-line-string
 ### <end-file_info>
-
-## TODO: todoitems_securelyqpstash
-  * TODO ;; add in CustomFormat with placeholder syntax
-  * TODO ;; methods to add
-      * tofile()
-      * tozipfile()
-      * eachwithindex
-      * possible chainable formatters in customized str.formatter?
-  * TODO ;; make option for default fmtbody args, to reduce linenoise
-      * 
-
 """
 
 if('init_python'):

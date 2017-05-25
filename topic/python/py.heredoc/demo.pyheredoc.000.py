@@ -11,11 +11,13 @@
 ###         * demonstrate python-style heredoc with variables loops and fluent interface
 ###     seealso: |
 ###         * http://stackoverflow.com/questions/10660435/pythonic-way-to-create-a-long-multi-line-string
+###     seeinstead: |
+###         * href="smartpath://mytrybits/p/trypython/lab2014/pystring/barebones.format.003.py" find="strformat_extend_recall12grumble"
 ### <end-file_info>
 
 ## TODO: todoitems_securelyqpstash
-  * TODO ;; add in CustomFormat with placeholder syntax
-  * TODO ;; support for alternate delimiters
+  * DONE ;; add in CustomFormat with placeholder syntax
+  * DONE ;; support for alternate delimiters
   * TODO ;; methods to add
       * tofile()
       * tozipfile()
@@ -33,12 +35,13 @@ if('init_python'):
   import yaml
   import PyHereDoc
 
-if( not 'region::basic demo::musket02fully'):
+if( not not 'region::basic demo::musket02fully'):
   '''
   ## PyHereDoc barebones intro
 
   Demonstrates:
   * basic usage
+  * using the `tos` (tostring) method
   * native python string method `title`
   * addon non-native python string method `reverse`
   * chainable methods to support fluent interface
@@ -46,10 +49,10 @@ if( not 'region::basic demo::musket02fully'):
   '''
   odoc = PyHereDoc.Document
 
-  print odoc("hello world")                   ##=> hello world
-  print odoc("hello world").reverse()         ##=> dlrow olleh
-  print odoc("hello world").title().reverse() ##=> dlroW olleH
-  print odoc("hello world").reverse().title() ##=> Dlrow Olleh
+  print odoc().tos("hello world")                   ##=> hello world
+  print odoc().tos("hello world").reverse()         ##=> dlrow olleh
+  print odoc().tos("hello world").title().reverse() ##=> dlroW olleH
+  print odoc().tos("hello world").reverse().title() ##=> Dlrow Olleh
 
   pass
 
@@ -81,6 +84,7 @@ if( not 'region::basic demo::musket04fully'):
 
   Demonstrates:
   * PyHereDoc `concat` method for combining multiple PyHereDoc strings
+  * PyHereDoc `concat` is synonym method for `tos`
   * Adding newlines supported with `puts` and `n`
   * `n` is an alias for `puts` and eases the amount of typing necessary
       * puts='<'  ;;  n=1 ;; add a leading newline
@@ -135,7 +139,7 @@ if( not 'region::basic demo::predict02halogen'):
   '''
   odoc  = PyHereDoc.Document
 
-  print odoc("""
+  print odoc().tos("""
              Hello World!
                 This is a message
                 from me to you
@@ -336,5 +340,3 @@ if( not 'region::demo_holdingsqlalan'):
           )
   print vout
   pass
-
-

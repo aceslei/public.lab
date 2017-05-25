@@ -12,6 +12,8 @@
 ###         * base class for python heredoc
 ###     seealso: |
 ###         * __seealso__
+###     seeinstead: |
+###         * href="smartpath://mymedia/2014/git/github/dotdreftymac/.dreftymac/pylib/tymacheredoc.py"
 ### <end-file_info>
 """
 
@@ -42,28 +44,46 @@ if('py_init_class'):
   #   def render(self): return(
   #     self.tokenize().format(**self.srcdata))
 
+
   class Document(object):
+
+    ### ------------------------------------------------------------------------
+    ### begin_
+
     def __init__(self, dconfig=None, ):
       #self.strval   =   strval    if bool(strval)   else ""
       #self.ddata    =   ddata     if bool(ddata)    else []
+      self.strval   =   ''
       self.dconfig  =   dconfig   if bool(dconfig)  else {}
+      if('handle_dconfig_key_aliases'):
+        if(not '{' in dconfig): dconfig['{'] = dconfig.pop('tkbeg','{')
+        if(not '}' in dconfig): dconfig['}'] = dconfig.pop('tkend','}')
       self.tkbeg    =   self.dconfig.pop('{', '{')
       self.tkend    =   self.dconfig.pop('}', '}')
     ##enddef;;
+
+    ### ------------------------------------------------------------------------
+    ### begin_
+
     def proc_retokenize(self,ssinput=''):
-      return(ssinput.__str__()
-        .replace('{','{{').replace('}','}}')
-        .replace(self.tkbeg,'{').replace(self.tkend,'}')
-        )
+      vout    =   ssinput.__str__()
+      if( not (self.tkbeg == '{' or self.tkbeg =='}') ):
+        vout  =   (vout
+          .replace('{','{{').replace('}','}}')
+          .replace(self.tkbeg,'{').replace(self.tkend,'}')
+          )
+      return(vout)
     ##enddef;;
-    def proc_format(self,ssinput=''):
-      return(ssinput.__str__()
-        .replace('{','{{').replace('}','}}')
-        .replace(self.tkbeg,'{').replace(self.tkend,'}')
-        )
+
+    def proc_format(self,ssinput='',vdata={}):
+      vout =  ssinput.__str__()
+      vout =  self.proc_retokenize(vout)
+      vout =  vout.format(**vdata)
+      return(vout)
     ##enddef;;
 
     ### ------------------------------------------------------------------------
+    ### begin_
 
     ##
     def anonop(self,*args):
@@ -71,6 +91,7 @@ if('py_init_class'):
     ##;;
 
     ### ------------------------------------------------------------------------
+    ### begin_
 
     def fmtbody(self,sbody=None,**kwargs):
       bdedent = bool(kwargs['dedent'])if ('dedent' in kwargs) else False
@@ -153,6 +174,7 @@ if('py_init_class'):
     ##;;
 
     ### ------------------------------------------------------------------------
+    ### begin_
 
     def concat(self,sbody=None,**kwargs):
       sbody       = str(sbody) if (not sbody is None) else "_blank_"
@@ -162,12 +184,14 @@ if('py_init_class'):
       if(False):
         pass
       elif( odata ):
-        #self.strval += self.fmtbody(sbody.format(**odata),**kwargs)
-        self.strval += self.fmtbody(sbody.format(**odata),**kwargs)
+        self.strval += self.fmtbody(self.proc_format(str(sbody),odata),**kwargs)
       elif( not odata ):
-        self.strval += self.fmtbody(str(sbody),**kwargs)
+        self.strval += self.fmtbody(self.proc_format(str(sbody)),**kwargs)
       return self
-    ##;;
+    ##enddef;;
+    ## alias method ;; tos (aka tostring)
+    tos = concat
+    ##enddef;;
 
     def each(self,sbody=None,**kwargs):
       sbody       = str(sbody) if (not sbody is None) else "{0}"
@@ -185,7 +209,6 @@ if('py_init_class'):
       self.strval = textwrap.dedent(self.strval)
       return self
     ##;;
-
 
     def render(self):
       return str(self.strval)

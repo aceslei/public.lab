@@ -14,23 +14,12 @@
 * SOLUTION:
    * configure string.format() to support arbitrary delimiter placeholder syntax
    * this feature is supported in other contexts, such as the jinja templating system
-       * http://jinja.pocoo.org/docs/dev/api/#high-level-api
-
-### Example001: subclassing python str()
-
-* https://github.com/dreftymac/public.lab/blob/master/topic/python/string.format/demo.subclass.string.001.py
-
-### Example002: extending string.Formatter
-
-* https://github.com/dreftymac/public.lab/blob/master/topic/python/string.format/demo.subclass.string.002.py
-
-### Usage: easy placeholder entry using snippets with an IDE or text editor
-
-* https://github.com/dreftymac/public.lab/blob/master/topic/python/string.format/placeholder-substitution.gif
-
+       * http://jinja.pocoo.org/docs/dev/api/#high-level-api find="block_start_string"
 
 ## See also
 
+* regain://upheaval_elm_id
+* jinja syntax             ;; href="smartpath://mydaydirs/2017/week14/devlog.txt" find="jinjadelimiter_agoqpflourish"
 * nice_documentation       ;; https://pyformat.info
 * nice_blog_post           ;; https://tobywf.com/2015/12/custom-formatters/
 * nice_blog_post           ;; https://tobywf.com/2015/12/sane-pluralisation/

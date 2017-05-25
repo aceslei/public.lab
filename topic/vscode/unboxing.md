@@ -17,7 +17,7 @@ This is from the perspective of a self-described "text editor geek" who is famil
 * This tool looks targeted for cross-platform maximum compatibility ... this is not a "Microsoft-only" stereotype offering.
 
 **Annoyances:**
-* It is not clear where this "freemium" product is targeted, relative to "non-freemium" offerings by Microsoft.
+* It is not clear where this "freemium" product is targeted, relative to "non-freemium" offerings by Microsoft, what can I get if I am willing to pay extra? (compare ActiveState KomodoEdit vs KomodoIDE).
 
 **Lookups and Research:**
 * What is the debugging/development experience like for Python/Perl/Ruby

@@ -7,7 +7,7 @@ This is from the perspective of a self-described "text editor geek" who is famil
 * `KomodoIDE`
 * `Sublime` 
 * `Vim` 
-* A lot of the [other tools on this list](https://insights.stackoverflow.com/survey/2017#technology-most-popular-developer-environments-by-occupation) and even others [on this list](https://en.wikipedia.org/wiki/Comparison_of_text_editors#Overview).
+* ... as well as a lot of the [other tools on this list](https://insights.stackoverflow.com/survey/2017#technology-most-popular-developer-environments-by-occupation) and even others [on this list](https://en.wikipedia.org/wiki/Comparison_of_text_editors#Overview).
 
 **Highlights:**
 * **Rating**: :star::star::star::star: (4 stars out of 5)

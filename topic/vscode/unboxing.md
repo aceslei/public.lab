@@ -18,6 +18,7 @@ This is from the perspective of a self-described "text editor geek" who is famil
 
 **Annoyances:**
 * It is not clear where this "freemium" product is targeted, relative to "non-freemium" offerings by Microsoft, what can I get if I am willing to pay extra? (compare ActiveState KomodoEdit vs KomodoIDE).
+* [macro support ?](https://github.com/Microsoft/vscode/issues/4490)
 
 **Lookups and Research:**
 * What is the debugging/development experience like for Python/Perl/Ruby
@@ -67,6 +68,9 @@ This is from the perspective of a self-described "text editor geek" who is famil
 * ctrl+shift+k ;;  delete line ;;  how to change this to ctrl+shift+y
 * opening up cmd_pal and type in `key` immediately brings up keyboard help and a pdf download, very nice
 * keybindings have a json config, similar to atom, but it is normal json, and not atom-flavored-coffeescript
+
+### macros
+* https://marketplace.visualstudio.com/items?itemName=geddski.macros
 
 ### python
 * https://stackoverflow.com/questions/29987840/how-to-execute-python-code-from-within-visual-studio-code

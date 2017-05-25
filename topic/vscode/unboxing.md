@@ -14,6 +14,10 @@ This is from the perspective of a self-described "text editor geek" who is famil
 * Most key features "just work" without hassle, surprising quirks or rigamorole.
 * The devlopment team behind this product appears to be a sharp crew with savvy design sensibilities.
 * This is a tool for experienced/advanced use, but is also very approachable for non-experts.
+* This tool looks targeted for cross-platform maximum compatibility ... this is not a "Microsoft-only" stereotype offering.
+
+**Annoyances:**
+* It is not clear where this "freemium" product is targeted, relative to "non-freemium" offerings by Microsoft.
 
 **Lookups and Research:**
 * What is the debugging/development experience like for Python/Perl/Ruby

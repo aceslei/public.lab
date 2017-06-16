@@ -25,7 +25,6 @@
       * possible chainable formatters in customized str.formatter?
   * TODO ;; make option for default fmtbody args, to reduce linenoise
     * "./demo-image-000.html"
-
 """
 
 if('init_python'):
@@ -86,7 +85,7 @@ if( not 'region::basic demo::musket04fully'):
   * PyHereDoc `concat` method for combining multiple PyHereDoc strings
   * PyHereDoc `concat` is synonym method for `tos`
   * Adding newlines supported with `puts` and `n`
-  * `n` is an alias for `puts` and eases the amount of typing necessary
+  * `n` is an alias for `puts` and eases the amount of typing necessary (drawback, less intutive integer-based formatter)
       * puts='<'  ;;  n=1 ;; add a leading newline
       * puts='>'  ;;  n=2 ;; add a trailing newline
       * puts='<>' ;;  n=3 ;; both leading and trailing newline

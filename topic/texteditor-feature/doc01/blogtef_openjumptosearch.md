@@ -17,6 +17,6 @@
 
 
 ## See also
-* vimhelp://-+/
+* vim ;; :help -+/
 
 

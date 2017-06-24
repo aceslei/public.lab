@@ -18,12 +18,15 @@
 
 ## See also
 * notepadplusplus ;; https://superuser.com/questions/290409/opening-a-text-file-at-a-certain-line-shortcut
+* atom ;; https://duckduckgo.com/?q=atom+open+file+specific+line+number&t=hz&ia=web
+* sublime ;; https://duckduckgo.com/?q=sublime+open+file+specific+line+number&t=hz&ia=web
 * vim ;; https://stackoverflow.com/questions/3313418/starting-vim-at-a-certain-position-line-and-column-of-a-file
 * vim ;; https://superuser.com/questions/585065/is-it-possible-to-open-a-file-to-a-specific-line-number-as-formatted-in-grep-n
 * vim ;; http://vimdoc.sourceforge.net/htmldoc/starting.html?find="For the first file the cursor will be positioned on line"
 * vim ;; http://vimdoc.sourceforge.net/htmldoc/usr_toc.html
 * vim ;; https://duckduckgo.com/?q=site%3Avimdoc.sourceforge.net+%22For+the+first+file+the+cursor+will+be+positioned+on+line%22&t=hd&ia=web
-* vim ;; vimhelp://-+
-* vim ;; vimhelp://-+/
+* vim ;; :help -+
+* vim ;; :help -+/
+* vscode ;; https://duckduckgo.com/?q=vscode+open+file+specific+line+number&t=hz&ia=qa
 
 

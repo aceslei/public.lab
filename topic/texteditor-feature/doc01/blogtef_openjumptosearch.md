@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## OpenJumpToSearch         --  open a file and automatically jump to search string
+## OpenJumpToSearch         --  open a file and automatically jump to search string pattern
 
 ## Desc
 * open a file and automatically jump to first occurance of a specific word in the file (eg, as part of shell command-line startup)

@@ -13,7 +13,8 @@
 ## TrimTrailSp              --  edit munge trim trailing space
 
 ## Desc
-edit munge trim trailing space
+* easily get rid of trailing spaces (upon save, or upon special command)
+
 
 ## See also
 * __blank__

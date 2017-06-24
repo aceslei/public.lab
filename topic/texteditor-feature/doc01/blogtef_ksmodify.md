@@ -13,7 +13,8 @@
 ## KSModify                 --  keyboard shortcuts disable
 
 ## Desc
-keyboard shortcuts disable
+* manage and modify keyboard shortcuts for frequently used commands
+
 
 ## See also
 * __blank__

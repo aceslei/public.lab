@@ -13,7 +13,8 @@
 ## BrowserPreview           --  preview in web browser
 
 ## Desc
-preview in web browser
+* preview the current buffer in user-chosen web-renderer as an HTML file
+
 
 ## See also
 * __blank__

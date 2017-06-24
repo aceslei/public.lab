@@ -13,7 +13,8 @@
 ## HyLinkInsert             --  insert arbitrary hyperlinks
 
 ## Desc
-insert arbitrary hyperlinks
+* insert the path of the currently-loaded buffer into a buffer
+
 
 ## See also
 * __blank__

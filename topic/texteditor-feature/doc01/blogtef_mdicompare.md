@@ -13,7 +13,8 @@
 ## MDICompare               --  multi-buffer file comparison
 
 ## Desc
-multi-buffer file comparison
+* compare two currently-open files for differences
+
 
 ## See also
 * __blank__

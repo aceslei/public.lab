@@ -13,7 +13,8 @@
 ## SynModeCnfg              --  user configurable syntax highlighting
 
 ## Desc
-user configurable syntax highlighting
+* user ability to view/add/edit/delete SynModeColor for multiple languages
+
 
 ## See also
 * __blank__

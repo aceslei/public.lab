@@ -13,7 +13,8 @@
 ## DspCurrLineHi            --  highlight entire cursor-active line
 
 ## Desc
-highlight entire cursor-active line
+* highlight-color the current line where the cursor is positioned
+
 
 ## See also
 * __blank__

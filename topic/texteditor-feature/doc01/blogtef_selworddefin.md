@@ -13,7 +13,8 @@
 ## SelWordDefin             --  word characters vs non-word characters
 
 ## Desc
-word characters vs non-word characters
+* easily change the characters of what constitutes a 'word' for purposes of MKSelWord
+
 
 ## See also
 * https://duckduckgo.com/?q=vim+syntax+word+vs+word&t=hc&ia=qa

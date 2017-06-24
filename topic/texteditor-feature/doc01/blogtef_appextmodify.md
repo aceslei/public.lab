@@ -13,7 +13,8 @@
 ## AppExtModify             --  autodetect external changes to file
 
 ## Desc
-autodetect external changes to file
+* auto detect when file has been modified externally, with configurable response
+
 
 ## See also
 * __blank__

@@ -13,7 +13,8 @@
 ## BlockCursor              --  block cursor appearance
 
 ## Desc
-block cursor appearance
+* select empty block and use as a long narrow 'Block Cursor'
+
 
 ## See also
 * __blank__

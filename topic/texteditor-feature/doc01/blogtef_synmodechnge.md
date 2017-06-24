@@ -13,7 +13,8 @@
 ## SynModeChnge             --  user change current syntax language
 
 ## Desc
-user change current syntax language
+* easily change between different SynModeColor while editing a file
+
 
 ## See also
 * __blank__

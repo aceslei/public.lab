@@ -13,10 +13,11 @@
 ## GUIBasedGOTO             --  full feature goto visited locations or line number
 
 ## Desc
-full feature goto visited locations or line number
+* goto line number, goto last edited line no matter where you are in the text
+
 
 ## See also
-* https://duckduckgo.com/?q=vim+change-list-jumps&t=hd&ia=web
-* https://stackoverflow.com/questions/22972702/gvim-jumplist-to-functions-within-a-file
+* vim ;; https://duckduckgo.com/?q=vim+change-list-jumps&t=hd&ia=web
+* vim ;; https://stackoverflow.com/questions/22972702/gvim-jumplist-to-functions-within-a-file
 
 

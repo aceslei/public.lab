@@ -13,7 +13,8 @@
 ## EasyMunge                --  easy text filter munge like uppercase lowercase titlecase join lines etc
 
 ## Desc
-easy text filter munge like uppercase lowercase titlecase join lines etc
+* quick munge operations like uppercase, lowercase, titlecase, join lines, reformat
+
 
 ## See also
 * __blank__

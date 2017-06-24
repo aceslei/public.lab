@@ -13,7 +13,8 @@
 ## SnippetAbbrev            --  snippet abbreviations
 
 ## Desc
-snippet abbreviations
+* user ability to assign 'abbreviations' to specific snippets
+
 
 ## See also
 * __blank__

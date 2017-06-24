@@ -13,7 +13,8 @@
 ## OpenJumpToNumber         --  open a file and automatically jump to line number
 
 ## Desc
-open a file and automatically jump to line number
+* open a file and automatically jump to a specific line number in the file (e.g., as part of shell command-line startup)
+
 
 ## See also
 * https://stackoverflow.com/questions/3313418/starting-vim-at-a-certain-position-line-and-column-of-a-file

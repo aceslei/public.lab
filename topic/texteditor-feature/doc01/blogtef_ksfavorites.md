@@ -13,7 +13,8 @@
 ## KSFavorites              --  keyboard shortcuts favorites
 
 ## Desc
-keyboard shortcuts favorites
+* ability to specify my all-time favorite keyboard shortcuts
+
 
 ## See also
 * __blank__

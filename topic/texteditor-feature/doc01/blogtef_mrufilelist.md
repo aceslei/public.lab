@@ -13,7 +13,8 @@
 ## MRUFileList              --  most recently used file list
 
 ## Desc
-most recently used file list
+* OpenMRU recently edited files with configurable number of files on list
+
 
 ## See also
 * __blank__

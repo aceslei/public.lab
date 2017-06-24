@@ -13,7 +13,8 @@
 ## NewlineSave              --  configure system-dependent newlines
 
 ## Desc
-configure system-dependent newlines
+* easily save files in Windows CR_LF Unix LF Mac CR format
+
 
 ## See also
 * __blank__

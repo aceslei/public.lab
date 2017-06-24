@@ -13,7 +13,8 @@
 ## FileTypeSwitch           --  easily switch into and out of syntax coloring modes
 
 ## Desc
-easily switch into and out of syntax coloring modes
+* user ability to repeatedly switch the currently-active FileType to any known FileType while editing a file
+
 
 ## See also
 * __blank__

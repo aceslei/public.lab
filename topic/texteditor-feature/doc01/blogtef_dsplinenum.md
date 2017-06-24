@@ -13,7 +13,8 @@
 ## DspLineNum               --  toggle display of buffer line numbers
 
 ## Desc
-toggle display of buffer line numbers
+* easily show-hide continuous display of line numbers in the gutter
+
 
 ## See also
 * __blank__

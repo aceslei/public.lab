@@ -13,7 +13,8 @@
 ## SnippetGUI               --  snippets gui management
 
 ## Desc
-snippets gui management
+* user ability to cut/copy/insert snippets by means of a searchable, filterable, sortable GUI
+
 
 ## See also
 * __blank__

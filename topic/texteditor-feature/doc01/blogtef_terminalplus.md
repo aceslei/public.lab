@@ -13,7 +13,8 @@
 ## TerminalPlus             --  shell terminal interop
 
 ## Desc
-shell terminal interop
+* integrated shell terminal built into the editor
+
 
 ## See also
 * __seealso__

@@ -13,7 +13,8 @@
 ## GUIBasedReplace          --  full feature search and replace
 
 ## Desc
-full feature search and replace
+* full-featured replace
+
 
 ## See also
 * __blank__

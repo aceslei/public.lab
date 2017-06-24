@@ -13,7 +13,8 @@
 ## SnippetPopup             --  snippets user interface popups
 
 ## Desc
-snippets user interface popups
+* user ability to assign snippets to a popup menu that appears on right click of the mouse
+
 
 ## See also
 * __blank__

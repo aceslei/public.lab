@@ -13,7 +13,8 @@
 ## RunAsScriptWithArgs      --  run current buffer as script with arguments
 
 ## Desc
-run current buffer as script with arguments
+* run a script and pass arguments through the commandline
+
 
 ## See also
 * https://github.com/lsegal/atom-runner/issues/42

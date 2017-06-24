@@ -13,7 +13,8 @@
 ## BlockSelect              --  rectangular cursor selection
 
 ## Desc
-rectangular cursor selection
+* select a rectangular region of text
+
 
 ## See also
 * __blank__

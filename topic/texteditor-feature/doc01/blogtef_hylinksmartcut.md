@@ -13,7 +13,8 @@
 ## HyLinkSmartCut           --  goto definition -- jump to related items on arbitrary text
 
 ## Desc
-goto definition -- jump to related items on arbitrary text
+* automatically guess a file hyperlink by clicking on arbitrary text (like a function call)
+
 
 ## See also
 * https://duckduckgo.com/?q=vscode+%22code+lens%22&ia=web

@@ -13,7 +13,8 @@
 ## EasyIndent               --  easy indent text regions
 
 ## Desc
-easy indent text regions
+* quick indent of currently selected text using Tab key (shift+tab to dedent)
+
 
 ## See also
 * __blank__

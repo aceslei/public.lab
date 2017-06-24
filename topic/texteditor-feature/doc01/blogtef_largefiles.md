@@ -13,7 +13,8 @@
 ## LargeFiles               --  open large files without crashing or excessive lag
 
 ## Desc
-open large files without crashing or excessive lag
+* edit and save large files, no size limit on the files you can open
+
 
 ## See also
 * __blank__

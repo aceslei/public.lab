@@ -13,7 +13,8 @@
 ## SynModeColor             --  syntax highlighting and coloring
 
 ## Desc
-syntax highlighting and coloring
+* color or highlight text based on any arbitrary syntax definition (aka "syntax coloring")
+
 
 ## See also
 * https://duckduckgo.com/?q=vim+syntax+coloring&ia=web

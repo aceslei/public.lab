@@ -13,7 +13,8 @@
 ## SnipCompletion           --  word completion
 
 ## Desc
-word completion
+* complete snippets from snippet abbreviations
+
 
 ## See also
 * blogtef_WordCompletion

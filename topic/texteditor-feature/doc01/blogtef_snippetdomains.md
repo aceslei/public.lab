@@ -13,7 +13,8 @@
 ## SnippetDomains           --  snippet domains and contexts
 
 ## Desc
-snippet domains and contexts
+* user ability to assign and subgroup snippets according to FileType
+
 
 ## See also
 * __blank__

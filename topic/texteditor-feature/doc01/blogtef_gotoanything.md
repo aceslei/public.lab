@@ -13,11 +13,12 @@
 ## CommandRunner            --  command palette
 
 ## Desc
-command palette
+* called the Commando (Go To Anything) in komodo
+
 
 ## See also
-* https://github.com/dbeecham/ctrlp-commandpalette.vim
-* https://atom.io/packages/command-palette
-* http://komodoide.com/screencasts/commando-go-to-anything/
+* atom ;; https://atom.io/packages/command-palette
+* vim ;; https://github.com/dbeecham/ctrlp-commandpalette.vim
+* komodo ;; http://komodoide.com/screencasts/commando-go-to-anything/
 
 

@@ -13,7 +13,8 @@
 ## InvisChar                --  toggle visibility of hidden characters
 
 ## Desc
-toggle visibility of hidden characters
+* easly toggle show-hide non-visible chars like space, tab, newline
+
 
 ## See also
 * __blank__

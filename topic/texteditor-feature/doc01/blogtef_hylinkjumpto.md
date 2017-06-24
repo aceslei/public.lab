@@ -13,14 +13,14 @@
 ## HyLinkJumpTo             --  open arbitrary filepath hyperlink to specific places in buffer
 
 ## Desc
-open arbitrary filepath hyperlink to specific places in buffer
+* HyLinkOpen and jump to either 1) specific line number; OR 2) specific search_term
+
 
 ## See also
-* href="blogtef://blogtef_openjumptosearch"
-* href="blogtef://blogtef_openjumptonumber"
-* href="smartpath://mydaydirs/2017/week23/devlog.txt" find="grepandcut_tenev_nokof"
-* href="http://www.cyberciti.biz/faq/linux-unix-command-open-file-linenumber-function"
-* href="http://orgmode.org/manual/External-links.html"
-* href="http://orgmode.org/guide/Hyperlinks.html"
+* infra ;; href="blogtef://blogtef_openjumptosearch"
+* infra ;; href="blogtef://blogtef_openjumptonumber"
+* linux ;; href="http://www.cyberciti.biz/faq/linux-unix-command-open-file-linenumber-function"
+* emacs ;; href="http://orgmode.org/manual/External-links.html"
+* emacs ;; href="http://orgmode.org/guide/Hyperlinks.html"
 
 

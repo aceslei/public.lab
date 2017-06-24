@@ -13,7 +13,8 @@
 ## EasyInsert               --  insert arbitrary variables like current date
 
 ## Desc
-insert arbitrary variables like current date
+* easily insert automatic variables like date, file basename, system time, and user-defined variables
+
 
 ## See also
 * 

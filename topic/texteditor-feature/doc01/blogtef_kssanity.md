@@ -13,7 +13,8 @@
 ## KSSanity                 --  keyboard shortcuts support
 
 ## Desc
-keyboard shortcuts support
+* well-rounded set of frequently-used keyboard shortcuts
+
 
 ## See also
 * __blank__

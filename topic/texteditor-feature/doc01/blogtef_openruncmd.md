@@ -13,7 +13,8 @@
 ## OpenRunCmd               --  run command on file actions like open and save
 
 ## Desc
-run command on file actions like open and save
+* open a file and automatically run an arbitrary command or series of command on the file
+
 
 ## See also
 * __blank__

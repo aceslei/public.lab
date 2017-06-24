@@ -13,7 +13,8 @@
 ## EdWrdWrap                --  toggle word wrapping and word wrap boundary easily
 
 ## Desc
-toggle word wrapping and word wrap boundary easily
+* toggle word wrapping and word wrap boundary
+
 
 ## See also
 * __blank__

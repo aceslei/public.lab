@@ -13,7 +13,8 @@
 ## MDISplit                 --  mdi split window
 
 ## Desc
-mdi split window
+* edit two or more currently-open files in a 'split-window'
+
 
 ## See also
 * https://duckduckgo.com/?q=vim+split+window+viewport&t=hd&ia=qa

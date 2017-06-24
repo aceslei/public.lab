@@ -13,7 +13,8 @@
 ## FontSanity               --  easily specify good looking monospace font
 
 ## Desc
-easily specify good looking monospace font
+* specify decent-looking monospace font with all characters easily distinguishable (1lI0O = one ell eye zero oh)
+
 
 ## See also
 * __blank__

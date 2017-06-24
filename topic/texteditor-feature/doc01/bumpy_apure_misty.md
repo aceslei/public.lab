@@ -13,7 +13,8 @@
 ## VimMode                  --  vim-compatible keybindings
 
 ## Desc
-vim-compatible keybindings
+* Emulate the keybindings and modality of the Vim editor
+
 
 ## See also
 * atom ;; https://github.com/atom/vim-mode

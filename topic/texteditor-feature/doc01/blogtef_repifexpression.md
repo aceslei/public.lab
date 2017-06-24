@@ -13,9 +13,11 @@
 ## ReplaceSequential        --  search and replace with seqential numbering
 
 ## Desc
-search and replace with seqential numbering
+* replace with sequential numbering
+* replace with expressions
+
 
 ## See also
-* href="smartpath://mydaydirs/2016/week39/devlog.txt" find="bloke_revising_ariser"
+* 
 
 

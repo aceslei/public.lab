@@ -13,7 +13,8 @@
 ## MDIEdit                  --  multiple buffers at once
 
 ## Desc
-multiple buffers at once
+* simultaneously edit multiple files at once
+
 
 ## See also
 * __blank__

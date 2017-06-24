@@ -13,7 +13,8 @@
 ## MKRegionCut              --  cut with mouse or keyboard
 
 ## Desc
-cut with mouse or keyboard
+* with mouse or keyboard
+
 
 ## See also
 * __blank__

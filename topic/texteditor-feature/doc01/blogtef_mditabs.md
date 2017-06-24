@@ -13,7 +13,8 @@
 ## MDITabs                  --  mdi tabs support
 
 ## Desc
-mdi tabs support
+* open documents can be displayed as 'tabs' with file basename
+
 
 ## See also
 * __blank__

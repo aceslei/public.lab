@@ -13,7 +13,10 @@
 ## InsertCurFilepath        --  copy/insert path of currently edited buffer
 
 ## Desc
-copy/insert path of currently edited buffer
+* autocomplete filepaths
+* autocomplete the path of the currently-focused buffer into the buffer itself (for cutting and pasting filepaths)
+* autocomplete any arbitrary filepath on the local system
+
 
 ## See also
 * href="http://stackoverflow.com/q/1919492/42223"

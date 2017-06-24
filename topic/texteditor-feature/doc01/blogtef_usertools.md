@@ -13,7 +13,8 @@
 ## UserTools                --  external user runnable tools on current buffer
 
 ## Desc
-external user runnable tools on current buffer
+* specify any external tool for munging text (e.g., run HTMLTidy on current file or selection)
+
 
 ## See also
 * https://duckduckgo.com/?q=vim+execute+shell+command&t=hc&ia=qa

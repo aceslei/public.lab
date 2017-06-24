@@ -13,7 +13,8 @@
 ## MDITabsCnfg              --  mdi tabs docking
 
 ## Desc
-mdi tabs docking
+* document tabs can be docked on the bottom, top, sides, or turned off completely
+
 
 ## See also
 * __blank__

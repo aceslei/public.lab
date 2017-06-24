@@ -13,7 +13,8 @@
 ## MultiBuffer              --  open multiple buffers at the same time
 
 ## Desc
-open multiple buffers at the same time
+* (see MDIEdit)
+
 
 ## See also
 * __blank__

@@ -13,7 +13,8 @@
 ## AppSnglInst              --  single instance vs multiple instance of app
 
 ## Desc
-single instance vs multiple instance of app
+* user ability to specify whether app should only run single instance
+
 
 ## See also
 * __blank__

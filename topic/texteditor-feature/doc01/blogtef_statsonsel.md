@@ -13,7 +13,8 @@
 ## StatsOnSel               --  stats on selected text
 
 ## Desc
-stats on selected text
+* easily show stats on currently selected text (num of bytes, num of lines)
+
 
 ## See also
 * __blank__

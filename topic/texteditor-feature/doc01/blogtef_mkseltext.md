@@ -13,7 +13,8 @@
 ## MKSelText                --  select arbitrary regions of text
 
 ## Desc
-select arbitrary regions of text
+* select contiguous region or discontiguous regions of text
+
 
 ## See also
 * __blank__

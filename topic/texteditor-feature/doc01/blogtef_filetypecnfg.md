@@ -13,10 +13,11 @@
 ## FileTypeCnfg             --  assign syntax coloring based on arbitrary criteria
 
 ## Desc
-assign syntax coloring based on arbitrary criteria
+* user ability to assign different FileTypes based on file extension, contents of file, or combination of the 2
+
 
 ## See also
-* regain://blogtef_filesyntaxdetect
-* https://discuss.atom.io/t/change-syntax-highlighting-based-on-file-extension/6262
+* infra ;; infra://blogtef_filesyntaxdetect
+* atom ;; https://discuss.atom.io/t/change-syntax-highlighting-based-on-file-extension/6262
 
 

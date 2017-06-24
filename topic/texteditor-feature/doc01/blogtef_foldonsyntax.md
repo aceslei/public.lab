@@ -13,7 +13,8 @@
 ## FoldOnSyntax             --  buffer folding on syntax
 
 ## Desc
-buffer folding on syntax
+* fold based on the programming language syntax
+
 
 ## See also
 * __blank__

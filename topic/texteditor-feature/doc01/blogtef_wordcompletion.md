@@ -13,7 +13,8 @@
 ## WordCompletion           --  editor word completion
 
 ## Desc
-editor word completion
+* complete any partially 'TargetWord' from one or more 'TargetWordNamespace'
+
 
 ## See also
 * atom editor   ;;  href="https://atom.io/packages/autocomplete-plus"

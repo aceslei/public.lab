@@ -13,7 +13,8 @@
 ## WheelScroll              --  mouse wheel scroll
 
 ## Desc
-mouse wheel scroll
+* scroll up and down in document with the mouse wheel button
+
 
 ## See also
 * __blank__

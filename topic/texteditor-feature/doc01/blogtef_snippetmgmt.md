@@ -13,7 +13,8 @@
 ## SnippetMgmt              --  snippets management
 
 ## Desc
-snippets management
+* user ability to view/add/edit/delete/categorize 'text-snippet' database
+
 
 ## See also
 * __blank__

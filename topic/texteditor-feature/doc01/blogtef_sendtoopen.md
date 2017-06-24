@@ -13,7 +13,8 @@
 ## SendToOpen               --  sendto application
 
 ## Desc
-sendto application
+* open one file, or multiple files, by 'rubber band select' or 'right click' in a GUI desktop
+
 
 ## See also
 * __blank__

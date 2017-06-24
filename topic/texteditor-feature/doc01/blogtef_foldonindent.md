@@ -13,7 +13,8 @@
 ## FoldOnIndent             --  buffer folding based on indentation/whitespace
 
 ## Desc
-buffer folding based on indentation/whitespace
+* folding based on indentation of text (works with plaintext)
+
 
 ## See also
 * __blank__

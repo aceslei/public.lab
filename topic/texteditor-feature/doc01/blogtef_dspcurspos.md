@@ -13,7 +13,8 @@
 ## DspCursPos               --  continuous display of cursor position
 
 ## Desc
-continuous display of cursor position
+* continuous display of current cursor position (col and row)
+
 
 ## See also
 * __blank__

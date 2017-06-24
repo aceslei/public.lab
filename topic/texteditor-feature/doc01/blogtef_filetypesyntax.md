@@ -13,7 +13,8 @@
 ## FileTypeSyntax           --  easily associate syntax coloring with filetype or extension
 
 ## Desc
-easily associate syntax coloring with filetype or extension
+* user ability to associate a SynModeColor with a FileType
+
 
 ## See also
 * __blank__

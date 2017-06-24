@@ -13,7 +13,8 @@
 ## RunAsScript              --  run current buffer as script
 
 ## Desc
-run current buffer as script
+* run the currently-loaded buffer as a script (e.g., Perl/Python/Ruby ), with option to capture the output
+
 
 ## See also
 * https://duckduckgo.com/?q=atom+atom-script

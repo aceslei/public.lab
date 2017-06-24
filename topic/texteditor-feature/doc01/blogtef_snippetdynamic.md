@@ -13,7 +13,8 @@
 ## SnippetDynamicContent    --  snippet domains and contexts
 
 ## Desc
-snippet domains and contexts
+* user ability to assign define dynamic snippet content with expressions as placeholders
+
 
 ## See also
 * https://stackoverflow.com/questions/39413783/dynamic-snippet-evaluation-in-vscode#39414606

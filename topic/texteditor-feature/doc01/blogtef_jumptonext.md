@@ -13,7 +13,8 @@
 ## JumpToNext               --  search feature jump to next/previous instance of search
 
 ## Desc
-search feature jump to next/previous instance of search
+* jump to the next-prev occurance of srch or selection using keyboard
+
 
 ## See also
 * __blank__

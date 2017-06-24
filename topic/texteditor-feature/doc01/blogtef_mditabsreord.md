@@ -13,7 +13,9 @@
 ## MDITabsReord             --  reorder MDI buffer tabs
 
 ## Desc
-reorder MDI buffer tabs
+* mdi document tabs can be reordered by drag and drop
+* mdi document tabs that can be reordred with a command
+
 
 ## See also
 * https://duckduckgo.com/?q=vim+tabmove&t=hd&ia=qa

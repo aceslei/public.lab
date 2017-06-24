@@ -13,7 +13,8 @@
 ## KSOverride               --  keyboard shortcuts override or remap with plugins
 
 ## Desc
-keyboard shortcuts override or remap with plugins
+* ability to override default keyboard settings for any command
+
 
 ## See also
 * __blank__

@@ -13,7 +13,8 @@
 ## FocusItemJump            --  arbitrary placeholder jumpto
 
 ## Desc
-arbitrary placeholder jumpto
+* user ability to JumpTo previous and next focus item in currently open document using keyboard
+
 
 ## See also
 * __blank__

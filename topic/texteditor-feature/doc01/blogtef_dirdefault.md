@@ -13,7 +13,8 @@
 ## DirDefault               --  open specific directory by default
 
 ## Desc
-open specific directory by default
+* easily configure it to open by default into any directory you want (see also; DirFollowDoc)
+
 
 ## See also
 * __blank__

@@ -13,7 +13,10 @@
 ## FileSyntaxDetect         --  smart rules for detecting file language
 
 ## Desc
-smart rules for detecting file language
+* user ability to set rules or tokens that instruct the editor which syntax rules should apply (for autocomplete, coloring, etc)
+* includes autodetection (implicit)
+* includes in-file directives (express)
+
 
 ## See also
 * http://stackoverflow.com/questions/22363070/how-do-i-make-a-default-syntax-by-filetype-in-atom-text-editor

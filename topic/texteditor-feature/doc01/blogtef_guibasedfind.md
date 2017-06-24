@@ -13,7 +13,8 @@
 ## GUIBasedFind             --  full featured search with regex and smart case-sensitivity
 
 ## Desc
-full featured search with regex and smart case-sensitivity
+* full-featured find with regex, case sensitivity, kbd shortcuts et al
+
 
 ## See also
 * __blank__

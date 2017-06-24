@@ -13,7 +13,8 @@
 ## DirFollowDoc             --  active directory follows currently focused buffer
 
 ## Desc
-active directory follows currently focused buffer
+* the file dialog (for opening or saving) can follow currently focused document
+
 
 ## See also
 * __blank__

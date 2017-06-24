@@ -13,7 +13,8 @@
 ## GUIBasedFindFIF          --  full featured find in files
 
 ## Desc
-full featured find in files
+* full-featured find-in-files
+
 
 ## See also
 * __blank__

@@ -13,7 +13,8 @@
 ## HyLinkOpen               --  open arbitrary filepath hyperlink
 
 ## Desc
-open arbitrary filepath hyperlink
+* open hyperlink (URL plus optional aName) under cursor
+
 
 ## See also
 * https://duckduckgo.com/?q=vim+gf

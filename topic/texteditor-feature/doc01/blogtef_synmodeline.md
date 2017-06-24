@@ -13,7 +13,8 @@
 ## SynModeline              --  editor modeline
 
 ## Desc
-editor modeline
+* specify editor context using a modeline
+
 
 ## See also
 * http://stackoverflow.com/questions/1984072/indicate-programming-language-in-a-file-without-extension

@@ -13,7 +13,8 @@
 ## EdInsOvr                 --  toggle insert vs overwrite mode
 
 ## Desc
-toggle insert vs overwrite mode
+* toggle INSERT vs OVERWRITE mode
+
 
 ## See also
 * __blank__

@@ -13,7 +13,8 @@
 ## JumpToWrap               --  toggle ability to auto-wrap from bottom to top of buffer when searching
 
 ## Desc
-toggle ability to auto-wrap from bottom to top of buffer when searching
+* toggle ability to automatically start over at top of file with JumpToNext
+
 
 ## See also
 * __blank__

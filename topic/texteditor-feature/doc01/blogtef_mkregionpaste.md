@@ -13,7 +13,8 @@
 ## MKRegionPaste            --  paste with mouse or keyboard
 
 ## Desc
-paste with mouse or keyboard
+* with mouse or keyboard
+
 
 ## See also
 * __blank__

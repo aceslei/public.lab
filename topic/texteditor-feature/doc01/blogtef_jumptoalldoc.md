@@ -13,7 +13,8 @@
 ## JumpToAllDoc             --  search feature jump to next/previous across buffers
 
 ## Desc
-search feature jump to next/previous across buffers
+* jump to the next-prev occurance of srch or selection in all currently open documents
+
 
 ## See also
 * __blank__

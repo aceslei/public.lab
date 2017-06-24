@@ -13,7 +13,8 @@
 ## FocusItemMgmt            --  snippets placeholder jumpto
 
 ## Desc
-snippets placeholder jumpto
+* user ability to view/add/edit/delete/categorize a 'FocusItem' collection
+
 
 ## See also
 * __blank__

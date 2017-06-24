@@ -13,7 +13,8 @@
 ## FileOpRename             --  rename the current file from within the editor
 
 ## Desc
-rename the current file from within the editor
+* user ability to rename the currently-edited buffer
+
 
 ## See also
 * __blank__

@@ -13,7 +13,8 @@
 ## RunOnSelection           --  run external tool on selected text
 
 ## Desc
-run external tool on selected text
+* run any munge tool to auto-replace selection with munged result
+
 
 ## See also
 * https://marketplace.visualstudio.com/items?itemName=yhirose.FilterText

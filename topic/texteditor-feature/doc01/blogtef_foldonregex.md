@@ -13,7 +13,8 @@
 ## FoldOnRegex              --  buffer folding based on regex
 
 ## Desc
-buffer folding based on regex
+* folding based on arbitrary user-supplied chars or regex
+
 
 ## See also
 * __blank__

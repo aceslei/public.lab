@@ -13,7 +13,8 @@
 ## KSSave                   --  keyboard shortcuts save
 
 ## Desc
-keyboard shortcuts save
+* easy keyboard shortcut to save current file
+
 
 ## See also
 * __blank__

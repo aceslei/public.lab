@@ -13,7 +13,8 @@
 ## OpenJumpToSearch         --  open a file and automatically jump to search string
 
 ## Desc
-open a file and automatically jump to search string
+* open a file and automatically jump to first occurance of a specific word in the file (eg, as part of shell command-line startup)
+
 
 ## See also
 * vimhelp://-+/

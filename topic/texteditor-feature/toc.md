@@ -9,7 +9,7 @@
 ### <end-file_info>
 --->
 
-## Features
+## Text editor features
 
 The following is a list of general text editor features.
 

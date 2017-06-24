@@ -9,6 +9,8 @@
 ### <end-file_info>
 --->
 
+[AppExtModify](doc01/blogtef_appextmodify.md)
+
 ## Text editor features
 <table>
 <tr>      

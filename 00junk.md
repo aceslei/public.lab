@@ -1,1 +1,1 @@
-<table><tr><td>You can even [link to google](https://www.google.com)</td></tr></table>
+<table><tr><td>You can even [link to readme](readme.md)</td></tr></table>

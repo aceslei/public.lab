@@ -13,10 +13,10 @@
 ## AppSnglInst              --  single instance vs multiple instance of app
 
 ## Desc
-* user ability to specify whether app should only run single instance
+* user ability to specify whether app should only run single instance or multiple instances
 
 
 ## See also
-* __blank__
+* vim ;; https://stackoverflow.com/questions/936501/let-gvim-always-run-a-single-instance
 
 

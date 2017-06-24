@@ -17,6 +17,10 @@
 
 
 ## See also
-* __blank__
+* atom ;; https://discuss.atom.io/t/toggle-line-numbers/7233
+* notepadplusplus ;; https://superuser.com/questions/432403/how-can-i-hide-the-line-numbers-in-notepad
+* vim ;; https://stackoverflow.com/questions/8322931/how-to-take-off-line-numbers-in-vi
+* vim ;; https://stackoverflow.com/questions/14975600/command-for-toggling-line-numbers-in-vi
+* vscode ;; https://stackoverflow.com/questions/43597322/dynamically-change-line-numbering-settings-in-visual-studio-code
 
 

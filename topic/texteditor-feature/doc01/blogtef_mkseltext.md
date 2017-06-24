@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## MKSelText                select arbitrary regions of text
+## MKSelText                --  select arbitrary regions of text
 
 ## Desc
 select arbitrary regions of text

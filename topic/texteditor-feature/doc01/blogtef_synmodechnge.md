@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## SynModeChnge             user change current syntax language
+## SynModeChnge             --  user change current syntax language
 
 ## Desc
 user change current syntax language

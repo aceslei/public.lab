@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## FileOpRename             rename the current file from within the editor
+## FileOpRename             --  rename the current file from within the editor
 
 ## Desc
 rename the current file from within the editor

@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## FileTypeSyntax           easily associate syntax coloring with filetype or extension
+## FileTypeSyntax           --  easily associate syntax coloring with filetype or extension
 
 ## Desc
 easily associate syntax coloring with filetype or extension

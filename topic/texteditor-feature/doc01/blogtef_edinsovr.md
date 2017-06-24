@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## EdInsOvr                 toggle insert vs overwrite mode
+## EdInsOvr                 --  toggle insert vs overwrite mode
 
 ## Desc
 toggle insert vs overwrite mode

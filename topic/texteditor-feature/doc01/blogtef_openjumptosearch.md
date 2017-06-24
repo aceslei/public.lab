@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## OpenJumpToSearch         open a file and automatically jump to search string
+## OpenJumpToSearch         --  open a file and automatically jump to search string
 
 ## Desc
 open a file and automatically jump to search string

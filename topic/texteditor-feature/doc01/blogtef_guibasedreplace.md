@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## GUIBasedReplace          full feature search and replace
+## GUIBasedReplace          --  full feature search and replace
 
 ## Desc
 full feature search and replace

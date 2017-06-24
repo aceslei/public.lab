@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## DirFollowDoc             active directory follows currently focused buffer
+## DirFollowDoc             --  active directory follows currently focused buffer
 
 ## Desc
 active directory follows currently focused buffer

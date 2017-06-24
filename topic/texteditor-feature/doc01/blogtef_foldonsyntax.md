@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## FoldOnSyntax             buffer folding on syntax
+## FoldOnSyntax             --  buffer folding on syntax
 
 ## Desc
 buffer folding on syntax

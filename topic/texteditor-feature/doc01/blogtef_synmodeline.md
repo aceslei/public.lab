@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## SynModeline              editor modeline
+## SynModeline              --  editor modeline
 
 ## Desc
 editor modeline

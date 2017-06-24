@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## AppExtModify             autodetect external changes to file
+## AppExtModify             --  autodetect external changes to file
 
 ## Desc
 autodetect external changes to file

@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## DspLineNum               toggle display of buffer line numbers
+## DspLineNum               --  toggle display of buffer line numbers
 
 ## Desc
 toggle display of buffer line numbers

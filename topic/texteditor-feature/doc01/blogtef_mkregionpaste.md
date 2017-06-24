@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## MKRegionPaste            paste with mouse or keyboard
+## MKRegionPaste            --  paste with mouse or keyboard
 
 ## Desc
 paste with mouse or keyboard

@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## KSSanity                 keyboard shortcuts support
+## KSSanity                 --  keyboard shortcuts support
 
 ## Desc
 keyboard shortcuts support

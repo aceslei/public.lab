@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## SynModeColor             syntax highlighting and coloring
+## SynModeColor             --  syntax highlighting and coloring
 
 ## Desc
 syntax highlighting and coloring

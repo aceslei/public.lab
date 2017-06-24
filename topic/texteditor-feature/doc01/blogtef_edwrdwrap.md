@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## EdWrdWrap                toggle word wrapping and word wrap boundary easily
+## EdWrdWrap                --  toggle word wrapping and word wrap boundary easily
 
 ## Desc
 toggle word wrapping and word wrap boundary easily

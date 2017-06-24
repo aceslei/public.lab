@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## SnippetAbbrev            snippet abbreviations
+## SnippetAbbrev            --  snippet abbreviations
 
 ## Desc
 snippet abbreviations

@@ -9,9 +9,11 @@
 ### <end-file_info>
 --->
 
-## Header
+## Features
 
-| Tables        | Are           | Cool  |
+The following is a list of general text editor features.
+
+| ixx | Feature | Desc |
 | ------------- |-------------| -----|      
 | 001 | [AppExtModify](doc01/blogtef_appextmodify.md) | autodetect external changes to file |
 | 002 | [AppSnglInst](doc01/blogtef_appsnglinst.md) | single instance vs multiple instance of app |

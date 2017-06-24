@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## OpenJumpToNumber         open a file and automatically jump to line number
+## OpenJumpToNumber         --  open a file and automatically jump to line number
 
 ## Desc
 open a file and automatically jump to line number

@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## GUIBasedFind             full featured search with regex and smart case-sensitivity
+## GUIBasedFind             --  full featured search with regex and smart case-sensitivity
 
 ## Desc
 full featured search with regex and smart case-sensitivity

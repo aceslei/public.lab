@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## DirDefault               open specific directory by default
+## DirDefault               --  open specific directory by default
 
 ## Desc
 open specific directory by default

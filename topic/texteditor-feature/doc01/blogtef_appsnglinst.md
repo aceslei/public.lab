@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## AppSnglInst              single instance vs multiple instance of app
+## AppSnglInst              --  single instance vs multiple instance of app
 
 ## Desc
 single instance vs multiple instance of app

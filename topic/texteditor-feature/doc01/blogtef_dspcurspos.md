@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## DspCursPos               continuous display of cursor position
+## DspCursPos               --  continuous display of cursor position
 
 ## Desc
 continuous display of cursor position

@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## TrimTrailSp              edit munge trim trailing space
+## TrimTrailSp              --  edit munge trim trailing space
 
 ## Desc
 edit munge trim trailing space

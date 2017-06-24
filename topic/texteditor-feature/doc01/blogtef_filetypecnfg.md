@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## FileTypeCnfg             assign syntax coloring based on arbitrary criteria
+## FileTypeCnfg             --  assign syntax coloring based on arbitrary criteria
 
 ## Desc
 assign syntax coloring based on arbitrary criteria

@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## HyLinkInsert             insert arbitrary hyperlinks
+## HyLinkInsert             --  insert arbitrary hyperlinks
 
 ## Desc
 insert arbitrary hyperlinks

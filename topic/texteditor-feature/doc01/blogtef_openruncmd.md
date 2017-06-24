@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## OpenRunCmd               run command on file actions like open and save
+## OpenRunCmd               --  run command on file actions like open and save
 
 ## Desc
 run command on file actions like open and save

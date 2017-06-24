@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## FontSanity               easily specify good looking monospace font
+## FontSanity               --  easily specify good looking monospace font
 
 ## Desc
 easily specify good looking monospace font

@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## WordCompletion           editor word completion
+## WordCompletion           --  editor word completion
 
 ## Desc
 editor word completion

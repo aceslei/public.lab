@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## LargeFiles               open large files without crashing or excessive lag
+## LargeFiles               --  open large files without crashing or excessive lag
 
 ## Desc
 open large files without crashing or excessive lag

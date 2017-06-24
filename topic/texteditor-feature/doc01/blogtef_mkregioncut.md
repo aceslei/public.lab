@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## MKRegionCut              cut with mouse or keyboard
+## MKRegionCut              --  cut with mouse or keyboard
 
 ## Desc
 cut with mouse or keyboard

@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## MDITabs                  mdi tabs support
+## MDITabs                  --  mdi tabs support
 
 ## Desc
 mdi tabs support

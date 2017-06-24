@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## ReplaceSequential        search and replace with seqential numbering
+## ReplaceSequential        --  search and replace with seqential numbering
 
 ## Desc
 search and replace with seqential numbering

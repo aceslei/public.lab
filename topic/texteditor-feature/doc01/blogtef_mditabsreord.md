@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## MDITabsReord             reorder MDI buffer tabs
+## MDITabsReord             --  reorder MDI buffer tabs
 
 ## Desc
 reorder MDI buffer tabs

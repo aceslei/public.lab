@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## EasyIndent               easy indent text regions
+## EasyIndent               --  easy indent text regions
 
 ## Desc
 easy indent text regions

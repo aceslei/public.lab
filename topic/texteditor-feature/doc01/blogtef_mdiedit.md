@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## MDIEdit                  multiple buffers at once
+## MDIEdit                  --  multiple buffers at once
 
 ## Desc
 multiple buffers at once

@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## TerminalPlus             shell terminal interop
+## TerminalPlus             --  shell terminal interop
 
 ## Desc
 shell terminal interop

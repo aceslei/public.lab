@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## BrowserPreview           preview in web browser
+## BrowserPreview           --  preview in web browser
 
 ## Desc
 preview in web browser

@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## MultiBuffer              open multiple buffers at the same time
+## MultiBuffer              --  open multiple buffers at the same time
 
 ## Desc
 open multiple buffers at the same time

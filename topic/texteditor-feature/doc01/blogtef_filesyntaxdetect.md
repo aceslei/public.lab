@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## FileSyntaxDetect         smart rules for detecting file language
+## FileSyntaxDetect         --  smart rules for detecting file language
 
 ## Desc
 smart rules for detecting file language

@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## GUIBasedGOTO             full feature goto visited locations or line number
+## GUIBasedGOTO             --  full feature goto visited locations or line number
 
 ## Desc
 full feature goto visited locations or line number

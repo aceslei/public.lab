@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## JumpToWrap               toggle ability to auto-wrap from bottom to top of buffer when searching
+## JumpToWrap               --  toggle ability to auto-wrap from bottom to top of buffer when searching
 
 ## Desc
 toggle ability to auto-wrap from bottom to top of buffer when searching

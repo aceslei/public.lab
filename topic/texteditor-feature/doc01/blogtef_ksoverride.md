@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## KSOverride               keyboard shortcuts override or remap with plugins
+## KSOverride               --  keyboard shortcuts override or remap with plugins
 
 ## Desc
 keyboard shortcuts override or remap with plugins

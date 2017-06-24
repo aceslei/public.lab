@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## BlockSelect              rectangular cursor selection
+## BlockSelect              --  rectangular cursor selection
 
 ## Desc
 rectangular cursor selection

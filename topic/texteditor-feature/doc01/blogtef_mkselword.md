@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## MKSelWord                select word with mouse or keyboard
+## MKSelWord                --  select word with mouse or keyboard
 
 ## Desc
 select word with mouse or keyboard

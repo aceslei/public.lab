@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## JumpToNext               search feature jump to next/previous instance of search
+## JumpToNext               --  search feature jump to next/previous instance of search
 
 ## Desc
 search feature jump to next/previous instance of search

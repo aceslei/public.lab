@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## SendToOpen               sendto application
+## SendToOpen               --  sendto application
 
 ## Desc
 sendto application

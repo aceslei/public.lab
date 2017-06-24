@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## EasyMunge                easy text filter munge like uppercase lowercase titlecase join lines etc
+## EasyMunge                --  easy text filter munge like uppercase lowercase titlecase join lines etc
 
 ## Desc
 easy text filter munge like uppercase lowercase titlecase join lines etc

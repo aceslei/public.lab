@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## RunOnSelection           run external tool on selected text
+## RunOnSelection           --  run external tool on selected text
 
 ## Desc
 run external tool on selected text

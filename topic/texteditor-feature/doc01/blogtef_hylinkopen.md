@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## HyLinkOpen               open arbitrary filepath hyperlink
+## HyLinkOpen               --  open arbitrary filepath hyperlink
 
 ## Desc
 open arbitrary filepath hyperlink

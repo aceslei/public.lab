@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## SnippetMgmt              snippets management
+## SnippetMgmt              --  snippets management
 
 ## Desc
 snippets management

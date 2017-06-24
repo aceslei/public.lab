@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## FoldOnIndent             buffer folding based on indentation/whitespace
+## FoldOnIndent             --  buffer folding based on indentation/whitespace
 
 ## Desc
 buffer folding based on indentation/whitespace

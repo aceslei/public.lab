@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## MKClipboard              send text to clipboard or registers with mouse or keyboard
+## MKClipboard              --  send text to clipboard or registers with mouse or keyboard
 
 ## Desc
 send text to clipboard or registers with mouse or keyboard

@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## InvisChar                toggle visibility of hidden characters
+## InvisChar                --  toggle visibility of hidden characters
 
 ## Desc
 toggle visibility of hidden characters

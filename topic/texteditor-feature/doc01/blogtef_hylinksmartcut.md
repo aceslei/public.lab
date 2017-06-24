@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## HyLinkSmartCut           goto definition -- jump to related items on arbitrary text
+## HyLinkSmartCut           --  goto definition -- jump to related items on arbitrary text
 
 ## Desc
 goto definition -- jump to related items on arbitrary text

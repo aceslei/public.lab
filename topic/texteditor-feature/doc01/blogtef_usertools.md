@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## UserTools                external user runnable tools on current buffer
+## UserTools                --  external user runnable tools on current buffer
 
 ## Desc
 external user runnable tools on current buffer

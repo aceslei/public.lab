@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## JumpToAllDoc             search feature jump to next/previous across buffers
+## JumpToAllDoc             --  search feature jump to next/previous across buffers
 
 ## Desc
 search feature jump to next/previous across buffers

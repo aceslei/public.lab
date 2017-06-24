@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## SnipCompletion           word completion
+## SnipCompletion           --  word completion
 
 ## Desc
 word completion

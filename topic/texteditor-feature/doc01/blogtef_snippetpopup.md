@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## SnippetPopup             snippets user interface popups
+## SnippetPopup             --  snippets user interface popups
 
 ## Desc
 snippets user interface popups

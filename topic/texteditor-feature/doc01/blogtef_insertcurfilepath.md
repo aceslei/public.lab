@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## InsertCurFilepath        copy/insert path of currently edited buffer
+## InsertCurFilepath        --  copy/insert path of currently edited buffer
 
 ## Desc
 copy/insert path of currently edited buffer

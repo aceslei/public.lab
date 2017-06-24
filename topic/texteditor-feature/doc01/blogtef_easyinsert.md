@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## EasyInsert               insert arbitrary variables like date, filename, file basename, system time, and user-defined variables
+## EasyInsert               --  insert arbitrary variables like date, filename, file basename, system time, and user-defined variables
 
 ## Desc
 insert arbitrary variables like date, filename, file basename, system time, and user-defined variables

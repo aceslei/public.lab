@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## SelWordDefin             word characters vs non-word characters
+## SelWordDefin             --  word characters vs non-word characters
 
 ## Desc
 word characters vs non-word characters

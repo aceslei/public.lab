@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## StatsOnSel               stats on selected text
+## StatsOnSel               --  stats on selected text
 
 ## Desc
 stats on selected text

@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## KSModify                 keyboard shortcuts disable
+## KSModify                 --  keyboard shortcuts disable
 
 ## Desc
 keyboard shortcuts disable

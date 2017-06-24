@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## BlockCursor              block cursor appearance
+## BlockCursor              --  block cursor appearance
 
 ## Desc
 block cursor appearance

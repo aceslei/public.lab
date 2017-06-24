@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## KSFavorites              keyboard shortcuts favorites
+## KSFavorites              --  keyboard shortcuts favorites
 
 ## Desc
 keyboard shortcuts favorites

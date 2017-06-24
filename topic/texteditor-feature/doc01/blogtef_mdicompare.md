@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## MDICompare               multi-buffer file comparison
+## MDICompare               --  multi-buffer file comparison
 
 ## Desc
 multi-buffer file comparison

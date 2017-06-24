@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## SnippetGUI               snippets gui management
+## SnippetGUI               --  snippets gui management
 
 ## Desc
 snippets gui management

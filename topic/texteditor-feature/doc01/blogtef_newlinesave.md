@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## NewlineSave              configure system-dependent newlines
+## NewlineSave              --  configure system-dependent newlines
 
 ## Desc
 configure system-dependent newlines

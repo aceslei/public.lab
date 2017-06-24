@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## CommandRunner            command palette
+## CommandRunner            --  command palette
 
 ## Desc
 command palette

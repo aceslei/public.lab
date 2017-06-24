@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## SnippetDynamicContent    snippet domains and contexts
+## SnippetDynamicContent    --  snippet domains and contexts
 
 ## Desc
 snippet domains and contexts

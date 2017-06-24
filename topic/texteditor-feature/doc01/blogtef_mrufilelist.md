@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## MRUFileList              most recently used file list
+## MRUFileList              --  most recently used file list
 
 ## Desc
 most recently used file list

@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## GUIBasedFindFIF          full featured find in files
+## GUIBasedFindFIF          --  full featured find in files
 
 ## Desc
 full featured find in files

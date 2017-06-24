@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## SynModeCnfg              user configurable syntax highlighting
+## SynModeCnfg              --  user configurable syntax highlighting
 
 ## Desc
 user configurable syntax highlighting

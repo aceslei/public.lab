@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## MDISplit                 mdi split window
+## MDISplit                 --  mdi split window
 
 ## Desc
 mdi split window

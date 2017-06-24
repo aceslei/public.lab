@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## FileTypeSwitch           easily switch into and out of syntax coloring modes
+## FileTypeSwitch           --  easily switch into and out of syntax coloring modes
 
 ## Desc
 easily switch into and out of syntax coloring modes

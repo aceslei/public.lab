@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## KSSave                   keyboard shortcuts save
+## KSSave                   --  keyboard shortcuts save
 
 ## Desc
 keyboard shortcuts save

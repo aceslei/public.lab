@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## RunAsScript              run current buffer as script
+## RunAsScript              --  run current buffer as script
 
 ## Desc
 run current buffer as script

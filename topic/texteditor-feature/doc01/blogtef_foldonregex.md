@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## FoldOnRegex              buffer folding based on regex
+## FoldOnRegex              --  buffer folding based on regex
 
 ## Desc
 buffer folding based on regex

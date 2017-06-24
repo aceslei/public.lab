@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## MDITabsCnfg              mdi tabs docking
+## MDITabsCnfg              --  mdi tabs docking
 
 ## Desc
 mdi tabs docking

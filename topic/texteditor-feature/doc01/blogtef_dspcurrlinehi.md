@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## DspCurrLineHi            highlight entire cursor-active line
+## DspCurrLineHi            --  highlight entire cursor-active line
 
 ## Desc
 highlight entire cursor-active line

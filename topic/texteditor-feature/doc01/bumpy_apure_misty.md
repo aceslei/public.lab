@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## VimMode                  vim-compatible keybindings
+## VimMode                  --  vim-compatible keybindings
 
 ## Desc
 vim-compatible keybindings

@@ -10,7 +10,7 @@
 ### <end-file_info>
 --->
 
-## HyLinkJumpTo             open arbitrary filepath hyperlink to specific places in buffer
+## HyLinkJumpTo             --  open arbitrary filepath hyperlink to specific places in buffer
 
 ## Desc
 open arbitrary filepath hyperlink to specific places in buffer

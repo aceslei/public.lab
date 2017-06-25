@@ -1,3 +1,6 @@
+## movie to watch
+* https://www.youtube.com/watch?v=WMgm20Di9Wg
+
 ###
 
 energy signature of vital essence ... in the expansive or contractive state (inhale/exhale)

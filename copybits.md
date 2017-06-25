@@ -1,3 +1,7 @@
+## liks
+
+* https://lynchinginamerica.eji.org/?dclid=CL3_lobK2dQCFc6LfgodyQcJVg
+
 ## movies to watch
 * https://www.youtube.com/watch?v=WMgm20Di9Wg
 * sean of the dead

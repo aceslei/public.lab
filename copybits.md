@@ -1,5 +1,6 @@
-## movie to watch
+## movies to watch
 * https://www.youtube.com/watch?v=WMgm20Di9Wg
+* sean of the dead
 
 ###
 

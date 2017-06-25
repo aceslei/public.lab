@@ -1,6 +1,7 @@
 ## liks
 
-* https://lynchinginamerica.eji.org/?dclid=CL3_lobK2dQCFc6LfgodyQcJVg
+* race, history, usa, violence ;;  https://lynchinginamerica.eji.org/?dclid=CL3_lobK2dQCFc6LfgodyQcJVg
+* french english ;;  https://www.youtube.com/watch?v=daGfylg3W2Y
 
 ## movies to watch
 * https://www.youtube.com/watch?v=WMgm20Di9Wg

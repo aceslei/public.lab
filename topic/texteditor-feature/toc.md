@@ -77,7 +77,7 @@ The following is a list of general text editor features.
 | 060 | [NewlineSave](doc01/blogtef_newlinesave.md)                | configure system-dependent newlines |
 | 061 | [OpenJumpToNumber](doc01/blogtef_openjumptonumber.md)      | open a file and automatically jump to line number |
 | 062 | [OpenJumpToSearch](doc01/blogtef_openjumptosearch.md)      | open a file and automatically jump to search string pattern |
-| 063 | [OpenRunCmd](doc01/blogtef_openruncmd.md)                  | run command on file actions like open and save |
+| 063 | [OpenRunCmd](doc01/blogtef_openruncmd.md)                  | automatic commands similar to vim autocmd |
 | 064 | [ReplaceSequential](doc01/blogtef_repifexpression.md)      | search and replace with seqential numbering |
 | 065 | [RunAsScript](doc01/blogtef_runasscript.md)                | run current buffer as script |
 | 066 | [RunAsScriptWithArgs](doc01/blogtef_runasscriptwithargs.md) | run current buffer as script with arguments |

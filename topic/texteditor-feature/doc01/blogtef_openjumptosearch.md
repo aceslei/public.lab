@@ -14,6 +14,7 @@
 
 ## Desc
 * open a file and automatically jump to first occurance of a specific word in the file (eg, as part of shell command-line startup)
+* automate the manual process of opening a file and doing a search for <pattern> by hand
 
 
 ## See also

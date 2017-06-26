@@ -10,13 +10,13 @@
 ### <end-file_info>
 --->
 
-## OpenRunCmd               --  run command on file actions like open and save
+## OpenRunCmd               --  automatic commands similar to vim autocmd
 
 ## Desc
 * open a file and automatically run an arbitrary command or series of command on the file
 
 
 ## See also
-* __blank__
+* vim ;; http://vimdoc.sourceforge.net/htmldoc/autocmd.html
 
 

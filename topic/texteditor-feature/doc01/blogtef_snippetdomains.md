@@ -13,6 +13,7 @@
 ## SnippetDomains           --  snippet domains and contexts
 
 ## Desc
+* user ability to define language-agnostic snippets for any and all filetypes
 * user ability to assign and subgroup snippets according to FileType
 
 

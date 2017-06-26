@@ -14,9 +14,11 @@
 
 ## Desc
 * specify editor context using a modeline
+* alternative to syntax by filetype or extension
 
 
 ## See also
 * http://stackoverflow.com/questions/1984072/indicate-programming-language-in-a-file-without-extension
+* https://stackoverflow.com/a/1985247/42223
 
 

@@ -3,6 +3,7 @@
 * race, history, usa, violence ;;  https://lynchinginamerica.eji.org/?dclid=CL3_lobK2dQCFc6LfgodyQcJVg
 * french english ;;  https://www.youtube.com/watch?v=daGfylg3W2Y
 * benjamin disraeli ;; https://en.wikipedia.org/wiki/Benjamin_Disraeli
+* funny costume halloween ;; https://www.facebook.com/dailypicksandflicks/videos/1533618136658245/
 
 ## movies to watch
 * monster calls ;; https://www.youtube.com/watch?v=WMgm20Di9Wg

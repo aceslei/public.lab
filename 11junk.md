@@ -8,6 +8,7 @@ If the pending financial aid does not post to he student account by the due date
 
 Financial aid will show as pending if the student is enrolled full-time and all financial aid requirements and holds have been met. Students can view the status of their financial aid in Duckweb. 
 
-More information
+<a href="http://ba.uoregon.edu/content/refunds-and-direct-deposit#financial-aid-refunds">More information</a>
+
 
 
